@@ -41,8 +41,7 @@ export default function Navbar() {
             <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="navbar-inner">
                     <Link to={brand === 'cleaning' ? '/cleanz' : '/furnitures'} className="navbar-logo">
-                        <span className="logo-icon">✦</span>
-                        {brand === 'cleaning' ? 'VK Max Cleanz' : 'VK Max Furnitures'}
+                        <img src="/LogoFull.jpg" alt={brand === 'cleaning' ? 'VK Max Cleanz' : 'VK Max Furnitures'} className="navbar-logo-img" />
                     </Link>
 
                     <div className="navbar-links">
