@@ -1,0 +1,131 @@
+.about {
+    background: var(--white);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.about-images {
+    position: relative;
+    height: 480px;
+}
+
+.about-img-main {
+    width: 70%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about-img-secondary {
+    width: 60%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 5px solid var(--white);
+}
+
+.about-experience-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: var(--white);
+    padding: var(--space-5) var(--space-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-xl);
+    z-index: 2;
+}
+
+.about-experience-badge strong {
+    display: block;
+    font-size: var(--text-3xl);
+    font-weight: 800;
+}
+
+.about-experience-badge span {
+    font-size: var(--text-sm);
+    opacity: 0.9;
+}
+
+.about-text .section-label {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--space-3);
+}
+
+.about-text h2 {
+    margin-bottom: var(--space-5);
+}
+
+.about-text>p {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-8);
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--grey-200);
+}
+
+.about-stat {
+    text-align: center;
+}
+
+.about-stat strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.about-stat span {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .about-images {
+        height: 400px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+
+    .about-images {
+        height: 320px;
+    }
+}

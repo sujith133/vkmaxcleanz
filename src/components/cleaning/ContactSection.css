@@ -1,0 +1,201 @@
+.contact {
+    background: var(--dark-bg);
+    position: relative;
+}
+
+.contact .section-header h2 {
+    color: var(--white);
+}
+
+.contact .section-header p {
+    color: var(--grey-400);
+}
+
+.contact .section-header .section-label {
+    color: var(--accent-light);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-12);
+}
+
+.contact-form-wrapper {
+    background: var(--dark-card);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-form-wrapper h3 {
+    color: var(--white);
+    margin-bottom: var(--space-2);
+}
+
+.contact-form-wrapper>p {
+    color: var(--grey-400);
+    margin-bottom: var(--space-8);
+    font-size: var(--text-sm);
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--grey-300);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: var(--space-3) var(--space-4);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary-light);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--grey-500);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: var(--dark-bg);
+}
+
+.contact-submit {
+    grid-column: span 2;
+    background: var(--cta-gradient);
+    color: var(--white);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+    margin-top: var(--space-4);
+}
+
+.contact-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3);
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.contact-info-card {
+    background: var(--dark-card);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-info-card h3 {
+    color: var(--white);
+    margin-bottom: var(--space-6);
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.contact-info-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: rgba(108, 99, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-xl);
+    flex-shrink: 0;
+}
+
+.contact-info-text h4 {
+    font-size: var(--text-base);
+    color: var(--white);
+    margin-bottom: 2px;
+}
+
+.contact-info-text p {
+    font-size: var(--text-sm);
+    color: var(--grey-400);
+}
+
+.contact-map {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 200px;
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-500);
+    font-size: var(--text-6xl);
+}
+
+@media (max-width: 1024px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width,
+    .contact-submit {
+        grid-column: span 1;
+    }
+}

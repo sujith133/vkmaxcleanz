@@ -1,0 +1,193 @@
+.furniture-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.furniture-hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--hero-gradient);
+}
+
+.furniture-hero .hero-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.furniture-hero .hero-text h1 {
+    color: var(--white);
+    font-size: var(--text-6xl);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: var(--space-6);
+}
+
+.furniture-hero .hero-text p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-8);
+}
+
+.furniture-hero .hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.furniture-hero .hero-wave svg {
+    display: block;
+    width: 100%;
+}
+
+/* Products */
+.furniture-products {
+    background: var(--off-white);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--grey-200);
+    transition: all var(--transition-slow);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--card-hover-border);
+}
+
+.product-image {
+    aspect-ratio: 4/3;
+    background: var(--grey-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    overflow: hidden;
+}
+
+.product-info {
+    padding: var(--space-6);
+}
+
+.product-info h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+}
+
+.product-info .product-price {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--space-3);
+}
+
+.product-info p {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-4);
+}
+
+.product-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--primary);
+    color: var(--white);
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.product-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Categories */
+.furniture-categories {
+    background: var(--white);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+.category-card {
+    text-align: center;
+    padding: var(--space-8);
+    background: var(--off-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--grey-200);
+    transition: all var(--transition-slow);
+    cursor: pointer;
+}
+
+.category-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.category-icon {
+    font-size: 48px;
+    margin-bottom: var(--space-4);
+}
+
+.category-card h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+}
+
+.category-card p {
+    font-size: var(--text-sm);
+}
+
+@media (max-width: 1024px) {
+    .furniture-hero .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .products-grid,
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
