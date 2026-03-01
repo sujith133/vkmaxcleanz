@@ -1,0 +1,144 @@
+.clean-howwework {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.clean-howwework-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+}
+
+.clean-howwework-label {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.clean-howwework-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 48px;
+}
+
+.clean-howwework-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.clean-howwework-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 330px;
+}
+
+.clean-howwework-step {
+    background: #f2f0fe;
+    border-radius: 12px;
+    padding: 20px;
+    height: 150px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clean-howwework-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(101, 70, 250, 0.15);
+}
+
+.clean-howwework-step-number {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.clean-howwework-step-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.clean-howwework-step-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #595959;
+    line-height: 1.4;
+}
+
+.clean-howwework-center {
+    width: 328px;
+    height: 462px;
+    border-radius: 24px;
+    background: linear-gradient(to bottom, #f2f0fe, #6546fa);
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.clean-howwework-center-emoji {
+    font-size: 80px;
+    line-height: 1;
+}
+
+.clean-howwework-center-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.clean-howwework-center-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1100px) {
+    .clean-howwework-center {
+        display: none;
+    }
+
+    .clean-howwework-layout {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .clean-howwework-steps {
+        width: 280px;
+    }
+}
+
+@media (max-width: 650px) {
+    .clean-howwework-layout {
+        flex-direction: column;
+    }
+
+    .clean-howwework-steps {
+        width: 100%;
+    }
+
+    .clean-howwework-step {
+        height: auto;
+    }
+
+    .clean-howwework-heading {
+        font-size: 26px;
+    }
+}

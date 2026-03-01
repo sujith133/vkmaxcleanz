@@ -12,6 +12,7 @@
 .about-images {
     position: relative;
     height: 480px;
+    width: 100%;
 }
 
 .about-img-main {
@@ -23,6 +24,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .about-img-secondary {
@@ -35,6 +37,7 @@
     bottom: 0;
     right: 0;
     border: 5px solid var(--white);
+    z-index: 1;
 }
 
 .about-experience-badge {
@@ -113,9 +116,35 @@
     }
 
     .about-images {
-        height: 400px;
-        max-width: 500px;
+        height: auto;
+        max-width: 100%;
         margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .about-img-main {
+        position: static;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
+    .about-img-secondary {
+        position: static;
+        width: 100%;
+        height: auto;
+        max-height: 260px;
+        border: none;
+    }
+
+    .about-experience-badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        align-self: flex-start;
     }
 }
 
@@ -125,7 +154,11 @@
         gap: var(--space-6);
     }
 
-    .about-images {
-        height: 320px;
+    .about-img-main {
+        max-height: 240px;
+    }
+
+    .about-img-secondary {
+        max-height: 200px;
     }
 }

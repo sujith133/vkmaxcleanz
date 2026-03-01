@@ -1,0 +1,171 @@
+.clean-footer {
+    background: #111727;
+    padding: 48px 0 0;
+    border-top: 1px solid #282e3c;
+}
+
+.clean-footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.clean-footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+/* Brand column */
+.clean-footer-brand {
+    max-width: 280px;
+}
+
+.clean-footer-logo {
+    height: 48px;
+    margin-bottom: 16px;
+    filter: brightness(0) invert(1);
+}
+
+.clean-footer-tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.clean-footer-socials {
+    display: flex;
+    gap: 8px;
+}
+
+.clean-footer-social-btn {
+    width: 38px;
+    height: 38px;
+    background: #282e3c;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.clean-footer-social-btn:hover {
+    background: #6546fa;
+}
+
+/* Link columns */
+.clean-footer-links-col {
+    min-width: 150px;
+}
+
+.clean-footer-col-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.clean-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.clean-footer-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.clean-footer-links a:hover {
+    color: #6546fa;
+}
+
+/* Contact info column */
+.clean-footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.clean-footer-contact-item svg {
+    width: 16px;
+    height: 16px;
+    color: #6546fa;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.clean-footer-contact-item span {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+/* Bottom bar */
+.clean-footer-bottom {
+    border-top: 1px solid #282e3c;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.clean-footer-copyright {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.clean-footer-legal {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.clean-footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.clean-footer-legal a:hover {
+    color: #6546fa;
+}
+
+@media (max-width: 768px) {
+    .clean-footer-columns {
+        flex-direction: column;
+    }
+
+    .clean-footer-brand {
+        max-width: 100%;
+    }
+
+    .clean-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

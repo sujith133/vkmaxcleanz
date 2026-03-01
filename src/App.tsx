@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import CleaningHome from './pages/cleaning/CleaningHome';
 import FurnitureHome from './pages/furniture/FurnitureHome';
+import CleanHomePage from './pages/clean/CleanHomePage';
 import FloatingWhatsApp from './components/shared/FloatingWhatsApp';
 
 function AppContent() {
@@ -26,10 +27,14 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
-        <AppContent />
+        <Routes>
+          <Route path="/clean" element={<CleanHomePage />} />
+          <Route path="*" element={<AppContent />} />
+        </Routes>
       </ThemeProvider>
     </BrowserRouter>
   );
 }
 
 export default App;
+

@@ -41,7 +41,7 @@ export default function Navbar() {
             <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="navbar-inner">
                     <Link to={brand === 'cleaning' ? '/cleanz' : '/furnitures'} className="navbar-logo">
-                        <img src="/LogoFull.jpg" alt={brand === 'cleaning' ? 'VK Max Cleanz' : 'VK Max Furnitures'} className="navbar-logo-img" />
+                        <img src="/LogoFull.png" alt={brand === 'cleaning' ? 'VK Max Cleanz' : 'VK Max Furnitures'} className="navbar-logo-img" />
                     </Link>
 
                     <div className="navbar-links">
@@ -57,19 +57,26 @@ export default function Navbar() {
                     </div>
 
                     <div className="navbar-right">
-                        <div className="brand-toggle" onClick={toggleBrand}>
-                            <div className={`toggle-slider ${brand === 'furniture' ? 'right' : ''}`} />
-                            <span className={`toggle-option ${brand === 'cleaning' ? 'active' : ''}`}>
-                                Cleanz
-                            </span>
-                            <span className={`toggle-option ${brand === 'furniture' ? 'active' : ''}`}>
-                                Furnitures
-                            </span>
+                        <div className="navbar-location">
+                            <svg width="14" height="18" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="location-icon">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="currentColor" />
+                            </svg>
+                            <select aria-label="Select City" className="navbar-location-select">
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Vishakapatnam">Vishakapatnam</option>
+                                <option value="Vijaywada">Vijaywada</option>
+                            </select>
                         </div>
 
-                        <a href="#contact" className="navbar-cta" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
-                            {brand === 'cleaning' ? 'Book Service' : 'Shop Now'}
-                        </a>
+                        {brand === 'cleaning' ? (
+                            <button className="brand-cta-btn dark" onClick={toggleBrand}>
+                                Furnitures
+                            </button>
+                        ) : (
+                            <button className="brand-cta-btn purple" onClick={toggleBrand}>
+                                Cleanz
+                            </button>
+                        )}
 
                         <button
                             className={`hamburger ${mobileOpen ? 'open' : ''}`}
@@ -92,18 +99,25 @@ export default function Navbar() {
                         {link.label}
                     </a>
                 ))}
-                <div className="brand-toggle" onClick={() => { toggleBrand(); setMobileOpen(false); }}>
-                    <div className={`toggle-slider ${brand === 'furniture' ? 'right' : ''}`} />
-                    <span className={`toggle-option ${brand === 'cleaning' ? 'active' : ''}`}>Cleanz</span>
-                    <span className={`toggle-option ${brand === 'furniture' ? 'active' : ''}`}>Furnitures</span>
+                <div className="mobile-location">
+                    <svg width="14" height="18" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                        <path fillRule="evenodd" clipRule="evenodd" d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="currentColor" />
+                    </svg>
+                    <select aria-label="Select City" className="mobile-location-select">
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Vishakapatnam">Vishakapatnam</option>
+                        <option value="Vijaywada">Vijaywada</option>
+                    </select>
                 </div>
-                <a
-                    href="#contact"
-                    className="navbar-cta"
-                    onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
-                >
-                    {brand === 'cleaning' ? 'Book Service' : 'Shop Now'}
-                </a>
+                {brand === 'cleaning' ? (
+                    <button className="brand-cta-btn dark mobile-cta" onClick={() => { toggleBrand(); setMobileOpen(false); }}>
+                        Furnitures
+                    </button>
+                ) : (
+                    <button className="brand-cta-btn purple mobile-cta" onClick={() => { toggleBrand(); setMobileOpen(false); }}>
+                        Cleanz
+                    </button>
+                )}
             </div>
         </>
     );

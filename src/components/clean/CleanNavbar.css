@@ -1,0 +1,203 @@
+.clean-navbar-wrapper {
+    background: #664bfa;
+    width: 100%;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.clean-navbar {
+    max-width: 1088px;
+    width: 100%;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border-radius: 37.5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clean-navbar-logo {
+    width: 160px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.clean-navbar-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.clean-navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1;
+    justify-content: center;
+}
+
+.clean-navbar-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 69px;
+    transition: color 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.clean-navbar-links a:hover {
+    color: #664bfa;
+}
+
+.clean-navbar-links a.active {
+    font-weight: 700;
+    color: #664bfa;
+}
+
+.clean-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.clean-navbar-furniture-btn {
+    background: #222;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.25s ease;
+}
+
+.clean-navbar-furniture-btn:hover {
+    background: #333;
+}
+
+.clean-navbar-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.clean-navbar-phone-icon {
+    width: 36px;
+    height: 36px;
+    background: #664bfa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.clean-navbar-phone-icon svg {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+}
+
+.clean-navbar-phone-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.clean-navbar-phone-text span:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+}
+
+.clean-navbar-phone-text span:last-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #333;
+}
+
+/* Mobile hamburger */
+.clean-navbar-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+
+.clean-navbar-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.clean-navbar-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 107px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.clean-navbar-mobile-menu.open {
+    display: flex;
+}
+
+.clean-navbar-mobile-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+@media (max-width: 900px) {
+    .clean-navbar-links {
+        display: none;
+    }
+
+    .clean-navbar-phone {
+        display: none;
+    }
+
+    .clean-navbar-furniture-btn {
+        display: none;
+    }
+
+    .clean-navbar-hamburger {
+        display: flex;
+    }
+}

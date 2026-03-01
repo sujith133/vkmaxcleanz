@@ -1,0 +1,486 @@
+# VK Max Cleanz Solutions — Complete Website Reference
+
+> **Purpose**: This document is a complete specification of the VK Max Cleanz Solutions website. Give this document to an AI assistant along with the images listed in the **Images Manifest** section to rebuild the entire website from scratch in a new codebase.
+
+---
+
+## 1. TECH STACK & PROJECT SETUP
+
+- **Framework**: Vite + React 18 (TypeScript)
+- **Styling**: TailwindCSS v4 with `tw-animate-css`
+- **Routing**: `react-router` v7 (browser router, `createBrowserRouter`)
+- **Icons**: `lucide-react` (ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Phone, Mail, MapPin)
+- **Fonts**: Google Fonts — **Montserrat** (headings, navbar) and **DM Sans** (body, labels, buttons)
+- **Path alias**: `@` → `./src`
+
+---
+
+## 2. IMAGES MANIFEST
+
+Place all images in the `public/images/` folder of the new repo. The document references them as `/images/FILENAME`.
+
+| Image File | Used In | Description |
+|---|---|---|
+| `logo.png` | Navbar, Footer | Company logo — "VK Max Cleanz Solutions" full-color logo |
+| `hero-bg.png` | HeroSection, ProjectsSection | Large background photo — cleaning/professional workspace |
+| `hero-cleaner.png` | HeroSection | Cutout image of a cleaning professional holding equipment |
+| `avatar.png` | TestimonialsSection | Small portrait photo used as testimonial avatar |
+
+> **Note to user**: Rename your 4 asset files to these names and put them in `public/images/`. The original Figma hash names were:
+> - `895ea6f8...png` → `logo.png`
+> - `70214cd1...png` → `hero-bg.png`
+> - `50360bc9...png` → `hero-cleaner.png`
+> - `7dd2278f...png` → `avatar.png`
+
+---
+
+## 3. DESIGN SYSTEM
+
+### 3.1 Colors
+
+| Token | Hex | Usage |
+|---|---|---|
+| Primary Purple | `#664bfa` / `#6546fa` | Navbar bg, hero bg, CTAs, active states, FAQ active |
+| Primary Purple Hover | `#5535e8` / `#5035dd` | CTA hover states |
+| Primary Purple Dark | `#624bf2` | Highlighted service card, gradient |
+| Dark BG | `#111727` | Footer, Projects section, Contact section |
+| Dark Card | `#282e3c` | Contact form cards, footer social bg |
+| Dark Card Lighter | `#3e434e` | Contact info icon circles |
+| Dark Border | `#484f61` | Form input borders |
+| Dark Hover | `#252e3c` | Inactive project nav button |
+| Light Purple BG | `#f2f0fe` | Services section bg, Testimonials bg, HowWeWork cards |
+| White | `#ffffff` | About section bg, FAQ bg, HowWeWork bg |
+| Text Dark | `#333` / `#1e1e1e` / `#202020` | Headings, dark text |
+| Text Gray | `#595959` / `#615e5b` | Body text, muted text |
+| Text Muted Gray | `#878787` | Dividers in About stats |
+| Star Gold | `#FAB33F` | Star rating fill |
+| Footer Divider | `#282e3c` | Footer section dividers |
+| Dot Inactive | `#d9d9d9` | Carousel inactive dots |
+
+### 3.2 Fonts
+
+| Font | Weight | Usage |
+|---|---|---|
+| Montserrat | `font-extrabold` (800) | Section headings |
+| Montserrat | `font-bold` (700) | Navbar active link |
+| Montserrat | `font-semibold` (600) | Navbar call text, footer headings |
+| Montserrat | `font-medium` (500) | Navbar links, testimonial names |
+| Montserrat | `font-normal` (400) | Testimonial text |
+| DM Sans | `font-semibold` (600) | CTA buttons, service card titles, contact headings |
+| DM Sans | `font-extrabold` (800) | About stats values, FAQ questions |
+| DM Sans | `font-medium` (500) | HowWeWork descriptions, form labels, FAQ description |
+| DM Sans | `font-normal` (400) | Section labels, body paragraphs, footers |
+
+### 3.3 Common CTA Button Pattern
+
+Used throughout the site (Hero, About, Services, FAQ, Contact):
+
+```
+Rounded pill button: rounded-[90px], px-5 py-3
+Background: bg-[#6546fa], hover: bg-[#5535e8]
+Shadow: 0px 4px 4px rgba(0,0,0,0.25)
+Font: DM Sans, font-semibold, 16px, white text
+Leading icon: White circle (34x34px) with ArrowUpRight icon (16px) in purple
+```
+
+### 3.4 Container
+
+All sections use: `max-w-[1280px] mx-auto px-8`
+
+### 3.5 Section Label Pattern
+
+Every section has a small label above the heading:
+```
+Font: DM Sans, font-normal, 15px
+Color: varies (#333 on light bg, white on dark bg)
+Margin bottom: mb-3
+```
+
+---
+
+## 4. ROUTING & PAGE STRUCTURE
+
+```
+/ (Root layout: Navbar + <Outlet> + Footer)
+├── /            → HomePage
+├── /services    → ServicesPage
+├── /about       → AboutPage
+└── /contact     → ContactPage
+```
+
+---
+
+## 5. ROOT LAYOUT
+
+A full-screen flex column container (`min-h-screen w-full flex flex-col`) with:
+1. `<Navbar />`
+2. `<main className="flex-1">` → `<Outlet />`
+3. `<Footer />`
+
+---
+
+## 6. NAVBAR
+
+**Container**: Purple bg (`#664bfa`), full width, padding `py-4 px-6`, centered content.
+
+**Navbar bar**: Floating, centered, `max-w-[1088px]`, height `75px`, `bg-white/80 backdrop-blur-[22px]`, border-radius `37.5px`, shadow `2px 2px 8px rgba(0,0,0,0.25)`, inner padding `px-6`, flex row.
+
+**Layout (left to right)**:
+1. **Logo** (left): `160x48px`, contains logo image, links to `/`
+2. **Nav Links** (center, flex-1, gap-[18px]):
+   - Home (`/`) — Montserrat bold 16px, active: `#664bfa`, inactive: black
+   - Services (`/services`) — Montserrat medium 16px + ChevronDown icon (16px)
+   - About Us (`/about`) — Montserrat medium 16px
+   - Contact Us (`/contact`) — Montserrat medium 16px
+   - All links: `leading-[69px]`, `whitespace-nowrap`, hover: `text-[#664bfa]`
+3. **Right side** (gap-4):
+   - "Furnitures" button: `bg-[#222]`, white text, `px-4 py-2`, `rounded-[5px]`, Montserrat medium 16px, links to `/services`
+   - Phone section: Purple circle (`#664bfa`, rounded-full, p-2) with Phone icon (16px white), next to two lines — "Call Now" (Montserrat semibold 13px) and "75690 57281" (Montserrat bold 13px)
+
+---
+
+## 7. SECTIONS (in order on HomePage)
+
+### 7.1 HeroSection
+
+**Background**: `min-height: 680px`, base color `#414e70`.
+- Full-bleed background image (`hero-bg.png`), `object-cover`
+- Dark overlay: `rgba(42, 64, 123, 0.8)` on top of image
+
+**Right side**: Cleaner image (`hero-cleaner.png`), absolute positioned, right-0, top-0, `w-[50%]`, height `750px`, aligned to bottom, `object-contain`.
+
+**Content (left side)**: `z-10`, padded container, `max-w-[520px]`.
+- Tagline: "Spotless Spaces, Stress-Free Living" — DM Sans 15px white, left border `2px white/50`, `pl-3`
+- Heading: "Trusted Cleaning Expert For Home And Businesses" — Montserrat semibold, `56px`, `line-height: 1.2`, white, with `<br>` after "Cleaning" and "Home"
+- Description: "Enjoy a spotless home or office without lifting a Finger. Our Professional cleaning team delivers reliable eco-friendly." — DM Sans 16px white, `leading-[23px]`, `max-w-[420px]`
+- CTA: "Book Your Cleaning Today" — standard CTA button pattern (purple bg, white text)
+
+**Bottom**: White cloud/wave SVG shapes (decorative), absolute at bottom, `w-[200%]`, centered, `height: 160px`, all white fills. The cloud shapes are wavy organic SVG paths that create a smooth transition to the white About section below.
+
+---
+
+### 7.2 AboutSection
+
+**Background**: White, `py-16`
+
+**Label**: "About Us" — standard section label
+
+**Heading**: "At **Vk Max Cleanz** we believe a clean space creates a happier and healthier life." — Montserrat extrabold 32px, company name at 36px. Line break after "clean".
+
+**Layout**: Flex row (stacks on mobile), `gap-12`
+
+**Left — Image Collage** (`flex-1, min-h-[420px]`):
+- 2-column grid, 3 images:
+  - Top-left: Unsplash image, `h-[273px]`, `rounded-[24px]`, shadow `0px 5px 17px rgba(0,0,0,0.25)`
+  - Top-right: Unsplash image, same styling
+  - Bottom-left: Overlapping card shifted up (`-mt-16 ml-16`), `rounded-[24px]`, shadow `0px 0px 17px rgba(0,0,0,0.25)`
+- Unsplash URLs:
+  1. `https://images.unsplash.com/photo-1581578949510-fa7315c4c350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400`
+  2. `https://images.unsplash.com/photo-1644890550788-3ca4ee5c3bc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400`
+  3. `https://images.unsplash.com/photo-1758273238415-01ec03d9ef27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400`
+
+**Right — Stats** (`w-[280px]`, `gap-6`, `pt-8`):
+
+| Value | Label |
+|---|---|
+| 10+ | Years of Experience |
+| 10K+ | Spaces Cleaned |
+| 99% | Customer Satisfaction |
+| 500+ | Happy Homes Cleaned |
+
+- Value: DM Sans extrabold 36px `#333`, `leading-[23px]`
+- Label: DM Sans normal 16px `#333`, `leading-[23px]`
+- Divider between each: `h-[1px] bg-[#878787]`
+
+**CTA**: "Learn More About US" → links to `/about`
+
+---
+
+### 7.3 ServicesSection
+
+**Background**: `#f2f0fe`, `py-16`
+
+**Header row**: Flex, space-between
+- Label: "Our Services"
+- Heading: "Complete Cleaning Solutions for Homes & Business" — Montserrat extrabold 32px, text-center (within left div)
+- Right: CTA button "Click to View More" → links to `/services`
+
+**Cards** (flex-wrap, gap-6, centered): 4 service cards
+
+| Service | Image URL | Highlighted? |
+|---|---|---|
+| Commercial Cleaning | `photo-1644890550788-3ca4ee5c3bc3` | No |
+| Residential Cleaning | `photo-1581578949510-fa7315c4c350` | No |
+| Deep Cleaning | `photo-1758273238415-01ec03d9ef27` | **Yes** |
+| Window Cleaning | `photo-1733271751327-140114dbdb4c` | No |
+
+All descriptions: "Create a professional and welcoming environment for your office or business." (Residential says "home" instead)
+
+**Card styling**: `w-[246px] h-[367px]`, `rounded-[10px]`, shadow `0 2px 12px rgba(0,0,0,0.08)`
+- Normal: `bg-white`
+- Highlighted: `bg-[#624bf2]` with a "View" badge (purple circle `51x51px` in top-right of image)
+- Image area: `h-[224px]`, `w-[214px]`, centered with `mx-auto mt-4`, `rounded-[12px]`
+- Title: DM Sans semibold 17px, `leading-[23px]`
+- Description: DM Sans normal 14px
+- Colors flip white on highlighted card
+
+**Dots**: 5 dots centered below cards, sizes `[9, 14, 18, 14, 9]px`, center dot `#6649fb`, rest `#d9d9d9`
+
+---
+
+### 7.4 HowWeWorkSection
+
+**Background**: White, `py-16`
+
+**Label**: "How we work" (centered)
+**Heading**: "Trusted Cleaning Process Designed Around You" — centered
+
+**Layout**: 3-column on desktop (left steps, center image, right steps)
+
+**Steps** (left 2, right 2), each in `w-[330px]`:
+
+| # | Title | Description |
+|---|---|---|
+| 01 | Book Your Service | Choose a convenient time service package that fits your needs book takes just a few minutes |
+| 02 | We Plan & Prepare | (same) |
+| 03 | Cleaning Begins | (same) |
+| 04 | Final Inspection | (same) |
+
+**Step card**: `bg-[#f2f0fe]`, `rounded-[12px]`, padding `p-5`, `h-[150px]`
+- Number: DM Sans bold 28px `#333`
+- Title: DM Sans bold 22px `#333`
+- Description: DM Sans medium 14px `#595959`, `leading-[1.4]`
+
+**Center decorator** (hidden on mobile): `w-[328px] h-[462px]`, `rounded-[24px]`, gradient `from-[#f2f0fe] to-[#6546fa]`, shadow `0 0 17px rgba(0,0,0,0.25)`. Contains centered content:
+- Broom emoji: 🧹 at 80px
+- "VK Max Cleanz": Montserrat bold 20px white
+- "Professional Cleaning Services": DM Sans white/80 14px
+
+---
+
+### 7.5 ProjectsSection
+
+**Background**: `#111727`, `py-16`
+
+**Header**: Flex, space-between
+- Label: "Our Projects" (white)
+- Heading: "Trusted Cleaning Process Designed Around You" — Montserrat extrabold 32px white
+- Nav arrows (right side): Two round buttons `50x50px`
+  - Left: `bg-[#6045ed]`, hover `bg-[#5035dd]`
+  - Right: `bg-[#252e3c]`, hover `bg-[#3a4456]`
+
+**Cards row**: Flex, `gap-6`, `overflow-hidden`
+
+1. **Small card** (`225x400px`): `rounded-[24px]`, `hero-bg.png`, overlay `rgba(42,64,123,0.1)`, shadow `0 0 17px rgba(0,0,0,0.25)`
+2. **Large featured card** (`500x400px`): `rounded-[24px]`, `hero-bg.png`, gradient overlay `from-[rgba(41,27,128,0.2)] to-[#624bf2]`
+   - Top tags: `["Cleaning Services", "Residential", "Deep Clean", "Floor Clean"]` — `bg-[#6649fb]`, `rounded-[20px]`, `px-3 py-1.5`, DM Sans 12px white
+   - Bottom text: "Speaking Home Makeover" (DM Sans 14px white) + "Deep cleaning for a family residence" (DM Sans semibold 18px white) + white circle arrow button
+3. **Small card** (same as #1)
+4. **Small card** (same as #1)
+
+---
+
+### 7.6 TestimonialsSection
+
+**Background**: `#f2f0fe`, `py-16`
+
+**Label**: "Testimonials" (centered)
+**Heading**: "See Why Customers Trust Us" — centered
+
+**Layout**: Prev button — cards pair — next button, flex centered
+
+**Nav buttons**: Purple circles `50x50px`, `bg-[#6045ed]`, hover `bg-[#5035dd]`, with ChevronLeft/Right icons
+
+**Testimonial data** (shown 2 at a time, with carousel state):
+
+| Name | Role | Text |
+|---|---|---|
+| Wade Warren | Ceo, Postman | Assured country believe. On even feet time have an no at. Relation so in confined smallest children unpacked delicate. |
+| James Miren | HR, Reddis | (same as Wade) |
+| Sarah Johnson | Homeowner | Their team is absolutely amazing! The house has never been cleaner. I've been using their service for 3 years now. |
+| Michael Chen | Business Owner | Professional, reliable and thorough. Our office has been sparkling clean since we started using VK Max Cleanz. |
+
+**Card**: `bg-white`, `border border-[#ebebeb]`, `rounded-[10px]`, `max-w-[370px]`, `min-h-[278px]`
+- Avatar: `avatar.png`, `110x110px`, `rounded-[6px]`, absolute `top-[30px] left-[30px]`
+- Quote icon (SVG): Absolute `top-[30px] right-[30px]`, `rotate-180`, `69x46`, fill `#6045ED`. The quote SVG path: `M0 0.249V27.27C0 37.57 8.35 45.93 18.66 45.93H25.31C27.36 45.93 28.98 44.26 28.98 42.25V27.27C28.98 25.22 27.32 23.6 25.31 23.6H14.49L17.08 10.77C17.21 10.19 16.83 9.61 16.25 9.44L7.69 7.1C7.1 6.93 6.48 7.3 6.31 7.89L0 27.27V0.249Z M39.65 0.249V27.27C39.65 37.57 48 45.93 58.3 45.93H64.96C67.01 45.93 68.63 44.26 68.63 42.25V27.27C68.63 25.22 66.97 23.6 64.96 23.6H54.14L56.73 10.77C56.85 10.19 56.48 9.61 55.9 9.44L47.33 7.1C46.75 6.93 46.12 7.3 45.96 7.89L39.65 27.27V0.249Z`
+- Text: Montserrat normal 16px `#615e5b`, `leading-[1.5]`
+- Name: Montserrat medium 18px `#202020`
+- Role: Montserrat normal 13px `#615e5b`, `tracking-[-0.28px]`
+- Star rating: 5 gold stars (SVG, `22x20px`, fill `#FAB33F`)
+
+**Carousel gap**: `60px` (lg: `100px`)
+
+**Dots**: Buttons, active `18px #6649fb`, inactive `14px #d9d9d9`
+
+---
+
+### 7.7 FaqSection
+
+**Background**: White, `py-16`
+
+**Layout**: 2-column (lg), left info + right accordion
+
+**Left side** (`w-[480px]`):
+- Label: "FAQ"
+- Heading: "Trusted Answers from Our Cleaning Professionals"
+- Description: "Choose a convenient time service package that fits your needs book takes just a few minutes. Choose a convenient time service package that fits your needs book takes just a few minutes." — DM Sans medium 16px `#595959`, `max-w-[504px]`
+- CTA: "Contact Us" → links to `/contact`
+
+**Right — Accordion**: `gap-3`
+
+| Question | Answer |
+|---|---|
+| Are your cleaning products safe? | Choose a convenient time service package that fits your needs book takes just a few minutes. (repeated 2x) |
+| How long does a cleaning session take? | Choose a convenient time... The duration depends on the size of the space and the type of cleaning. |
+| Do I need to be home during the cleaning? | Choose a convenient time... |
+| Can I reschedule my booking? | Choose a convenient time... |
+| What areas do you cover? | Choose a convenient time... |
+| Do you offer recurring cleaning plans? | Choose a convenient time... |
+
+- Default open: index 1 (second item)
+- Closed: `bg-white`, `rounded-[12px]`, shadow `1px 1px 4px rgba(0,0,0,0.25)`
+  - Question: DM Sans extrabold 16px black, `tracking-[-0.64px]`
+  - Chevron: ChevronDown 22px `#1e1e1e`
+- Open: `bg-[#6546fa]`, text white, chevron rotated 180°
+  - Answer: DM Sans normal 12px white, `leading-[1.6]`
+
+---
+
+### 7.8 ContactSection
+
+**Background**: `#111727`, `py-16`
+
+**Label**: "Contact Us" (white, centered)
+**Heading**: "Let's Make Your Home or Office Shine - Contact Us Now" — white, centered
+
+**Layout**: 2-column (lg row)
+
+#### Left — Contact Form Card
+`bg-[#282e3c]`, `rounded-[16px]`, `p-8`, flex-1
+- Title: "Get In Touch" — DM Sans semibold 28px white, `tracking-[-1.12px]`
+- Description: "Choose a convenient time service package..." — DM Sans normal 16px white
+
+**Form fields** (`gap-5`):
+- Row 1: Full Name + Last Name (flex, gap-4)
+- Row 2: Email Address + Phone Number (flex, gap-4)
+- Row 3: Service Type (select dropdown)
+- Row 4: Your Message (textarea, 4 rows)
+- Row 5: Submit button "Send Now" (right-aligned, standard CTA)
+
+**Input styling**: `h-[55px]`, `bg-transparent`, `border-2 border-[#484f61]`, `rounded-[12px]`, `px-4`, DM Sans 14px white, `placeholder: white/40`, focus: `border-[#6546fa]`
+
+**Select dropdown**: Same as input + custom SVG arrow (double triangle, `14x24px`, fill `#484F61`), `appearance-none`
+
+**Service options**: Residential Cleaning, Commercial Cleaning, Deep Cleaning, Window Cleaning
+
+#### Right — Contact Info Card
+`bg-[#282e3c]`, `rounded-[16px]`, `p-8`, `w-[380px]`
+- Title: "Get In Touch"
+- Divider: `h-[2px] bg-[#484f61]`
+
+**Info items** (each separated by divider):
+
+| Icon BG | Icon | Label | Value |
+|---|---|---|---|
+| `#3e434e` | MapPin 24px | Our Location | Local Address, Street Lmvdkn, 125-G, the woodloneinis, 772 |
+| `#634bf5` | Phone 24px | Phone Number | +91 49370 34828, +91 49370 34826 |
+| `#3e434e` | Mail 24px | Email Address | vkmaxcleanz@gmail.com, Info@vkmaxcleanz.com |
+
+Icon circles: `70x70px`, `rounded-full`
+Label: DM Sans normal 18px white
+Value: DM Sans normal 16px white/70, `leading-[1.5]`
+
+**Social buttons**: "Stay Connected" label. 4 buttons `[fb, tw, ig, li]`, `47x47px`, `bg-[#3e434e]`, `hover:bg-[#6546fa]`, DM Sans semibold 12px white uppercase
+
+---
+
+## 8. FOOTER
+
+**Background**: `bg-[#111727]`, `py-12`, `border-t border-[#282e3c]`
+
+**Layout**: 4-column flex-wrap, `gap-8`, `mb-10`
+
+### Col 1: Brand (`max-w-[280px]`)
+- Logo image (48px height, inverted with `brightness-0 invert` filter for white version)
+- Tagline: "Spotless Spaces, Stress-Free Living. Professional cleaning for homes and businesses." — DM Sans 14px white/70
+- Social buttons: `[fb, tw, ig, li]`, `38x38px`, `bg-[#282e3c]`, `hover:bg-[#6546fa]`, DM Sans bold 10px white uppercase
+
+### Col 2: Quick Links
+Links: Home (/), Services (/services), About Us (/about), Contact Us (/contact)
+— DM Sans 14px white/70, `hover:text-[#6546fa]`
+
+### Col 3: Our Services
+Links: Residential Cleaning, Commercial Cleaning, Deep Cleaning, Window Cleaning, Carpet Cleaning
+— All link to `/services`, same styling as Quick Links
+
+### Col 4: Contact Info
+- MapPin icon (`#6546fa`): "Local Address, Street Lmvdkn, 125-G, the woodloneinis, 772"
+- Phone icon: "75690 57281"
+- Mail icon: "vkmaxcleanz@gmail.com"
+— DM Sans 14px white/70
+
+**Bottom bar**: `border-t border-[#282e3c]`, `pt-6`, flex space-between
+- Left: "© 2026 VK Max Cleanz Solutions. All rights reserved."
+- Right: "Privacy Policy · Terms of Service"
+— DM Sans 14px white/50
+
+---
+
+## 9. PAGE-SPECIFIC HEROES
+
+### ServicesPage Hero
+- BG: `#664bfa`, `py-16`
+- Label: "Our Services" (white/80, 15px)
+- Heading: "Complete Cleaning Solutions for Every Need" — Montserrat extrabold 48px white, `line-height: 1.2`
+- Description: "From residential homes to large commercial spaces, we deliver spotless results every time." — DM Sans 18px white/80, `max-w-[600px]`
+- CTA: "Book a Service Now" → `/contact` (white bg, purple text, purple leading icon circle)
+
+**Sections below hero**: ServicesSection → HowWeWorkSection → ProjectsSection
+
+### AboutPage Hero
+- BG: `#664bfa`, `py-16`
+- Label: "Who We Are" (white/80, 15px)
+- Heading: "About VK Max Cleanz Solutions" — Montserrat extrabold 48px white
+- Description: "We believe a clean space creates a happier, healthier life. Serving homes and businesses with unmatched quality since 2014." — DM Sans 18px white/80, `max-w-[600px]`
+
+**Sections below hero**: AboutSection → TestimonialsSection → FaqSection
+
+### ContactPage Hero
+- BG: `#664bfa`, `py-16`
+- Label: "Reach Out" (white/80, 15px)
+- Heading: "Contact Us" — Montserrat extrabold 48px white
+- Description: "Have a question or ready to book? We're here to help. Reach out and our team will get back to you shortly." — DM Sans 18px white/80, `max-w-[600px]`
+
+**Sections below hero**: ContactSection → FaqSection
+
+---
+
+## 10. HERO CLOUDS SVG
+
+The HeroSection has decorative white cloud/wave SVG shapes at the bottom creating a smooth transition. These are 6 layered `<path>` elements in a `2978.11 x 529` viewBox, all filled white, with `preserveAspectRatio="none"` and `height: 160px`. The paths create organic, wavy, layered cloud shapes. Use these SVG path `d` values:
+
+```
+Cloud 1: M0 529V462.5C156.5 394.5 401 350 625 387C849 424 1050 350 1200 300C1350 250 1550 200 1700 230C1850 260 2050 300 2200 270C2350 240 2550 200 2700 230C2850 260 2978.11 300 2978.11 300V529H0Z
+Cloud 2: M0 529V490C200 460 450 430 650 450C850 470 1050 430 1250 420C1450 410 1650 430 1850 440C2050 450 2250 430 2450 420C2650 410 2850 430 2978.11 440V529H0Z
+Wave 1: M0 529V500C100 485 250 475 400 480C550 485 700 495 850 490C1000 485 1150 475 1300 480C1450 485 1600 495 1750 490C1900 485 2050 475 2200 480C2350 485 2500 495 2650 490C2800 485 2900 480 2978.11 478V529H0Z
+Wave 2: M0 529V510C150 500 350 495 500 500C650 505 800 515 950 510C1100 505 1250 495 1400 500C1550 505 1700 515 1850 510C2000 505 2150 495 2300 500C2450 505 2600 515 2750 510C2900 505 2978.11 502 2978.11 500V529H0Z
+Wave 3: M0 529V520C200 515 500 512 750 515C1000 518 1250 522 1500 520C1750 518 2000 515 2250 517C2500 519 2750 522 2978.11 520V529H0Z
+Wave 4: M0 529V525C300 523 700 521 1100 523C1500 525 1900 527 2300 525C2600 524 2850 523 2978.11 523V529H0Z
+```
+
+Waves 1-4 use both `fill="white"` and `stroke="white"` with `strokeMiterlimit="10"`.
+
+---
+
+## 11. UNSPLASH IMAGES USED IN SECTIONS
+
+These are loaded directly from URLs (no local files needed):
+
+| URL ID | Full URL |
+|---|---|
+| Cleaning 1 | `https://images.unsplash.com/photo-1581578949510-fa7315c4c350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400` |
+| Cleaning 2 | `https://images.unsplash.com/photo-1644890550788-3ca4ee5c3bc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400` |
+| Cleaning 3 | `https://images.unsplash.com/photo-1758273238415-01ec03d9ef27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400` |
+| Cleaning 4 | `https://images.unsplash.com/photo-1733271751327-140114dbdb4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400` |
+
+Used in: AboutSection (1, 2, 3), ServicesSection (2, 1, 3, 4)

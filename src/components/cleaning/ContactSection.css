@@ -170,17 +170,47 @@
     color: var(--grey-400);
 }
 
-.contact-map {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    height: 200px;
+.contact-social-card {
     background: var(--dark-card);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
     border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-social-card h3 {
+    color: var(--white);
+    margin-bottom: var(--space-2);
+}
+
+.contact-social-card>p {
+    color: var(--grey-400);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-6);
+}
+
+.contact-social-icons {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: rgba(108, 99, 255, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--grey-500);
-    font-size: var(--text-6xl);
+    color: var(--accent-light, #8B85FF);
+    transition: all var(--transition-base);
+}
+
+.social-icon:hover {
+    background: var(--accent, #6C63FF);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
 }
 
 @media (max-width: 1024px) {

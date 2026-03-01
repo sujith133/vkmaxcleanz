@@ -4,11 +4,10 @@ import AboutSection from '../../components/cleaning/AboutSection';
 import ServicesSection from '../../components/cleaning/ServicesSection';
 import ProcessSection from '../../components/cleaning/ProcessSection';
 import ProjectsSection from '../../components/cleaning/ProjectsSection';
-import TeamSection from '../../components/cleaning/TeamSection';
 import TestimonialsSection from '../../components/cleaning/TestimonialsSection';
 import FAQSection from '../../components/cleaning/FAQSection';
+import JoinTeamSection from '../../components/cleaning/JoinTeamSection';
 import ContactSection from '../../components/cleaning/ContactSection';
-import BlogSection from '../../components/cleaning/BlogSection';
 import CTABanner from '../../components/shared/CTABanner';
 
 export default function CleaningHome() {
@@ -40,11 +39,10 @@ export default function CleaningHome() {
             <ServicesSection />
             <ProcessSection />
             <ProjectsSection />
-            <TeamSection />
             <TestimonialsSection />
             <FAQSection />
+            <JoinTeamSection />
             <ContactSection />
-            <BlogSection />
             <CTABanner
                 title="Join Thousands of Happy Clients and Book Today"
                 description="Experience the difference with our professional services. Your satisfaction is guaranteed."
