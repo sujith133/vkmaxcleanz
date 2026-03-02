@@ -188,23 +188,24 @@
     background: #6649fb;
 }
 
-@media (max-width: 768px) {
-    .clean-services-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 1080px) {
     .clean-services-heading {
-        font-size: 26px;
+        font-size: 28px;
     }
 
-    .clean-services-cards {
-        gap: 16px;
+    .clean-services-header {
+        justify-content: center;
+        text-align: center;
     }
 
     .clean-service-card {
-        width: calc(50% - 8px);
-        height: auto;
+        width: calc(33.333% - 16px);
+    }
+}
+
+@media (max-width: 860px) {
+    .clean-service-card {
+        width: calc(50% - 12px);
     }
 }
 

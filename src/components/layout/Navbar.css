@@ -265,21 +265,31 @@
    RESPONSIVE
    ======================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .navbar {
         width: 94%;
         padding: 0 var(--space-4);
     }
 
     .navbar-inner {
-        height: 56px;
+        height: 60px;
     }
 
-    .navbar-logo-img {
-        height: 36px;
-        max-height: 36px;
+    .navbar-links {
+        gap: var(--space-4);
     }
 
+    .navbar-links a {
+        font-size: var(--text-xs);
+    }
+
+    .brand-cta-btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-xs);
+    }
+}
+
+@media (max-width: 860px) {
     .navbar-links {
         display: none;
     }

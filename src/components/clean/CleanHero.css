@@ -142,14 +142,41 @@
     display: block;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .clean-hero-heading {
-        font-size: 42px;
+        font-size: 46px;
+    }
+
+    .clean-hero-content {
+        padding: 60px 0;
     }
 
     .clean-hero-image {
         width: 45%;
-        opacity: 0.4;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 880px) {
+    .clean-hero-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .clean-hero-content {
+        max-width: 100%;
+    }
+
+    .clean-hero-heading {
+        font-size: 38px;
+    }
+
+    .clean-hero-image {
+        display: none;
+    }
+
+    .clean-hero-description {
+        margin: 0 auto 32px;
     }
 }
 

@@ -184,6 +184,30 @@
     padding: 8px 0;
 }
 
+@media (max-width: 1080px) {
+    .clean-navbar {
+        max-width: 90%;
+        padding: 0 16px;
+    }
+
+    .clean-navbar-links {
+        gap: 12px;
+    }
+
+    .clean-navbar-links a {
+        font-size: 14px;
+    }
+
+    .clean-navbar-furniture-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .clean-navbar-phone-text span {
+        font-size: 11px !important;
+    }
+}
+
 @media (max-width: 900px) {
     .clean-navbar-links {
         display: none;

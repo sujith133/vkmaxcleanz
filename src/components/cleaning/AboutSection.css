@@ -85,8 +85,8 @@
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-4);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
     padding-top: var(--space-8);
     border-top: 1px solid var(--grey-200);
 }
@@ -112,39 +112,42 @@
 @media (max-width: 1024px) {
     .about-content {
         grid-template-columns: 1fr;
-        gap: var(--space-10);
+        gap: var(--space-12);
+        text-align: center;
     }
 
     .about-images {
         height: auto;
-        max-width: 100%;
+        max-width: 80%;
         margin: 0 auto;
         position: relative;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: var(--space-4);
     }
 
-    .about-img-main {
-        position: static;
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-    }
-
+    .about-img-main,
     .about-img-secondary {
         position: static;
         width: 100%;
-        height: auto;
-        max-height: 260px;
+        height: 250px;
         border: none;
     }
 
     .about-experience-badge {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        align-self: flex-start;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+    }
+
+    .about-text {
+        padding-top: var(--space-8);
+    }
+
+    .about-stats {
+        justify-content: center;
     }
 }
 

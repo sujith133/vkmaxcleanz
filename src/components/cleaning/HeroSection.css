@@ -165,24 +165,55 @@
 @media (max-width: 1024px) {
     .hero-content {
         grid-template-columns: 1fr 1fr;
-        padding-top: 120px;
-        gap: var(--space-6);
+        padding-top: 100px;
+        gap: var(--space-4);
+        align-items: center;
     }
 
     .hero-text {
-        padding-bottom: 60px;
+        padding-bottom: 40px;
     }
 
     .hero-text h1 {
         font-size: var(--text-4xl);
+        margin-bottom: var(--space-4);
+    }
+
+    .hero-desc {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-6);
     }
 
     .person-img {
-        max-width: 100%;
+        max-width: 90%;
     }
 
     .desktop-break {
         display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-text {
+        padding-bottom: 0;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+    }
+
+    .person-img {
+        max-width: 60%;
     }
 }
 

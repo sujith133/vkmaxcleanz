@@ -29,7 +29,7 @@ export default function AboutSection() {
                             Our team of certified professionals provides top-notch services including cleaning, repairs,
                             and maintenance to deliver excellent results every time.
                         </p>
-                        <div className="about-stats" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+                        <div className="about-stats">
                             <div className="about-stat">
                                 <strong>700+</strong>
                                 <span>Happy Customers</span>

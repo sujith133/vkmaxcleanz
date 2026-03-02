@@ -141,16 +141,32 @@
     color: var(--white);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer-col:first-child,
+    .footer-col:last-child {
+        grid-column: span 3;
+        text-align: center;
+    }
+
+    .footer-social,
+    .newsletter-form {
+        justify-content: center;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-8);
+    }
+
+    .footer-col:first-child,
+    .footer-col:last-child {
+        grid-column: span 2;
     }
 
     .footer-bottom {
