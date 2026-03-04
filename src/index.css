@@ -5,42 +5,42 @@
    ======================================== */
 
 :root {
-  /* Cleaning Theme (Default) – Deep Indigo / Navy */
-  --primary: #2D2B7F;
-  --primary-dark: #1E1C5E;
-  --primary-light: #4A47A8;
-  --primary-lighter: #6C69C9;
-  --primary-bg: #F0EFFF;
-  --accent: #6C63FF;
-  --accent-light: #8B85FF;
-  --accent-dark: #4F46E5;
-  --secondary: #00BCD4;
-  --secondary-dark: #00838F;
+  /* Cleaning Theme (Default) – Forest Green / Gold */
+  --primary: #1B5E20;
+  --primary-dark: #0D3B0D;
+  --primary-light: #2E7D32;
+  --primary-lighter: #43A047;
+  --primary-bg: #E8F5E9;
+  --accent: #FFC107;
+  --accent-light: #FFD54F;
+  --accent-dark: #FFA000;
+  --secondary: #8D6E63;
+  --secondary-dark: #6D4C41;
 
-  --hero-gradient: linear-gradient(135deg, #2D2B7F 0%, #4A47A8 40%, #6C63FF 100%);
-  --hero-gradient-soft: linear-gradient(135deg, rgba(45, 43, 127, 0.08) 0%, rgba(108, 99, 255, 0.06) 100%);
-  --cta-gradient: linear-gradient(135deg, #2D2B7F 0%, #6C63FF 100%);
-  --card-hover-border: #6C63FF;
+  --hero-gradient: linear-gradient(135deg, #1B5E20 0%, #2E7D32 40%, #43A047 100%);
+  --hero-gradient-soft: linear-gradient(135deg, rgba(27, 94, 32, 0.08) 0%, rgba(255, 193, 7, 0.06) 100%);
+  --cta-gradient: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+  --card-hover-border: #FFC107;
 
   /* Neutrals */
   --white: #FFFFFF;
-  --off-white: #F7F9FC;
-  --grey-50: #F8FAFC;
-  --grey-100: #F1F5F9;
-  --grey-200: #E2E8F0;
-  --grey-300: #CBD5E1;
-  --grey-400: #94A3B8;
-  --grey-500: #64748B;
-  --grey-600: #475569;
-  --grey-700: #334155;
-  --grey-800: #1E293B;
-  --grey-900: #0F172A;
-  --dark-bg: #111033;
-  --dark-card: #1a1950;
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
-  --text-light: #94A3B8;
-  --text-on-dark: #F1F5F9;
+  --off-white: #F9FBF7;
+  --grey-50: #F8FAF6;
+  --grey-100: #F1F5F0;
+  --grey-200: #E2E8E0;
+  --grey-300: #CBD5C9;
+  --grey-400: #94A390;
+  --grey-500: #64746A;
+  --grey-600: #475549;
+  --grey-700: #334135;
+  --grey-800: #1E2B1F;
+  --grey-900: #0F170F;
+  --dark-bg: #14261A;
+  --dark-card: #1B3726;
+  --text-primary: #1E2B1F;
+  --text-secondary: #475549;
+  --text-light: #94A390;
+  --text-on-dark: #F1F5F0;
   --text-on-primary: #FFFFFF;
 
   /* Shadows */

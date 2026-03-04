@@ -28,7 +28,7 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(45, 43, 127, 0.92) 0%, rgba(30, 28, 94, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.92) 0%, rgba(13, 59, 13, 0.80) 100%);
 }
 
 /* Content Area */
@@ -89,7 +89,7 @@
 }
 
 .btn-book {
-    background: var(--accent, #6C63FF);
+    background: var(--accent, #FFC107);
     color: var(--white);
     border: none;
     border-radius: var(--radius-full);
@@ -104,7 +104,7 @@
 }
 
 .btn-book:hover {
-    background: var(--accent-dark, #4F46E5);
+    background: var(--accent-dark, #FFA000);
     transform: translateY(-2px);
 }
 

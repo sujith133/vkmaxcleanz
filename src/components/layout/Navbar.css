@@ -153,14 +153,14 @@
 }
 
 .brand-cta-btn.purple {
-    background: #6C63FF;
-    color: var(--white);
+    background: #FFC107;
+    color: #1B5E20;
 }
 
 .brand-cta-btn.purple:hover {
-    background: #4F46E5;
+    background: #FFA000;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
 }
 
 /* ========================================

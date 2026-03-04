@@ -78,7 +78,7 @@
 .form-group select:focus {
     border-color: var(--primary-light);
     background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.15);
 }
 
 .form-group input::placeholder,
@@ -114,7 +114,7 @@
 
 .contact-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(27, 94, 32, 0.3);
 }
 
 .contact-info-wrapper {
@@ -151,7 +151,7 @@
     width: 48px;
     height: 48px;
     border-radius: var(--radius-sm);
-    background: rgba(108, 99, 255, 0.15);
+    background: rgba(27, 94, 32, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,19 +198,19 @@
     width: 48px;
     height: 48px;
     border-radius: var(--radius-sm);
-    background: rgba(108, 99, 255, 0.15);
+    background: rgba(27, 94, 32, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-light, #8B85FF);
+    color: var(--accent-light, #FFD54F);
     transition: all var(--transition-base);
 }
 
 .social-icon:hover {
-    background: var(--accent, #6C63FF);
+    background: var(--accent, #FFC107);
     color: var(--white);
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
 }
 
 @media (max-width: 1024px) {
