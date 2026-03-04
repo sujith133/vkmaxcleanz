@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import './Navbar.css';
 
 export default function Navbar() {
     const { brand, toggleBrand } = useTheme();
+    const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -14,20 +15,24 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const scrollToSection = (id: string) => {
+    const handleNavClick = (link: { id: string; route?: string }) => {
         setMobileOpen(false);
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
+        if (link.route) {
+            navigate(link.route);
+        } else {
+            const el = document.getElementById(link.id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
 
-    const navLinks = brand === 'cleaning'
+    const navLinks: { label: string; id: string; route?: string }[] = brand === 'cleaning'
         ? [
-            { label: 'Home', id: 'hero' },
-            { label: 'About Us', id: 'aboutus' },
-            { label: 'Services', id: 'service' },
-            { label: 'Contact Us', id: 'contact' },
+            { label: 'Home', id: 'home', route: '/cleanz' },
+            { label: 'About Us', id: 'about', route: '/cleanz/about' },
+            { label: 'Services', id: 'services', route: '/cleanz/services' },
+            { label: 'Contact Us', id: 'contact', route: '/cleanz/contact' },
         ]
         : [
             { label: 'Home', id: 'hero' },
@@ -48,8 +53,8 @@ export default function Navbar() {
                         {navLinks.map(link => (
                             <a
                                 key={link.id}
-                                href={`#${link.id}`}
-                                onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }}
+                                href={link.route || `#${link.id}`}
+                                onClick={(e) => { e.preventDefault(); handleNavClick(link); }}
                             >
                                 {link.label}
                             </a>
@@ -93,8 +98,8 @@ export default function Navbar() {
                 {navLinks.map(link => (
                     <a
                         key={link.id}
-                        href={`#${link.id}`}
-                        onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }}
+                        href={link.route || `#${link.id}`}
+                        onClick={(e) => { e.preventDefault(); handleNavClick(link); }}
                     >
                         {link.label}
                     </a>
