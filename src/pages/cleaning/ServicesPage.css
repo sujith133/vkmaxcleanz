@@ -468,6 +468,31 @@ span.sp-crumb:hover {
     }
 }
 
+/* Portrait mode: single-column cards and stacked service detail */
+@media (max-width: 1024px) and (orientation: portrait) {
+
+    .sp-grid-4,
+    .sp-grid-3 {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sp-service-card {
+        grid-template-columns: 1fr;
+    }
+
+    .sp-service-img-wrap {
+        aspect-ratio: 16 / 9;
+    }
+
+    .sp-service-info {
+        padding: var(--space-6);
+    }
+}
+
 /* ========================================
    RESPONSIVE – SMALL TABLET (≤768px)
    ======================================== */
