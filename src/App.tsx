@@ -6,6 +6,7 @@ import CleaningHome from './pages/cleaning/CleaningHome';
 import FurnitureHome from './pages/furniture/FurnitureHome';
 import CleanHomePage from './pages/clean/CleanHomePage';
 import FloatingWhatsApp from './components/shared/FloatingWhatsApp';
+import ManPowerHome from './pages/man power/ManPowerHome';
 
 function AppContent() {
   return (
@@ -15,6 +16,7 @@ function AppContent() {
         <Route path="/" element={<Navigate to="/cleanz" replace />} />
         <Route path="/cleanz" element={<CleaningHome />} />
         <Route path="/furnitures" element={<FurnitureHome />} />
+        <Route path="/manpower" element={<ManPowerHome />} />
         <Route path="*" element={<Navigate to="/cleanz" replace />} />
       </Routes>
       <Footer />
