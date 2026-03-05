@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import './HeroSection.css';
 
 export default function HeroSection() {
+    const navigate = useNavigate();
+
     return (
         <section className="hero" id="hero">
 
@@ -19,7 +22,7 @@ export default function HeroSection() {
                     </p>
 
                     <div className="hero-actions">
-                        <button className="btn-book">
+                        <button className="btn-book" onClick={() => navigate('/cleanz/services')}>
                             <span className="icon-circle">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="var(--primary, #6C63FF)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

@@ -315,6 +315,27 @@
 /* ========================================
    RESPONSIVE
    ======================================== */
+/* Portrait mode: stack join team content vertically */
+@media (max-width: 1024px) and (orientation: portrait) {
+    .join-team-content {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-12) var(--space-4);
+    }
+
+    .join-team-text h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .join-team-text p {
+        font-size: var(--text-base);
+        margin: 0 auto;
+    }
+
+    .join-team-label {
+        justify-content: center;
+    }
+}
 
 @media (max-width: 768px) {
     .join-team-content {
