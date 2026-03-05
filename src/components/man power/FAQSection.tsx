@@ -3,24 +3,24 @@ import './FAQSection.css';
 
 const faqs = [
     {
-        question: 'What cleaning services do you offer?',
-        answer: 'We offer residential cleaning, commercial cleaning, deep cleaning, move-in/out cleaning, office cleaning, carpet cleaning, and specialized sanitization services.',
+        question: 'What types of staff do you supply?',
+        answer: 'We supply trained personnel for various roles, including construction workers, warehouse staff, cleaning professionals, event helpers, and security personnel.',
     },
     {
-        question: 'How do I book a cleaning service?',
-        answer: 'You can easily book through our website by filling out the contact form, calling us directly, or clicking the "Book Service" button. Our team will confirm your appointment within 2 hours.',
+        question: 'How do I request manpower?',
+        answer: 'You can easily request staff through our website by filling out the contact form, calling us directly, or clicking the "Request Manpower" button.',
     },
     {
-        question: 'Are your cleaning products eco-friendly?',
-        answer: 'Yes! We exclusively use eco-friendly, non-toxic cleaning products that are safe for children, pets, and the environment while still delivering exceptional cleaning results.',
+        question: 'Are your workers vetted?',
+        answer: 'Yes! All our personnel undergo strict background checks, skill assessments, and professional training before being deployed to your site.',
     },
     {
-        question: 'Do you offer recurring cleaning plans?',
-        answer: 'Absolutely! We offer weekly, bi-weekly, and monthly cleaning plans at discounted rates. Contact us to customize a plan that fits your schedule and budget.',
+        question: 'What is the minimum hire period?',
+        answer: 'We offer flexible staffing options, ranging from daily assignments for events to long-term contracts for construction and corporate settings.',
     },
     {
-        question: 'What is your satisfaction guarantee?',
-        answer: 'We offer a 100% satisfaction guarantee. If you\'re not happy with any aspect of our service, we\'ll re-clean the area at no additional cost within 24 hours.',
+        question: 'What if a worker is unable to attend?',
+        answer: 'We maintain a robust pool of standby staff to ensure immediate replacements so your business operations are never interrupted.',
     },
 ];
 
@@ -36,7 +36,7 @@ export default function FAQSection() {
             <div className="section-wrapper">
                 <div className="section-header">
                     <span className="section-label">FAQ</span>
-                    <h2>Trusted Answers from Our<br />Cleaning Professionals</h2>
+                    <h2>Trusted Answers from Our<br />Staffing Experts</h2>
                 </div>
                 <div className="faq-content">
                     <div className="faq-list">
@@ -56,7 +56,7 @@ export default function FAQSection() {
                         <div className="faq-img-card">
                             <div className="faq-emoji">🤔</div>
                             <h3>Still Have Questions?</h3>
-                            <p>Can't find the answer you're looking for? Reach out to our support team.</p>
+                            <p>Can't find the answer you're looking for? Reach out to our recruitment team.</p>
                             <a href="#contact" className="faq-cta">Contact Us →</a>
                         </div>
                     </div>

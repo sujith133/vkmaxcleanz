@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import { useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import CleaningHome from './pages/cleaning/CleaningHome';
@@ -12,6 +13,57 @@ import FloatingWhatsApp from './components/shared/FloatingWhatsApp';
 import ManPowerHome from './pages/man power/ManPowerHome';
 
 function AppContent() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleManpowerClick = () => {
+      navigate('/manpower');
+    };
+
+    // Inject Desktop Button
+    const navbarRight = document.querySelector('.navbar-right');
+    const existingDesktopBtn = document.getElementById('manpower-nav-btn');
+
+    if (navbarRight && !existingDesktopBtn) {
+      const btn = document.createElement('button');
+      btn.id = 'manpower-nav-btn';
+      btn.className = 'brand-cta-btn green';
+      btn.innerText = 'Manpower';
+      btn.onclick = handleManpowerClick;
+
+      const hamburger = document.querySelector('.hamburger');
+      if (hamburger) {
+        navbarRight.insertBefore(btn, hamburger);
+      } else {
+        navbarRight.appendChild(btn);
+      }
+    }
+
+    // Inject Mobile Button
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const existingMobileBtn = document.getElementById('manpower-mobile-btn');
+
+    if (mobileMenu && !existingMobileBtn) {
+      const btn = document.createElement('button');
+      btn.id = 'manpower-mobile-btn';
+      btn.className = 'brand-cta-btn green mobile-cta';
+      btn.innerText = 'Manpower';
+      btn.onclick = () => {
+        const hamburger = document.querySelector('.hamburger') as HTMLElement;
+        if (hamburger && mobileMenu.classList.contains('open')) {
+          hamburger.click(); // Close menu
+        }
+        handleManpowerClick();
+      };
+      mobileMenu.appendChild(btn);
+    }
+
+    return () => {
+      existingDesktopBtn?.remove();
+      existingMobileBtn?.remove();
+    };
+  }, [navigate]);
+
   return (
     <>
       <Navbar />

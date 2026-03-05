@@ -1,14 +1,12 @@
 import './ServicesSection.css';
 
 const services = [
-    { icon: '💆‍♀️', title: 'Salon and Spa', description: 'Professional beauty and wellness treatments at home.' },
-    { icon: '❄️', title: 'AC & Appliance Repair', description: 'Expert technicians for all your home appliances.' },
-    { icon: '✨', title: 'Cleaning', description: 'Thorough deep cleaning for your entire home.' },
-    { icon: '🛠️', title: 'Electrician, Plumber & Carpenter', description: 'Reliable repair and maintenance services.' },
-    { icon: '🎨', title: 'Home Painting', description: 'Transform your space with professional painting.' },
-    { icon: '🐛', title: 'Pest Control', description: 'Effective solutions for a pest-free environment.' },
-    { icon: '📐', title: 'Interior Designing', description: 'Creative and functional interior design solutions.' },
-    { icon: '🛋️', title: 'Sofa Cleaning', description: 'Specialized cleaning for your upholstery.' }
+    { icon: '👷', title: 'Construction Workers', description: 'Skilled and unskilled labor for your construction sites.' },
+    { icon: '📦', title: 'Warehouse Staff', description: 'Efficient personnel for logistics, packing, and inventory.' },
+    { icon: '👔', title: 'Office Assistants', description: 'Professional support staff for your daily administrative tasks.' },
+    { icon: '🧹', title: 'Cleaning Crews', description: 'Dedicated cleaning professionals for commercial and residential places.' },
+    { icon: '🛡️', title: 'Security Staff', description: 'Trained security guards for comprehensive protection.' },
+    { icon: '🎭', title: 'Event Manpower', description: 'Reliable staff to ensure your events run smoothly.' }
 ];
 
 export default function ServicesSection() {
@@ -16,9 +14,9 @@ export default function ServicesSection() {
         <section className="services" id="service">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="section-label">Our Service Categories</span>
-                    <h2>Comprehensive Home Services<br />Tailored For You</h2>
-                    <p>We offer a wide range of professional services to meet all your household needs.</p>
+                    <span className="section-label">Our Premium Manpower</span>
+                    <h2>Skilled Workforce Solutions<br />Tailored For Your Business</h2>
+                    <p>We supply reliable, vetted, and trained personnel across multiple industries.</p>
                 </div>
                 <div className="services-grid">
                     {services.map((service, i) => (

@@ -6,21 +6,21 @@ const testimonials = [
         name: 'Amanda Peters',
         location: 'New York, NY',
         stars: 5,
-        text: 'Absolutely incredible service! The team arrived on time, were extremely professional, and left our home sparkling clean. Highly recommend!',
+        text: 'Absolutely incredible service! The deployed staff arrived on time, were extremely professional, and integrated seamlessly with our team. Highly recommend!',
     },
     {
         emoji: '👨',
         name: 'Robert Kim',
         location: 'Los Angeles, CA',
         stars: 5,
-        text: 'We\'ve been using Cleanzo for our office for 6 months now. The consistency and quality of their work is unmatched. Our employees love the clean workspace.',
+        text: 'We\'ve been using VK Max Cleanz manpower services for our warehouse for 6 months now. The consistency and quality of their personnel is unmatched. Operations run much smoother now.',
     },
     {
         emoji: '👩‍🦰',
         name: 'Jennifer Lopez',
         location: 'Chicago, IL',
         stars: 5,
-        text: 'The deep cleaning service exceeded all expectations. They cleaned areas I didn\'t even know existed! Will definitely be booking again.',
+        text: 'The event staff exceeded all expectations. They managed the crowd effectively and were extremely polite! Will definitely be requesting staff again.',
     },
 ];
 
@@ -30,8 +30,8 @@ export default function TestimonialsSection() {
             <div className="section-wrapper">
                 <div className="section-header">
                     <span className="section-label">Testimonials</span>
-                    <h2>See Why Customers Trust<br />Us with Their Clean</h2>
-                    <p>Real reviews from real clients who experienced our exceptional service.</p>
+                    <h2>See Why Businesses Trust<br />Us with Their Staffing</h2>
+                    <p>Real reviews from real clients who experienced our exceptional manpower services.</p>
                 </div>
                 <div className="testimonials-slider">
                     {testimonials.map((t, i) => (

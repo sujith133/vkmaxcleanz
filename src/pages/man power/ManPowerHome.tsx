@@ -41,12 +41,12 @@ export default function ManPowerHome() {
             <ProjectsSection />
             <TestimonialsSection />
             <FAQSection />
-            <JoinTeamSection />
             <ContactSection />
+            <JoinTeamSection />
             <CTABanner
-                title="Join Thousands of Happy Clients and Book Today"
-                description="Experience the difference with our professional services. Your satisfaction is guaranteed."
-                primaryBtn="Book Now"
+                title="Join Thousands of Happy Clients and Hire Staff Today"
+                description="Experience the difference with our professional manpower services. Your satisfaction is guaranteed."
+                primaryBtn="Request Staff"
                 secondaryBtn="View Our Services"
             />
         </main>

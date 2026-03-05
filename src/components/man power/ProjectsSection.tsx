@@ -4,27 +4,27 @@ import './ProjectsSection.css';
 const projects = [
     {
         image: '/images/cleaning/project-1.png',
-        title: 'Deep cleaning for a family residence',
-        subtitle: 'Speaking Home Makeover',
-        tags: ['Cleaning Services', 'Cleaning Services', 'Cleaning Services', 'Cleaning Services', 'Cleaning Services'],
+        title: 'Skilled workforce for commercial construction site',
+        subtitle: 'Construction Staffing',
+        tags: ['Construction', 'Labor', 'Skilled Workers'],
     },
     {
         image: '/images/cleaning/project-2.png',
-        title: 'Office space deep sanitization',
-        subtitle: 'Corporate Clean Solution',
-        tags: ['Office Cleaning', 'Sanitization', 'Deep Clean'],
+        title: 'Dedicated personnel for large-scale warehouse operations',
+        subtitle: 'Logistics & Warehousing',
+        tags: ['Warehouse', 'Logistics', 'Inventory'],
     },
     {
         image: '/images/cleaning/project-3.png',
-        title: 'Kitchen & bathroom restoration',
-        subtitle: 'Residential Revamp',
-        tags: ['Kitchen Clean', 'Bathroom Clean', 'Restoration'],
+        title: 'Event staff for national corporate conference',
+        subtitle: 'Event Management',
+        tags: ['Events', 'Hospitality', 'Support'],
     },
     {
         image: '/images/cleaning/project-4.png',
-        title: 'Post-construction site cleanup',
-        subtitle: 'Builder Cleanup Project',
-        tags: ['Post Construction', 'Site Cleanup', 'Heavy Duty'],
+        title: 'Commercial facility maintenance and cleaning team',
+        subtitle: 'Facility Management',
+        tags: ['Maintenance', 'Cleaning', 'Facilities'],
     },
 ];
 
@@ -72,8 +72,8 @@ export default function ProjectsSection() {
                 {/* Header */}
                 <div className="projects-header">
                     <div className="projects-header-text">
-                        <span className="projects-label">Our Projects</span>
-                        <h2>Trusted Cleaning Process<br />Designed Around You</h2>
+                        <span className="projects-label">Our Placements</span>
+                        <h2>Successful Deployments<br />Across Industries</h2>
                     </div>
                     <div className="projects-nav">
                         <button className="projects-nav-btn" onClick={prev} aria-label="Previous">

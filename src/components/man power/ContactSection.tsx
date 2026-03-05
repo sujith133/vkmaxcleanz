@@ -6,7 +6,7 @@ export default function ContactSection() {
             <div className="section-wrapper">
                 <div className="section-header">
                     <span className="section-label">Get in Touch</span>
-                    <h2>Let's Make Your Home or Office<br />Shine – Contact Us Now</h2>
+                    <h2>Let's Fulfill Your Staffing Needs<br />– Contact Us Now</h2>
                 </div>
                 <div className="contact-content">
                     <div className="contact-form-wrapper">
@@ -33,15 +33,16 @@ export default function ContactSection() {
                                 <label>Service Type</label>
                                 <select>
                                     <option value="">Select a service</option>
-                                    <option>Residential Cleaning</option>
-                                    <option>Commercial Cleaning</option>
-                                    <option>Deep Cleaning</option>
-                                    <option>Move In/Out</option>
+                                    <option>Construction Workers</option>
+                                    <option>Warehouse Staff</option>
+                                    <option>Cleaning Staff</option>
+                                    <option>Event Helpers</option>
+                                    <option>Security Personnel</option>
                                 </select>
                             </div>
                             <div className="form-group full-width">
                                 <label>Message</label>
-                                <textarea placeholder="Tell us about your cleaning needs..." />
+                                <textarea placeholder="Tell us about your staffing needs..." />
                             </div>
                             <button type="submit" className="contact-submit">
                                 Send Message →
@@ -70,7 +71,7 @@ export default function ContactSection() {
                                     <div className="contact-info-icon">✉️</div>
                                     <div className="contact-info-text">
                                         <h4>Email</h4>
-                                        <p>hello@cleanzo.com</p>
+                                        <p>staffing@vkmaxcleanz.com</p>
                                     </div>
                                 </div>
                                 <div className="contact-info-item">

@@ -1,5 +1,5 @@
 .testimonials {
-    background: var(--white);
+    background: #F5F1E8;
 }
 
 .testimonials-slider {
@@ -9,7 +9,7 @@
 }
 
 .testimonial-card {
-    background: var(--off-white);
+    background: white;
     border-radius: var(--radius-lg);
     padding: var(--space-8);
     border: 1px solid var(--grey-200);
@@ -25,8 +25,9 @@
 
 .testimonial-quote {
     font-size: 48px;
-    color: var(--primary);
-    opacity: 0.2;
+    color: #2F5D50;
+    opacity: 0.7;
+    text-shadow: 2px 2px 0px #F6C324;
     line-height: 1;
     margin-bottom: var(--space-2);
 }
@@ -42,7 +43,7 @@
     font-size: var(--text-base);
     line-height: 1.8;
     margin-bottom: var(--space-6);
-    color: var(--text-secondary);
+    color: #1E1E1E;
 }
 
 .testimonial-author {

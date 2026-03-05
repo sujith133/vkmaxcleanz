@@ -1,5 +1,5 @@
 .contact {
-    background: var(--dark-bg);
+    background: #2F5D50;
     position: relative;
 }
 
@@ -8,11 +8,11 @@
 }
 
 .contact .section-header p {
-    color: var(--grey-400);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .contact .section-header .section-label {
-    color: var(--accent-light);
+    color: #F6C324;
 }
 
 .contact-content {
@@ -78,7 +78,7 @@
 .form-group select:focus {
     border-color: var(--primary-light);
     background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(47, 93, 80, 0.15);
 }
 
 .form-group input::placeholder,
@@ -114,7 +114,7 @@
 
 .contact-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(47, 93, 80, 0.3);
 }
 
 .contact-info-wrapper {
@@ -151,7 +151,8 @@
     width: 48px;
     height: 48px;
     border-radius: var(--radius-sm);
-    background: rgba(108, 99, 255, 0.15);
+    background: #F6C324;
+    color: #1E1E1E;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,19 +199,19 @@
     width: 48px;
     height: 48px;
     border-radius: var(--radius-sm);
-    background: rgba(108, 99, 255, 0.15);
+    background: rgba(246, 195, 36, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-light, #8B85FF);
+    color: #F6C324;
     transition: all var(--transition-base);
 }
 
 .social-icon:hover {
-    background: var(--accent, #6C63FF);
-    color: var(--white);
+    background: #F6C324;
+    color: #1E1E1E;
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(246, 195, 36, 0.3);
 }
 
 @media (max-width: 1024px) {

@@ -63,8 +63,8 @@ export default function JoinTeamSection() {
                             </svg>
                             Careers
                         </p>
-                        <h2>Join Our Cleaning Team</h2>
-                        <p>Looking for a rewarding career? Join VK Max Cleanz and be part of a professional team that delivers spotless results every day.</p>
+                        <h2>Join Thousands of Skilled Workers Finding Jobs Through Us</h2>
+                        <p>Looking for a rewarding career? Join VK Max Cleanz and be part of a professional team that delivers exceptional manpower support across various industries.</p>
                     </div>
 
                     <button className="btn-join" onClick={() => setIsOpen(true)}>
@@ -114,7 +114,7 @@ export default function JoinTeamSection() {
                                     </div>
 
                                     <div className="enroll-field">
-                                        <label>Experience in Cleaning</label>
+                                        <label>Years of Experience</label>
                                         <select name="experience" value={formData.experience} onChange={handleChange}>
                                             <option value="">Select experience level</option>
                                             <option value="fresher">Fresher – No prior experience</option>

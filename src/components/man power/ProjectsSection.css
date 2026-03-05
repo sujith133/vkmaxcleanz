@@ -62,7 +62,7 @@
 .projects-nav-btn:hover {
     border-color: var(--accent);
     color: var(--white);
-    background: rgba(108, 99, 255, 0.15);
+    background: rgba(47, 93, 80, 0.15);
 }
 
 .projects-nav-btn.active {

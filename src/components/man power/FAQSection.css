@@ -24,7 +24,8 @@
 }
 
 .faq-item.active {
-    border-color: var(--primary);
+    border-color: #2F5D50;
+    background: #2F5D50;
     box-shadow: var(--shadow-md);
 }
 
@@ -45,7 +46,7 @@
 }
 
 .faq-item.active .faq-question {
-    color: var(--primary);
+    color: white;
 }
 
 .faq-icon {
@@ -63,8 +64,8 @@
 }
 
 .faq-item.active .faq-icon {
-    background: var(--primary);
-    color: var(--white);
+    background: #F6C324;
+    color: #1E1E1E;
     transform: rotate(45deg);
 }
 
@@ -83,6 +84,10 @@
     font-size: var(--text-base);
     line-height: 1.7;
     color: var(--text-secondary);
+}
+
+.faq-item.active .faq-answer p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .faq-illustration {
