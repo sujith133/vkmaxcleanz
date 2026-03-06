@@ -2,6 +2,8 @@
     background: var(--grey-900);
     color: var(--text-on-dark);
     padding-top: var(--space-16);
+    position: relative;
+    z-index: 1;
 }
 
 .footer-grid {

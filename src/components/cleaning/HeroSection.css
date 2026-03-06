@@ -8,13 +8,23 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    z-index: 0;
+    /* No overflow:hidden — fixed children must be visible */
+}
+
+/* All sections after hero must cover the fixed background */
+.hero~* {
+    position: relative;
+    z-index: 1;
 }
 
 /* Background Image and Overlay */
 .hero-bg {
-    position: absolute;
-    inset: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     z-index: 0;
 }
 
@@ -33,17 +43,20 @@
 
 /* Content Area */
 .hero-content {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 4;
     max-width: var(--max-width);
     margin: 0 auto;
     width: 100%;
+    height: 100vh;
     padding: 40px var(--space-6) var(--space-8);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: end;
     gap: var(--space-8);
-    flex: 1;
 }
 
 /* Text */
@@ -137,10 +150,10 @@
     z-index: 5;
 }
 
-/* Clouds Separator */
+/* Clouds Separator — stays in document flow so it scrolls */
 .hero-clouds {
-    position: absolute;
-    bottom: -3px;
+    position: relative;
+    margin-top: auto;
     left: 0;
     width: 100%;
     z-index: 6;
@@ -191,6 +204,35 @@
 
     .desktop-break {
         display: none;
+    }
+}
+
+/* Landscape mode for tablets: adjust content positioning
+   max-width 1366px covers all iPad models (Air 1180px, Pro 1194-1366px)
+   pointer: coarse ensures this only targets touch devices, not desktops */
+@media (max-width: 1366px) and (orientation: landscape) and (pointer: coarse) {
+    .hero {
+        min-height: calc(100vh - 75px);
+    }
+
+    .hero-content {
+        padding-left: calc(var(--space-6) + 75px);
+        padding-top: 0px;
+        align-items: end;
+        top: -100px;
+    }
+
+    .hero-text {
+        padding-bottom: 100px;
+    }
+
+    .hero-image-wrapper {
+        margin-top: -75px;
+        min-height: unset;
+    }
+
+    .person-img {
+        max-height: 75vh;
     }
 }
 
