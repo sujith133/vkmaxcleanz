@@ -1,17 +1,13 @@
+import { useNavigate } from 'react-router-dom';
+import { getCategories, getCategoryImageUrl } from '../../data/servicesData';
+import { useState } from 'react';
 import './ServicesSection.css';
 
-const services = [
-    { icon: '💆‍♀️', title: 'Salon and Spa', description: 'Professional beauty and wellness treatments at home.' },
-    { icon: '❄️', title: 'AC & Appliance Repair', description: 'Expert technicians for all your home appliances.' },
-    { icon: '✨', title: 'Cleaning', description: 'Thorough deep cleaning for your entire home.' },
-    { icon: '🛠️', title: 'Electrician, Plumber & Carpenter', description: 'Reliable repair and maintenance services.' },
-    { icon: '🎨', title: 'Home Painting', description: 'Transform your space with professional painting.' },
-    { icon: '🐛', title: 'Pest Control', description: 'Effective solutions for a pest-free environment.' },
-    { icon: '📐', title: 'Interior Designing', description: 'Creative and functional interior design solutions.' },
-    { icon: '🛋️', title: 'Sofa Cleaning', description: 'Specialized cleaning for your upholstery.' }
-];
-
 export default function ServicesSection() {
+    const navigate = useNavigate();
+    // Show only the first 4 main categories
+    const categories = getCategories().slice(0, 4);
+
     return (
         <section className="services" id="service">
             <div className="section-wrapper">
@@ -21,18 +17,53 @@ export default function ServicesSection() {
                     <p>We offer a wide range of professional services to meet all your household needs.</p>
                 </div>
                 <div className="services-grid">
-                    {services.map((service, i) => (
-                        <div className="service-card" key={i}>
-                            <div className="service-icon">
-                                <span>{service.icon}</span>
-                            </div>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
-                            <a href="#" className="service-link">Learn More →</a>
-                        </div>
+                    {categories.map((cat) => (
+                        <ServiceCategoryCard
+                            key={cat.name}
+                            name={cat.name}
+                            icon={cat.icon}
+                            description={cat.description}
+                            count={cat.count}
+                            onClick={() => navigate('/cleanz/services')}
+                        />
                     ))}
                 </div>
             </div>
         </section>
+    );
+}
+
+function ServiceCategoryCard({ name, icon, description, count, onClick }: {
+    name: string;
+    icon: string;
+    description: string;
+    count: number;
+    onClick: () => void;
+}) {
+    const [imgError, setImgError] = useState(false);
+    const imgUrl = getCategoryImageUrl(name);
+
+    return (
+        <div className="service-card" onClick={onClick} style={{ cursor: 'pointer' }}>
+            {!imgError && imgUrl ? (
+                <div className="service-card-img">
+                    <img
+                        src={imgUrl}
+                        alt={name}
+                        onError={() => setImgError(true)}
+                        loading="lazy"
+                    />
+                </div>
+            ) : (
+                <div className="service-icon">
+                    <span>{icon}</span>
+                </div>
+            )}
+            <h3>{name}</h3>
+            <p>{description}</p>
+            <a className="service-link" onClick={onClick}>
+                {count} Services →
+            </a>
+        </div>
     );
 }
