@@ -91,3 +91,16 @@
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.6);
 }
+
+/* Manpower green theme override */
+.cta-banner-manpower {
+    background: linear-gradient(135deg, #244A41 0%, #2F5D50 100%);
+}
+
+.cta-banner-manpower .cta-btn-white {
+    color: #244A41;
+}
+
+.cta-banner-manpower .cta-btn-white:hover {
+    box-shadow: 0 10px 30px rgba(36, 74, 65, 0.3);
+}

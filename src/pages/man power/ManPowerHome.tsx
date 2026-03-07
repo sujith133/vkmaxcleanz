@@ -3,7 +3,6 @@ import HeroSection from '../../components/man power/HeroSection';
 import AboutSection from '../../components/man power/AboutSection';
 import ServicesSection from '../../components/man power/ServicesSection';
 import ProcessSection from '../../components/man power/ProcessSection';
-import ProjectsSection from '../../components/man power/ProjectsSection';
 import TestimonialsSection from '../../components/man power/TestimonialsSection';
 import FAQSection from '../../components/man power/FAQSection';
 import JoinTeamSection from '../../components/man power/JoinTeamSection';
@@ -38,7 +37,6 @@ export default function ManPowerHome() {
             <AboutSection />
             <ServicesSection />
             <ProcessSection />
-            <ProjectsSection />
             <TestimonialsSection />
             <FAQSection />
             <ContactSection />

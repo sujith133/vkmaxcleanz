@@ -1,10 +1,10 @@
 import './ProcessSection.css';
 
 const steps = [
-    { number: '01', icon: '📋', title: 'Request Staff', description: 'Submit your requirements online or call us with the details of your staffing needs.' },
-    { number: '02', icon: '🔍', title: 'Candidate Shortlisting', description: 'We source and vet the best candidates from our pool to match your criteria.' },
-    { number: '03', icon: '🤝', title: 'Deployment', description: 'Selected personnel are briefed and deployed to your location on schedule.' },
-    { number: '04', icon: '✅', title: 'Ongoing Support', description: 'We provide continuous support and quality checks for the duration of the deployment.' },
+    { number: '01', icon: '📋', title: 'Share Your Needs', description: 'Tell us the type, number, and duration of staff you need — via call, form, or WhatsApp.' },
+    { number: '02', icon: '🔍', title: 'We Screen & Match', description: 'Our team handpicks verified and trained candidates from our talent pool to match your exact requirements.' },
+    { number: '03', icon: '🚀', title: 'Quick Deployment', description: 'Selected personnel are briefed, uniformed, and deployed to your location — often within 24–48 hours.' },
+    { number: '04', icon: '✅', title: 'Ongoing Support', description: 'We conduct regular quality checks, handle replacements, and stay available for any staffing adjustments.' },
 ];
 
 export default function ProcessSection() {
@@ -12,8 +12,8 @@ export default function ProcessSection() {
         <section className="process" id="process">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="section-label">How It Works</span>
-                    <h2>Simplified Staffing Process<br />Designed Around You</h2>
+                    <span className="mp-section-label">How It Works</span>
+                    <h2>Hassle-Free <span className="mp-highlight">Staffing</span><br />in 4 Simple Steps</h2>
                 </div>
                 <div className="process-steps">
                     {steps.map((step, i) => (

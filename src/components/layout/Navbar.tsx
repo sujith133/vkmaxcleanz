@@ -4,7 +4,7 @@ import { useTheme } from '../../context/ThemeContext';
 import './Navbar.css';
 
 export default function Navbar() {
-    const { brand, toggleBrand } = useTheme();
+    const { brand, setBrand } = useTheme();
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -27,26 +27,47 @@ export default function Navbar() {
         }
     };
 
-    const navLinks: { label: string; id: string; route?: string }[] = brand === 'cleaning'
-        ? [
-            { label: 'Home', id: 'home', route: '/cleanz' },
-            { label: 'About Us', id: 'about', route: '/cleanz/about' },
-            { label: 'Services', id: 'services', route: '/cleanz/services' },
-            { label: 'Contact Us', id: 'contact', route: '/cleanz/contact' },
-        ]
-        : [
-            { label: 'Home', id: 'hero' },
-            { label: 'Products', id: 'products' },
-            { label: 'Categories', id: 'categories' },
-            { label: 'Contact', id: 'contact' },
-        ];
+    // Nav links change based on which brand/page we're on
+    const navLinks: { label: string; id: string; route?: string }[] =
+        brand === 'cleaning'
+            ? [
+                { label: 'Home', id: 'home', route: '/cleanz' },
+                { label: 'About Us', id: 'about', route: '/cleanz/about' },
+                { label: 'Services', id: 'services', route: '/cleanz/services' },
+                { label: 'Contact Us', id: 'contact', route: '/cleanz/contact' },
+            ]
+            : brand === 'manpower'
+                ? [
+                    { label: 'Home', id: 'hero', route: '/manpower' },
+                    { label: 'About Us', id: 'aboutus', route: '/manpower/about' },
+                    { label: 'Services', id: 'service', route: '/manpower/services' },
+                    { label: 'Contact Us', id: 'contact', route: '/manpower/contact' },
+                ]
+                : [
+                    { label: 'Home', id: 'hero', route: '/furnitures' },
+                    { label: 'About Us', id: 'about', route: '/furnitures/about' },
+                    { label: 'Products', id: 'products' },
+                    { label: 'Contact', id: 'contact', route: '/furnitures/contact' },
+                ];
+
+    // Logo links to the current brand's home
+    const logoPath = brand === 'manpower' ? '/manpower' : brand === 'furniture' ? '/furnitures' : '/cleanz';
+
+    // Brand switch buttons — hide the button for the current brand
+    const brandButtons: { label: string; brand: 'cleaning' | 'furniture' | 'manpower'; className: string }[] = [
+        { label: 'Cleanz', brand: 'cleaning', className: 'purple' },
+        { label: 'Furnitures', brand: 'furniture', className: 'dark' },
+        { label: 'Manpower', brand: 'manpower', className: 'green' },
+    ];
+
+    const visibleButtons = brandButtons.filter(b => b.brand !== brand);
 
     return (
         <>
             <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <div className="navbar-inner">
-                    <Link to={brand === 'cleaning' ? '/cleanz' : '/furnitures'} className="navbar-logo">
-                        <img src="/LogoFull.png" alt={brand === 'cleaning' ? 'VK Max Cleanz' : 'VK Max Furnitures'} className="navbar-logo-img" />
+                    <Link to={logoPath} className="navbar-logo">
+                        <img src="/LogoFull.png" alt="VK Max Cleanz Solutions" className="navbar-logo-img" />
                     </Link>
 
                     <div className="navbar-links">
@@ -73,15 +94,15 @@ export default function Navbar() {
                             </select>
                         </div>
 
-                        {brand === 'cleaning' ? (
-                            <button className="brand-cta-btn dark" onClick={toggleBrand}>
-                                Furnitures
+                        {visibleButtons.map(btn => (
+                            <button
+                                key={btn.brand}
+                                className={`brand-cta-btn ${btn.className}`}
+                                onClick={() => setBrand(btn.brand)}
+                            >
+                                {btn.label}
                             </button>
-                        ) : (
-                            <button className="brand-cta-btn purple" onClick={toggleBrand}>
-                                Cleanz
-                            </button>
-                        )}
+                        ))}
 
                         <button
                             className={`hamburger ${mobileOpen ? 'open' : ''}`}
@@ -114,15 +135,15 @@ export default function Navbar() {
                         <option value="Vijaywada">Vijaywada</option>
                     </select>
                 </div>
-                {brand === 'cleaning' ? (
-                    <button className="brand-cta-btn dark mobile-cta" onClick={() => { toggleBrand(); setMobileOpen(false); }}>
-                        Furnitures
+                {visibleButtons.map(btn => (
+                    <button
+                        key={btn.brand}
+                        className={`brand-cta-btn ${btn.className} mobile-cta`}
+                        onClick={() => { setBrand(btn.brand); setMobileOpen(false); }}
+                    >
+                        {btn.label}
                     </button>
-                ) : (
-                    <button className="brand-cta-btn purple mobile-cta" onClick={() => { toggleBrand(); setMobileOpen(false); }}>
-                        Cleanz
-                    </button>
-                )}
+                ))}
             </div>
         </>
     );

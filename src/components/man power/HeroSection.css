@@ -1,5 +1,6 @@
 /* ========================================
    HERO SECTION (MANPOWER)
+   Architecture mirrors cleanz HeroSection.css
    ======================================== */
 
 .mp-hero {
@@ -8,48 +9,87 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    z-index: 0;
     overflow: hidden;
-    background: linear-gradient(135deg, #244A41 0%, #2F5D50 100%);
-    padding-top: 100px;
 }
 
+/* No fixed positioning — hero scrolls with the page */
+
+/* ── Background & Overlay ── */
+.mp-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(135deg, #244A41 0%, #2F5D50 100%);
+}
+
+.mp-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(36, 74, 65, 0.95) 0%, rgba(47, 93, 80, 0.80) 100%);
+}
+
+/* ── Content Grid ── */
 .mp-hero-content {
     position: relative;
     z-index: 4;
     max-width: var(--max-width);
     margin: 0 auto;
     width: 100%;
+    min-height: 100vh;
     padding: 40px var(--space-6) var(--space-8);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: var(--space-8);
-    flex: 1;
 }
 
-/* Text */
+/* ── Text Block ── */
 .mp-hero-text {
+    color: var(--white, #fff);
     animation: fadeInLeft 0.8s ease;
+}
+
+.mp-hero-subtitle {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #F6C324;
+    margin-bottom: var(--space-4);
+    font-weight: 500;
+    margin-left: 2px;
+    /* optical alignment with H1 */
 }
 
 .mp-hero-text h1 {
     font-size: var(--text-5xl);
-    color: white;
-    line-height: 1.2;
+    color: #fff;
+    line-height: 1.15;
     margin-bottom: var(--space-6);
     font-weight: 700;
 }
 
+.mp-highlight {
+    color: #F6C324;
+}
+
 .mp-hero-desc {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: var(--space-8);
-    opacity: 0.85;
     max-width: 480px;
 }
 
-/* Actions */
+/* Hide desktop-only line break on small screens */
+.mp-hero .desktop-break {
+    display: inline;
+}
+
+/* ── Action Buttons ── */
 .mp-hero-actions {
     display: flex;
     gap: var(--space-4);
@@ -58,43 +98,58 @@
 }
 
 .btn-hire {
-    background: #2F5D50;
-    color: white;
-    border: 1px solid #F6C324;
+    background: #F6C324;
+    color: #244A41;
+    border: none;
     border-radius: var(--radius-full);
-    padding: var(--space-3) var(--space-6);
+    padding: var(--space-2) var(--space-6) var(--space-2) var(--space-2);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
     font-size: var(--text-base);
     font-weight: 600;
-    transition: all var(--transition-base);
+    transition: background var(--transition-base), transform var(--transition-fast);
+    white-space: nowrap;
     cursor: pointer;
-    box-shadow: inset 0 0 0 1px rgba(246, 195, 36, 0.5);
 }
 
 .btn-hire:hover {
-    background: #3A6F62;
-    border-color: #F6C324;
+    background: #E5B41E;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(246, 195, 36, 0.2), inset 0 0 0 1px #F6C324;
+    box-shadow: 0 6px 20px rgba(246, 195, 36, 0.35);
+}
+
+.mp-icon-circle {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .btn-join-team {
-    background: white;
-    color: #2F5D50;
-    border: none;
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
     border-radius: var(--radius-full);
     padding: var(--space-3) var(--space-6);
     font-size: var(--text-base);
     font-weight: 600;
     transition: all var(--transition-base);
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn-join-team:hover {
-    background: #F5F1E8;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
     transform: translateY(-2px);
 }
 
-/* Image Wrapper */
+/* ── Image Wrapper ── */
 .mp-hero-image-wrapper {
     position: relative;
     display: flex;
@@ -103,44 +158,95 @@
     animation: fadeInRight 0.8s ease;
 }
 
-.yellow-accent-shape-1 {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 200px;
-    height: 200px;
-    background-color: #F6C324;
-    border-radius: 50%;
-    z-index: 1;
-}
 
-.yellow-accent-shape-2 {
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 150px;
-    height: 150px;
-    background-color: #F6C324;
-    border-radius: 30px;
-    transform: rotate(15deg);
-    z-index: 1;
-}
 
-.person-img.rounded {
+.mp-person-img {
     max-width: 100%;
+    width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 40px;
+    max-height: 420px;
+    object-fit: contain;
     position: relative;
-    z-index: 5;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
-/* Responsive */
+/* ========================================
+   RESPONSIVE – TABLET (≤1024px)
+   ======================================== */
+
 @media (max-width: 1024px) {
+    .mp-hero-content {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 100px;
+        gap: var(--space-4);
+        align-items: center;
+    }
+
+    .mp-hero-text h1 {
+        font-size: var(--text-4xl);
+    }
+
+    .mp-hero-desc {
+        font-size: var(--text-sm);
+    }
+
+    .mp-person-img {
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+    .mp-hero .desktop-break {
+        display: none;
+    }
+}
+
+/* ========================================
+   LANDSCAPE TABLETS (≤1366px, coarse pointer)
+   Covers iPad Air (1180px) and iPad Pro (1194–1366px)
+   ======================================== */
+
+@media (max-width: 1366px) and (orientation: landscape) and (pointer: coarse) {
+    .mp-hero {
+        min-height: calc(100vh - 75px);
+    }
+
+    .mp-hero-content {
+        padding-left: calc(var(--space-6) + 75px);
+        padding-top: 0;
+        align-items: center;
+    }
+
+    .mp-hero-image-wrapper {
+        margin-top: -50px;
+    }
+
+    .mp-person-img {
+        max-height: 60vh;
+    }
+}
+
+/* ========================================
+   PORTRAIT TABLETS (≤1024px, portrait)
+   ======================================== */
+
+@media (max-width: 1024px) and (orientation: portrait) {
     .mp-hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        padding-top: 120px;
+        padding-bottom: 0;
+        gap: var(--space-4);
+        align-items: start;
+    }
+
+    .mp-hero-text {
+        order: 1;
+        padding-bottom: var(--space-4);
+    }
+
+    .mp-hero-text h1 {
+        font-size: var(--text-3xl);
+        line-height: 1.3;
     }
 
     .mp-hero-desc {
@@ -153,6 +259,143 @@
     }
 
     .mp-hero-image-wrapper {
-        margin-top: var(--space-8);
+        order: 2;
+        justify-content: center;
     }
+
+    .mp-person-img {
+        max-width: 75%;
+        max-height: 45vh;
+    }
+
+
+}
+
+/* ========================================
+   RESPONSIVE – SMALL TABLET (≤768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .mp-hero {
+        min-height: 100svh;
+    }
+
+    .mp-hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 110px;
+        padding-bottom: 0;
+        gap: var(--space-4);
+    }
+
+    .mp-hero-text {
+        order: 1;
+        padding-bottom: var(--space-4);
+    }
+
+    .mp-hero-text h1 {
+        font-size: var(--text-3xl);
+        line-height: 1.3;
+    }
+
+    .mp-hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: var(--text-base);
+    }
+
+    .mp-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn-hire {
+        font-size: var(--text-base);
+        padding: var(--space-3) var(--space-6) var(--space-3) var(--space-3);
+    }
+
+    .mp-icon-circle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .mp-hero-image-wrapper {
+        order: 2;
+        justify-content: center;
+    }
+
+    .mp-person-img {
+        max-width: 70%;
+        max-height: 40vh;
+    }
+
+
+}
+
+/* ========================================
+   RESPONSIVE – MOBILE (≤480px)
+   ======================================== */
+
+@media (max-width: 480px) {
+    .mp-hero {
+        min-height: 100svh;
+    }
+
+    .mp-hero-content {
+        padding-top: 90px;
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
+        gap: var(--space-4);
+    }
+
+    .mp-hero-text h1 {
+        font-size: var(--text-2xl);
+    }
+
+    .mp-hero-subtitle {
+        font-size: var(--text-xs, 0.75rem);
+        letter-spacing: 2px;
+    }
+
+    .mp-hero-desc {
+        font-size: var(--text-sm);
+    }
+
+    .mp-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .btn-hire {
+        font-size: var(--text-sm);
+        gap: var(--space-3);
+        padding: var(--space-3) var(--space-5) var(--space-3) var(--space-3);
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-join-team {
+        font-size: var(--text-sm);
+        padding: var(--space-3) var(--space-5);
+        width: 100%;
+        text-align: center;
+    }
+
+    .mp-person-img {
+        max-width: 85%;
+        max-height: 35vh;
+    }
+
+    .mp-hero-image-wrapper {
+        padding-bottom: 40px;
+        /* space for whatsapp bubble */
+    }
+
+
 }

@@ -1,6 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
-import { useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import CleaningHome from './pages/cleaning/CleaningHome';
@@ -8,62 +7,16 @@ import ServicesPage from './pages/cleaning/ServicesPage';
 import AboutPage from './pages/cleaning/AboutPage';
 import ContactPage from './pages/cleaning/ContactPage';
 import FurnitureHome from './pages/furniture/FurnitureHome';
+import FurnitureAboutPage from './pages/furniture/FurnitureAboutPage';
+import FurnitureContactPage from './pages/furniture/FurnitureContactPage';
 import CleanHomePage from './pages/clean/CleanHomePage';
 import FloatingWhatsApp from './components/shared/FloatingWhatsApp';
 import ManPowerHome from './pages/man power/ManPowerHome';
+import ManpowerServicesPage from './pages/man power/ManpowerServicesPage';
+import ManpowerAboutPage from './pages/man power/ManpowerAboutPage';
+import ManpowerContactPage from './pages/man power/ManpowerContactPage';
 
 function AppContent() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleManpowerClick = () => {
-      navigate('/manpower');
-    };
-
-    // Inject Desktop Button
-    const navbarRight = document.querySelector('.navbar-right');
-    const existingDesktopBtn = document.getElementById('manpower-nav-btn');
-
-    if (navbarRight && !existingDesktopBtn) {
-      const btn = document.createElement('button');
-      btn.id = 'manpower-nav-btn';
-      btn.className = 'brand-cta-btn green';
-      btn.innerText = 'Manpower';
-      btn.onclick = handleManpowerClick;
-
-      const hamburger = document.querySelector('.hamburger');
-      if (hamburger) {
-        navbarRight.insertBefore(btn, hamburger);
-      } else {
-        navbarRight.appendChild(btn);
-      }
-    }
-
-    // Inject Mobile Button
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const existingMobileBtn = document.getElementById('manpower-mobile-btn');
-
-    if (mobileMenu && !existingMobileBtn) {
-      const btn = document.createElement('button');
-      btn.id = 'manpower-mobile-btn';
-      btn.className = 'brand-cta-btn green mobile-cta';
-      btn.innerText = 'Manpower';
-      btn.onclick = () => {
-        const hamburger = document.querySelector('.hamburger') as HTMLElement;
-        if (hamburger && mobileMenu.classList.contains('open')) {
-          hamburger.click(); // Close menu
-        }
-        handleManpowerClick();
-      };
-      mobileMenu.appendChild(btn);
-    }
-
-    return () => {
-      existingDesktopBtn?.remove();
-      existingMobileBtn?.remove();
-    };
-  }, [navigate]);
-
   return (
     <>
       <Navbar />
@@ -74,7 +27,12 @@ function AppContent() {
         <Route path="/cleanz/about" element={<AboutPage />} />
         <Route path="/cleanz/contact" element={<ContactPage />} />
         <Route path="/furnitures" element={<FurnitureHome />} />
+        <Route path="/furnitures/about" element={<FurnitureAboutPage />} />
+        <Route path="/furnitures/contact" element={<FurnitureContactPage />} />
         <Route path="/manpower" element={<ManPowerHome />} />
+        <Route path="/manpower/services" element={<ManpowerServicesPage />} />
+        <Route path="/manpower/about" element={<ManpowerAboutPage />} />
+        <Route path="/manpower/contact" element={<ManpowerContactPage />} />
         <Route path="*" element={<Navigate to="/cleanz" replace />} />
       </Routes>
       <Footer />
@@ -97,4 +55,3 @@ function App() {
 }
 
 export default App;
-

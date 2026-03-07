@@ -22,10 +22,10 @@
 }
 
 .contact-form-wrapper {
-    background: var(--dark-card);
+    background: #1a3830;
     border-radius: var(--radius-xl);
     padding: var(--space-10);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-form-wrapper h3 {
@@ -76,7 +76,7 @@
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    border-color: var(--primary-light);
+    border-color: #2F5D50;
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 0 0 3px rgba(47, 93, 80, 0.15);
 }
@@ -97,12 +97,12 @@
 }
 
 .form-group select option {
-    background: var(--dark-bg);
+    background: var(--dark-bg, #0f2520);
 }
 
 .contact-submit {
     grid-column: span 2;
-    background: var(--cta-gradient);
+    background: linear-gradient(135deg, #244A41 0%, #2F5D50 100%);
     color: var(--white);
     padding: var(--space-4) var(--space-8);
     border-radius: var(--radius-md);
@@ -124,10 +124,10 @@
 }
 
 .contact-info-card {
-    background: var(--dark-card);
+    background: #1a3830;
     border-radius: var(--radius-xl);
     padding: var(--space-8);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-info-card h3 {
@@ -172,10 +172,10 @@
 }
 
 .contact-social-card {
-    background: var(--dark-card);
+    background: #1a3830;
     border-radius: var(--radius-xl);
     padding: var(--space-8);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-social-card h3 {

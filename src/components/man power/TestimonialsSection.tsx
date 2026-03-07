@@ -2,25 +2,25 @@ import './TestimonialsSection.css';
 
 const testimonials = [
     {
-        emoji: '👩',
-        name: 'Amanda Peters',
-        location: 'New York, NY',
+        emoji: '👨‍💼',
+        name: 'Rajesh Kumar',
+        location: 'Hyderabad',
         stars: 5,
-        text: 'Absolutely incredible service! The deployed staff arrived on time, were extremely professional, and integrated seamlessly with our team. Highly recommend!',
+        text: 'VK Max Solutions has been our go-to for security and cleaning staff. Their team is always punctual, professional, and well-trained. Highly reliable!',
+    },
+    {
+        emoji: '👩‍💼',
+        name: 'Priya Sharma',
+        location: 'Bangalore',
+        stars: 5,
+        text: 'We needed household helpers on short notice and they delivered within 24 hours. The staff has been with us for 6 months now — very trustworthy and efficient.',
     },
     {
         emoji: '👨',
-        name: 'Robert Kim',
-        location: 'Los Angeles, CA',
+        name: 'Mohammed Irfan',
+        location: 'Chennai',
         stars: 5,
-        text: 'We\'ve been using VK Max Cleanz manpower services for our warehouse for 6 months now. The consistency and quality of their personnel is unmatched. Operations run much smoother now.',
-    },
-    {
-        emoji: '👩‍🦰',
-        name: 'Jennifer Lopez',
-        location: 'Chicago, IL',
-        stars: 5,
-        text: 'The event staff exceeded all expectations. They managed the crowd effectively and were extremely polite! Will definitely be requesting staff again.',
+        text: 'Their fire safety officers are well-certified and thorough. We deployed them across 3 facilities and the compliance audits have been smooth ever since.',
     },
 ];
 
@@ -29,9 +29,9 @@ export default function TestimonialsSection() {
         <section className="testimonials" id="testimonials">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="section-label">Testimonials</span>
-                    <h2>See Why Businesses Trust<br />Us with Their Staffing</h2>
-                    <p>Real reviews from real clients who experienced our exceptional manpower services.</p>
+                    <span className="mp-section-label">Testimonials</span>
+                    <h2>Trusted by <span className="mp-highlight">Businesses</span><br />Across India</h2>
+                    <p>Real reviews from clients who rely on our manpower solutions every day.</p>
                 </div>
                 <div className="testimonials-slider">
                     {testimonials.map((t, i) => (

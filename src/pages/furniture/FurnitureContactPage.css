@@ -1,0 +1,348 @@
+/* ================================================
+   FURNITURE CONTACT PAGE – DARK THEME
+   ================================================ */
+
+.fu-cp-hero {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 100%);
+    overflow: hidden;
+    padding: 120px 24px 80px;
+    text-align: center;
+}
+
+.fu-cp-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 30% 70%, rgba(200, 170, 110, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.fu-cp-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.fu-cp-hero-label {
+    display: inline-block;
+    background: rgba(200, 170, 110, 0.15);
+    color: #c8aa6e;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.fu-cp-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.fu-cp-gold {
+    color: #c8aa6e;
+}
+
+.fu-cp-hero p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Shared ── */
+.fu-cp-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.fu-cp-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+/* ── Detail Cards ── */
+.fu-cp-details {
+    padding: 80px 0 0;
+    background: #fafafa;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+
+.fu-cp-details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.fu-cp-detail-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.fu-cp-detail-card:hover {
+    transform: translateY(-4px);
+    border-color: #1a1a2e;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fu-cp-detail-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.fu-cp-detail-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 10px;
+}
+
+.fu-cp-detail-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 4px;
+}
+
+/* ── Form Section ── */
+.fu-cp-form-section {
+    padding: 80px 0 100px;
+    background: #fafafa;
+}
+
+.fu-cp-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.fu-cp-form-info h2 {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 16px;
+}
+
+.fu-cp-form-info>p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0 0 32px;
+}
+
+.fu-cp-trust {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fu-cp-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* ── Form Card ── */
+.fu-cp-form-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 36px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.fu-cp-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.fu-cp-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.fu-cp-form-row .fu-cp-form-group {
+    margin-bottom: 0;
+}
+
+.fu-cp-form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.fu-cp-form-group input,
+.fu-cp-form-group textarea {
+    font-size: 1rem;
+    color: #1a1a2e;
+    background: #fafafa;
+    border: 1.5px solid #ddd;
+    border-radius: 12px;
+    padding: 12px 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    resize: vertical;
+}
+
+.fu-cp-form-group input:focus,
+.fu-cp-form-group textarea:focus {
+    border-color: #1a1a2e;
+    box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.08);
+}
+
+.fu-cp-form-group input::placeholder,
+.fu-cp-form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.fu-cp-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.fu-cp-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 26, 46, 0.3);
+}
+
+/* ── Success ── */
+.fu-cp-success {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.fu-cp-success-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.fu-cp-success h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 12px;
+}
+
+.fu-cp-success p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0 0 24px;
+}
+
+.fu-cp-success-btn {
+    display: inline-block;
+    background: #fafafa;
+    color: #1a1a2e;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border: 2px solid #1a1a2e;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.fu-cp-success-btn:hover {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) and (orientation: portrait) {
+    .fu-cp-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fu-cp-form-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .fu-cp-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .fu-cp-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fu-cp-form-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .fu-cp-form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .fu-cp-hero {
+        padding: 100px 20px 60px;
+        min-height: 300px;
+    }
+
+    .fu-cp-details {
+        padding: 60px 0 0;
+    }
+
+    .fu-cp-form-section {
+        padding: 60px 0 80px;
+    }
+
+    .fu-cp-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fu-cp-form-card {
+        padding: 28px 20px;
+    }
+}

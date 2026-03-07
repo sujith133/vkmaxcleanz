@@ -1,0 +1,456 @@
+/* ================================================
+   MANPOWER ABOUT PAGE
+   ================================================ */
+
+.mp-ap-hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a3830 0%, #244A41 40%, #2F5D50 100%);
+    overflow: hidden;
+    padding: 120px 24px 80px;
+    text-align: center;
+}
+
+.mp-ap-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(246, 195, 36, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(36, 74, 65, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.mp-ap-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.mp-ap-hero-label {
+    display: inline-block;
+    background: rgba(246, 195, 36, 0.2);
+    color: #F6C324;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.mp-ap-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.mp-ap-yellow {
+    color: #F6C324;
+}
+
+.mp-ap-hero p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Shared ── */
+.mp-ap-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.mp-ap-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #2F5D50;
+    margin-bottom: 12px;
+}
+
+.mp-ap-section-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+}
+
+/* ── Story ── */
+.mp-ap-story {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.mp-ap-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.mp-ap-story-images {
+    position: relative;
+    min-height: 350px;
+}
+
+.mp-ap-story-img-main {
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(36, 74, 65, 0.15);
+}
+
+.mp-ap-story-img-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mp-ap-story-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #244A41;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(36, 74, 65, 0.35);
+    z-index: 2;
+}
+
+.mp-ap-story-badge strong {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.mp-ap-story-badge span {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.mp-ap-story-text h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 20px;
+}
+
+.mp-ap-story-text p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0 0 16px;
+}
+
+.mp-ap-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.mp-ap-highlight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #FFFDF5;
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(36, 74, 65, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mp-ap-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(36, 74, 65, 0.1);
+}
+
+.mp-ap-highlight-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.mp-ap-highlight div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mp-ap-highlight strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #244A41;
+}
+
+.mp-ap-highlight span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ── Leadership ── */
+.mp-ap-leadership {
+    padding: 100px 0;
+    background: #FFFDF5;
+    text-align: center;
+}
+
+.mp-ap-leadership h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 8px;
+}
+
+.mp-ap-leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mp-ap-leader-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 48px 32px 36px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(36, 74, 65, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mp-ap-leader-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(36, 74, 65, 0.12);
+}
+
+.mp-ap-leader-avatar {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.mp-ap-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.mp-ap-avatar.ceo {
+    background: linear-gradient(135deg, #1a3830, #2F5D50);
+}
+
+.mp-ap-avatar.ops {
+    background: linear-gradient(135deg, #b8860b, #F6C324);
+}
+
+.mp-ap-leader-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 4px;
+}
+
+.mp-ap-leader-role {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2F5D50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.mp-ap-leader-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Values ── */
+.mp-ap-values {
+    padding: 100px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.mp-ap-values h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 48px;
+}
+
+.mp-ap-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.mp-ap-value-card {
+    background: #FFFDF5;
+    border-radius: 20px;
+    padding: 36px 24px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.mp-ap-value-card:hover {
+    transform: translateY(-4px);
+    border-color: #2F5D50;
+    box-shadow: 0 8px 24px rgba(36, 74, 65, 0.1);
+}
+
+.mp-ap-value-icon {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+
+.mp-ap-value-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 10px;
+}
+
+.mp-ap-value-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── Ticker ── */
+.mp-ap-ticker {
+    padding: 60px 0;
+    background: #FFFDF5;
+}
+
+.mp-ap-ticker-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.mp-ap-ticker-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.mp-ap-ticker-item strong {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #244A41, #2F5D50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mp-ap-ticker-item span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) and (orientation: portrait) {
+    .mp-ap-story-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .mp-ap-leaders-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .mp-ap-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mp-ap-ticker-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .mp-ap-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .mp-ap-story-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .mp-ap-leaders-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .mp-ap-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mp-ap-ticker-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mp-ap-hero {
+        padding: 100px 20px 60px;
+        min-height: 320px;
+    }
+
+    .mp-ap-story,
+    .mp-ap-leadership,
+    .mp-ap-values {
+        padding: 60px 0;
+    }
+
+    .mp-ap-highlights,
+    .mp-ap-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mp-ap-ticker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mp-ap-leader-card {
+        padding: 36px 20px 28px;
+    }
+}

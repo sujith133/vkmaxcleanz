@@ -1,32 +1,66 @@
+import { useNavigate } from 'react-router-dom';
 import './ServicesSection.css';
 
 const services = [
-    { icon: '👷', title: 'Construction Workers', description: 'Skilled and unskilled labor for your construction sites.' },
-    { icon: '📦', title: 'Warehouse Staff', description: 'Efficient personnel for logistics, packing, and inventory.' },
-    { icon: '👔', title: 'Office Assistants', description: 'Professional support staff for your daily administrative tasks.' },
-    { icon: '🧹', title: 'Cleaning Crews', description: 'Dedicated cleaning professionals for commercial and residential places.' },
-    { icon: '🛡️', title: 'Security Staff', description: 'Trained security guards for comprehensive protection.' },
-    { icon: '🎭', title: 'Event Manpower', description: 'Reliable staff to ensure your events run smoothly.' }
+    {
+        image: '/images/manpower/Security.png',
+        title: 'Security Services',
+        description: 'Trained and licensed security guards for residential, commercial, and event protection.',
+    },
+    {
+        image: '/images/manpower/Cleaning_Staff.png',
+        title: 'Cleaning Staff',
+        description: 'Professional cleaning personnel for offices, homes, hospitals, and commercial spaces.',
+    },
+    {
+        image: '/images/manpower/Fire_Safety.png',
+        title: 'Fire Safety',
+        description: 'Certified fire safety officers and fire watch personnel for compliance and emergency readiness.',
+    },
+    {
+        image: '/images/manpower/Household_Works.png',
+        title: 'Household Works',
+        description: 'Reliable domestic helpers for cooking, cleaning, laundry, and general household maintenance.',
+    },
+    {
+        image: '/images/manpower/Baby_Sitting.png',
+        title: 'Baby Sitting',
+        description: 'Experienced and caring babysitters and nannies for safe, attentive childcare at your home.',
+    },
+    {
+        image: '/images/manpower/Office_Support.png',
+        title: 'Office Support',
+        description: 'Administrative assistants, receptionists, and office boys for smooth daily operations.',
+    },
 ];
 
 export default function ServicesSection() {
+    const navigate = useNavigate();
+
     return (
-        <section className="services" id="service">
+        <section className="mp-services" id="service">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="section-label">Our Premium Manpower</span>
-                    <h2>Skilled Workforce Solutions<br />Tailored For Your Business</h2>
+                    <span className="mp-section-label">What We Offer</span>
+                    <h2>Our <span className="mp-highlight">Manpower</span> Services</h2>
                     <p>We supply reliable, vetted, and trained personnel across multiple industries.</p>
                 </div>
-                <div className="services-grid">
+                <div className="mp-services-grid">
                     {services.map((service, i) => (
-                        <div className="service-card" key={i}>
-                            <div className="service-icon">
-                                <span>{service.icon}</span>
+                        <div className="mp-service-card" key={i}>
+                            <div className="mp-service-img-wrap">
+                                <img src={service.image} alt={service.title} className="mp-service-img" />
                             </div>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
-                            <a href="#" className="service-link">Learn More →</a>
+                            <div className="mp-service-card-body">
+                                <h3>{service.title}</h3>
+                                <p>{service.description}</p>
+                                <button
+                                    className="mp-service-link"
+                                    onClick={() => navigate('/manpower/services')}
+                                >
+                                    Learn More →
+                                </button>
+                            </div>
                         </div>
                     ))}
                 </div>

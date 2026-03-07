@@ -163,6 +163,17 @@
     box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
 }
 
+.brand-cta-btn.green {
+    background: #244A41;
+    color: var(--white);
+}
+
+.brand-cta-btn.green:hover {
+    background: #1a3830;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(36, 74, 65, 0.3);
+}
+
 /* ========================================
    HAMBURGER
    ======================================== */

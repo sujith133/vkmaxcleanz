@@ -1,0 +1,423 @@
+/* ================================================
+   FURNITURE ABOUT PAGE – DARK THEME
+   ================================================ */
+
+.fu-ap-hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 100%);
+    overflow: hidden;
+    padding: 120px 24px 80px;
+    text-align: center;
+}
+
+.fu-ap-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(200, 170, 110, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.fu-ap-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.fu-ap-hero-label {
+    display: inline-block;
+    background: rgba(200, 170, 110, 0.15);
+    color: #c8aa6e;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.fu-ap-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.fu-ap-gold {
+    color: #c8aa6e;
+}
+
+.fu-ap-hero p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Shared ── */
+.fu-ap-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.fu-ap-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+.fu-ap-label.fu-light {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Story ── */
+.fu-ap-story {
+    padding: 100px 0;
+    background: #fafafa;
+}
+
+.fu-ap-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.fu-ap-story-text h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 20px;
+}
+
+.fu-ap-story-text p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0 0 16px;
+}
+
+.fu-ap-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.fu-ap-visual-item {
+    background: #1a1a2e;
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    font-size: 3rem;
+    transition: transform 0.3s;
+}
+
+.fu-ap-visual-item:hover {
+    transform: translateY(-4px);
+}
+
+.fu-ap-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.fu-ap-highlight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fu-ap-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.fu-ap-highlight-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.fu-ap-highlight div {
+    display: flex;
+    flex-direction: column;
+}
+
+.fu-ap-highlight strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.fu-ap-highlight span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ── Leadership ── */
+.fu-ap-leadership {
+    padding: 100px 0;
+    background: #1a1a2e;
+    text-align: center;
+}
+
+.fu-ap-leadership h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 48px;
+}
+
+.fu-ap-leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.fu-ap-leader-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 48px 32px 36px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.fu-ap-leader-card:hover {
+    transform: translateY(-6px);
+    border-color: #c8aa6e;
+}
+
+.fu-ap-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 auto 24px;
+}
+
+.fu-ap-avatar.founder {
+    background: linear-gradient(135deg, #1a1a2e, #c8aa6e);
+}
+
+.fu-ap-avatar.design {
+    background: linear-gradient(135deg, #16213e, #0f3460);
+}
+
+.fu-ap-leader-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4px;
+}
+
+.fu-ap-leader-role {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #c8aa6e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.fu-ap-leader-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Values ── */
+.fu-ap-values {
+    padding: 100px 0;
+    background: #fafafa;
+    text-align: center;
+}
+
+.fu-ap-values h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 48px;
+}
+
+.fu-ap-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.fu-ap-value-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 24px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.fu-ap-value-card:hover {
+    transform: translateY(-4px);
+    border-color: #1a1a2e;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.fu-ap-value-icon {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+
+.fu-ap-value-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 10px;
+}
+
+.fu-ap-value-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── Ticker ── */
+.fu-ap-ticker {
+    padding: 60px 0;
+    background: #1a1a2e;
+}
+
+.fu-ap-ticker-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.fu-ap-ticker-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.fu-ap-ticker-item strong {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #c8aa6e, #e8d5a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fu-ap-ticker-item span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) and (orientation: portrait) {
+    .fu-ap-story-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .fu-ap-leaders-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .fu-ap-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fu-ap-ticker-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .fu-ap-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .fu-ap-story-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .fu-ap-leaders-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .fu-ap-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fu-ap-ticker-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .fu-ap-hero {
+        padding: 100px 20px 60px;
+        min-height: 320px;
+    }
+
+    .fu-ap-story,
+    .fu-ap-leadership,
+    .fu-ap-values {
+        padding: 60px 0;
+    }
+
+    .fu-ap-highlights,
+    .fu-ap-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fu-ap-ticker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fu-ap-visual-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .fu-ap-visual-item {
+        padding: 40px;
+        font-size: 2rem;
+    }
+}

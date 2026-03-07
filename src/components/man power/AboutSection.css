@@ -1,21 +1,22 @@
-.about {
-    background: var(--white);
+/* ── About Section (Manpower) ── */
+.mp-about {
+    background: #FFFDF5;
 }
 
-.about-content {
+.mp-about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-16);
     align-items: center;
 }
 
-.about-images {
+.mp-about-images {
     position: relative;
     height: 480px;
     width: 100%;
 }
 
-.about-img-main {
+.mp-about-img-main {
     width: 70%;
     height: 340px;
     object-fit: cover;
@@ -27,7 +28,7 @@
     z-index: 1;
 }
 
-.about-img-secondary {
+.mp-about-img-secondary {
     width: 60%;
     height: 280px;
     object-fit: cover;
@@ -36,16 +37,16 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    border: 5px solid var(--white);
+    border: 5px solid #FFFDF5;
     z-index: 1;
 }
 
-.about-experience-badge {
+.mp-about-experience-badge {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background: var(--primary);
-    color: var(--white);
+    background: #244A41;
+    color: #fff;
     padding: var(--space-5) var(--space-6);
     border-radius: var(--radius-lg);
     text-align: center;
@@ -53,37 +54,41 @@
     z-index: 2;
 }
 
-.about-experience-badge strong {
+.mp-about-experience-badge strong {
     display: block;
     font-size: var(--text-3xl);
     font-weight: 800;
+    color: #F6C324;
 }
 
-.about-experience-badge span {
+.mp-about-experience-badge span {
     font-size: var(--text-sm);
     opacity: 0.9;
 }
 
-.about-text .section-label {
+.mp-section-label {
     display: inline-block;
     font-size: var(--text-sm);
     font-weight: 600;
-    color: var(--accent);
+    color: #F6C324;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: var(--space-3);
 }
 
-.about-text h2 {
+.mp-about-text h2 {
     margin-bottom: var(--space-5);
+    color: #244A41;
 }
 
-.about-text>p {
+.mp-about-text>p {
     font-size: var(--text-lg);
     margin-bottom: var(--space-8);
+    color: var(--text-secondary);
+    line-height: 1.8;
 }
 
-.about-stats {
+.mp-about-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-4);
@@ -91,38 +96,39 @@
     border-top: 1px solid var(--grey-200);
 }
 
-.about-stat {
+.mp-about-stat {
     text-align: center;
 }
 
-.about-stat strong {
+.mp-about-stat strong {
     display: block;
     font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: 800;
-    color: var(--primary);
+    color: #2F5D50;
 }
 
-.about-stat span {
+.mp-about-stat span {
     font-size: var(--text-xs);
     color: var(--text-secondary);
     font-weight: 500;
 }
 
+/* ── Responsive ── */
 @media (max-width: 1024px) {
-    .about-content {
+    .mp-about-content {
         grid-template-columns: 1fr;
         gap: var(--space-10);
     }
 
-    .about-images {
+    .mp-about-images {
         height: 380px;
         max-width: 600px;
         margin: 0 auto;
         position: relative;
     }
 
-    .about-img-main {
+    .mp-about-img-main {
         position: absolute;
         top: 0;
         left: 0;
@@ -131,17 +137,17 @@
         object-fit: cover;
     }
 
-    .about-img-secondary {
+    .mp-about-img-secondary {
         position: absolute;
         bottom: 0;
         right: 0;
         width: 55%;
         height: 220px;
         object-fit: cover;
-        border: 4px solid var(--white);
+        border: 4px solid #FFFDF5;
     }
 
-    .about-experience-badge {
+    .mp-about-experience-badge {
         position: absolute;
         bottom: 15px;
         left: 15px;
@@ -149,16 +155,16 @@
 }
 
 @media (max-width: 480px) {
-    .about-stats {
+    .mp-about-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-6);
     }
 
-    .about-img-main {
+    .mp-about-img-main {
         max-height: 240px;
     }
 
-    .about-img-secondary {
+    .mp-about-img-secondary {
         max-height: 200px;
     }
 }

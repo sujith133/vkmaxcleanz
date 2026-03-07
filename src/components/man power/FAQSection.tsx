@@ -3,24 +3,24 @@ import './FAQSection.css';
 
 const faqs = [
     {
-        question: 'What types of staff do you supply?',
-        answer: 'We supply trained personnel for various roles, including construction workers, warehouse staff, cleaning professionals, event helpers, and security personnel.',
+        question: 'What types of manpower do you supply?',
+        answer: 'We provide security guards, cleaning staff, fire safety officers, household helpers, babysitters, office assistants, and more — all trained and verified.',
     },
     {
-        question: 'How do I request manpower?',
-        answer: 'You can easily request staff through our website by filling out the contact form, calling us directly, or clicking the "Request Manpower" button.',
+        question: 'How quickly can you deploy staff?',
+        answer: 'In most cases, we can deploy personnel within 24–48 hours of receiving your request. For larger requirements, we work to a mutually agreed timeline.',
     },
     {
-        question: 'Are your workers vetted?',
-        answer: 'Yes! All our personnel undergo strict background checks, skill assessments, and professional training before being deployed to your site.',
+        question: 'Are your workers background-verified?',
+        answer: 'Absolutely. Every worker goes through thorough background verification, identity checks, and skill assessments before being assigned to any client.',
     },
     {
-        question: 'What is the minimum hire period?',
-        answer: 'We offer flexible staffing options, ranging from daily assignments for events to long-term contracts for construction and corporate settings.',
+        question: 'Do you provide replacement staff if someone doesn\'t show up?',
+        answer: 'Yes, we maintain a standby pool of workers. If any assigned personnel is unavailable, we arrange an immediate replacement at no extra cost.',
     },
     {
-        question: 'What if a worker is unable to attend?',
-        answer: 'We maintain a robust pool of standby staff to ensure immediate replacements so your business operations are never interrupted.',
+        question: 'What industries do you serve?',
+        answer: 'We supply manpower to corporate offices, residential societies, hospitals, construction sites, events, warehouses, and private households across India.',
     },
 ];
 
@@ -35,8 +35,8 @@ export default function FAQSection() {
         <section className="faq" id="faq">
             <div className="section-wrapper">
                 <div className="section-header">
-                    <span className="section-label">FAQ</span>
-                    <h2>Trusted Answers from Our<br />Staffing Experts</h2>
+                    <span className="mp-section-label">FAQ</span>
+                    <h2>Common <span className="mp-highlight">Questions</span><br />About Our Services</h2>
                 </div>
                 <div className="faq-content">
                     <div className="faq-list">
@@ -56,7 +56,7 @@ export default function FAQSection() {
                         <div className="faq-img-card">
                             <div className="faq-emoji">🤔</div>
                             <h3>Still Have Questions?</h3>
-                            <p>Can't find the answer you're looking for? Reach out to our recruitment team.</p>
+                            <p>Can't find the answer you're looking for? Reach out to our team directly.</p>
                             <a href="#contact" className="faq-cta">Contact Us →</a>
                         </div>
                     </div>

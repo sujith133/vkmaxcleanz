@@ -4,16 +4,29 @@ import './Footer.css';
 export default function Footer() {
     const { brand } = useTheme();
 
+    const brandName =
+        brand === 'cleaning' ? 'VK Max Cleanz' :
+            brand === 'manpower' ? 'VK Max Solutions' :
+                'VK Max Furnitures';
+
+    const description =
+        brand === 'cleaning'
+            ? 'Home services at your doorstep. We provide high-quality cleaning, repair, and maintenance services to make your life easier.'
+            : brand === 'manpower'
+                ? 'Your trusted manpower supply partner. We deliver skilled, verified, and trained personnel across industries.'
+                : 'Premium furniture for modern living. Crafting comfort and style for every home.';
+
+    const copyrightName =
+        brand === 'cleaning' ? 'VK Max Cleanz Company' :
+            brand === 'manpower' ? 'VK Max Solutions' :
+                'VK Max Furnitures';
+
     return (
         <footer className="footer" id="contact">
             <div className="footer-grid">
                 <div className="footer-col footer-about">
-                    <img src="/LogoFull.png" alt={brand === 'cleaning' ? 'VK Max Cleanz' : 'VK Max Furnitures'} className="footer-logo-img" />
-                    <p>
-                        {brand === 'cleaning'
-                            ? 'Home services at your doorstep. We provide high-quality cleaning, repair, and maintenance services to make your life easier.'
-                            : 'Premium furniture for modern living. Crafting comfort and style for every home.'}
-                    </p>
+                    <img src="/LogoFull.png" alt={brandName} className="footer-logo-img" />
+                    <p>{description}</p>
                     <div className="footer-social">
                         <a href="#" aria-label="Facebook">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
@@ -31,13 +44,25 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-col">
-                    <h4>{brand === 'cleaning' ? 'Company Links' : 'Products'}</h4>
+                    <h4>
+                        {brand === 'cleaning' ? 'Company Links' :
+                            brand === 'manpower' ? 'Our Services' :
+                                'Products'}
+                    </h4>
                     <ul>
                         {brand === 'cleaning' ? (
                             <>
                                 <li><a href="#aboutus">About us</a></li>
                                 <li><a href="#">Terms & conditions</a></li>
                                 <li><a href="#">Privacy policy</a></li>
+                            </>
+                        ) : brand === 'manpower' ? (
+                            <>
+                                <li><a href="/manpower/services">Security Services</a></li>
+                                <li><a href="/manpower/services">Cleaning Staff</a></li>
+                                <li><a href="/manpower/services">Fire Safety</a></li>
+                                <li><a href="/manpower/services">Household Works</a></li>
+                                <li><a href="/manpower/services">Baby Sitting</a></li>
                             </>
                         ) : (
                             <>
@@ -52,7 +77,11 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-col">
-                    <h4>{brand === 'cleaning' ? 'Customer Links' : 'Quick Links'}</h4>
+                    <h4>
+                        {brand === 'cleaning' ? 'Customer Links' :
+                            brand === 'manpower' ? 'Quick Links' :
+                                'Quick Links'}
+                    </h4>
                     <ul>
                         {brand === 'cleaning' ? (
                             <>
@@ -60,6 +89,13 @@ export default function Footer() {
                                 <li><a href="#service">Categories near you</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#contact">Contact us</a></li>
+                            </>
+                        ) : brand === 'manpower' ? (
+                            <>
+                                <li><a href="/manpower#aboutus">About Us</a></li>
+                                <li><a href="/manpower#process">How It Works</a></li>
+                                <li><a href="/manpower#join-team">Careers</a></li>
+                                <li><a href="/manpower#contact">Contact Us</a></li>
                             </>
                         ) : (
                             <>
@@ -76,7 +112,7 @@ export default function Footer() {
                 <div className="footer-col">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><a href="#">📍 Vishakapatnam, Andhra pradesh</a></li>
+                        <li><a href="#">📍 Vishakapatnam, Andhra Pradesh</a></li>
                         <li><a href="tel:+917569057281">📞 +91 7569057281</a></li>
                         <li><a href="mailto:enochmoses@vkmaxcleanzsolutions.com" style={{ wordBreak: 'break-all' }}>✉ enochmoses@vkmaxcleanzsolutions.com</a></li>
                     </ul>
@@ -85,7 +121,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-bottom">
-                <p>Copyright 2026 {brand === 'cleaning' ? 'VK Max Cleanz Company' : 'VK Max Furnitures'}. All rights reserved.</p>
+                <p>Copyright 2026 {copyrightName}. All rights reserved.</p>
                 <div className="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms & Conditions</a>

@@ -1,12 +1,11 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-type Brand = 'cleaning' | 'furniture';
+type Brand = 'cleaning' | 'furniture' | 'manpower';
 
 interface ThemeContextType {
     brand: Brand;
     setBrand: (brand: Brand) => void;
-    toggleBrand: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -17,6 +16,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     const getBrandFromPath = (): Brand => {
         if (location.pathname.startsWith('/furnitures')) return 'furniture';
+        if (location.pathname.startsWith('/manpower')) return 'manpower';
         return 'cleaning';
     };
 
@@ -35,17 +35,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     const setBrand = (newBrand: Brand) => {
         setBrandState(newBrand);
-        const path = newBrand === 'cleaning' ? '/cleanz' : '/furnitures';
-        navigate(path);
-    };
-
-    const toggleBrand = () => {
-        const newBrand = brand === 'cleaning' ? 'furniture' : 'cleaning';
-        setBrand(newBrand);
+        const paths: Record<Brand, string> = {
+            cleaning: '/cleanz',
+            furniture: '/furnitures',
+            manpower: '/manpower',
+        };
+        navigate(paths[newBrand]);
     };
 
     return (
-        <ThemeContext.Provider value={{ brand, setBrand, toggleBrand }}>
+        <ThemeContext.Provider value={{ brand, setBrand }}>
             {children}
         </ThemeContext.Provider>
     );
