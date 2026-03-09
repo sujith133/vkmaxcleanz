@@ -1,4 +1,5 @@
 import { useState, useEffect, type FormEvent } from 'react';
+import { sendManpowerEnquiry } from '../../utils/whatsapp';
 import './EnquiryModal.css';
 
 interface EnquiryModalProps {
@@ -42,7 +43,17 @@ export default function EnquiryModal({ onClose, preselectedService, formType = '
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        console.log('Enquiry submitted:', formData);
+        sendManpowerEnquiry({
+            formType,
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || undefined,
+            company: formData.company || undefined,
+            service: formData.service || undefined,
+            staffCount: formData.staffCount || undefined,
+            duration: formData.duration || undefined,
+            message: formData.message || undefined,
+        });
         setSubmitted(true);
     };
 

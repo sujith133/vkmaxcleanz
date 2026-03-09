@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { sendContactMessage } from '../../utils/whatsapp';
 import './ContactPage.css';
 
 export default function ContactPage() {
@@ -17,8 +18,14 @@ export default function ContactPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Contact form submitted:', formData);
-        // TODO: Send to WhatsApp / backend API later
+        sendContactMessage({
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || undefined,
+            subject: formData.subject || undefined,
+            message: formData.message,
+            brand: 'Cleanz',
+        });
         setSubmitted(true);
     };
 

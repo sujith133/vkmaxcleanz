@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { furnitureProducts, categories } from '../../data/furnitureProductsData';
 import type { FurnitureProduct } from '../../data/furnitureProductsData';
+import { sendFurnitureEnquiry } from '../../utils/whatsapp';
 import './FurnitureProductsPage.css';
 
 type SortOption = 'default' | 'price-asc' | 'price-desc' | 'name-asc';
@@ -198,10 +199,28 @@ function ProductDetailModal({
     onClose: () => void;
     formatPrice: (n: number) => string;
 }) {
+    const [showEnquiry, setShowEnquiry] = useState(false);
+    const [enquiryData, setEnquiryData] = useState({ name: '', phone: '', message: '' });
+    const [enquirySubmitted, setEnquirySubmitted] = useState(false);
+
     useEffect(() => {
         document.body.style.overflow = 'hidden';
         return () => { document.body.style.overflow = ''; };
     }, []);
+
+    const handleEnquirySubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        sendFurnitureEnquiry({
+            productName: product.name,
+            category: product.category,
+            subcategory: product.subcategory,
+            price: formatPrice(product.price),
+            customerName: enquiryData.name,
+            customerPhone: enquiryData.phone,
+            message: enquiryData.message || undefined,
+        });
+        setEnquirySubmitted(true);
+    };
 
     return (
         <div className="fpp-modal-overlay" onClick={onClose}>
@@ -220,31 +239,91 @@ function ProductDetailModal({
                         <span className="fpp-modal-cat">{product.category} · {product.subcategory}</span>
                         <h2>{product.name}</h2>
                         <span className="fpp-modal-price">{formatPrice(product.price)}</span>
-                        <p className="fpp-modal-desc">{product.description}</p>
 
-                        <div className="fpp-modal-features">
-                            <h4>Key Features</h4>
-                            <ul>
-                                {product.features.map((f, i) => (
-                                    <li key={i}>
-                                        <span className="fpp-check">✓</span>
-                                        {f}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        {!showEnquiry && !enquirySubmitted && (
+                            <>
+                                <p className="fpp-modal-desc">{product.description}</p>
+                                <div className="fpp-modal-features">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        {product.features.map((f, i) => (
+                                            <li key={i}>
+                                                <span className="fpp-check">✓</span>
+                                                {f}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="fpp-modal-actions">
+                                    <button className="fpp-enquiry-btn" onClick={() => setShowEnquiry(true)}>
+                                        Enquire Now
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <a
+                                        className="fpp-call-btn"
+                                        href="tel:+917569057281"
+                                    >
+                                        📞 Call Us
+                                    </a>
+                                </div>
+                            </>
+                        )}
 
-                        <div className="fpp-modal-actions">
-                            <button className="fpp-enquiry-btn" onClick={() => {
-                                onClose();
-                                window.location.href = `/furnitures/contact`;
-                            }}>
-                                Enquire Now
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
+                        {showEnquiry && !enquirySubmitted && (
+                            <form className="fpp-enquiry-form" onSubmit={handleEnquirySubmit}>
+                                <h4>Enquire About This Product</h4>
+                                <div className="fpp-enquiry-field">
+                                    <input
+                                        type="text"
+                                        placeholder="Your Name *"
+                                        value={enquiryData.name}
+                                        onChange={(e) => setEnquiryData({ ...enquiryData, name: e.target.value })}
+                                        required
+                                    />
+                                </div>
+                                <div className="fpp-enquiry-field">
+                                    <input
+                                        type="tel"
+                                        placeholder="Phone Number *"
+                                        value={enquiryData.phone}
+                                        onChange={(e) => setEnquiryData({ ...enquiryData, phone: e.target.value })}
+                                        required
+                                        pattern="[0-9]{10}"
+                                        title="Enter a 10-digit phone number"
+                                    />
+                                </div>
+                                <div className="fpp-enquiry-field">
+                                    <textarea
+                                        placeholder="Your message (optional)"
+                                        value={enquiryData.message}
+                                        onChange={(e) => setEnquiryData({ ...enquiryData, message: e.target.value })}
+                                        rows={2}
+                                    />
+                                </div>
+                                <div className="fpp-enquiry-actions">
+                                    <button type="button" className="fpp-enquiry-back" onClick={() => setShowEnquiry(false)}>
+                                        ← Back
+                                    </button>
+                                    <button type="submit" className="fpp-enquiry-send">
+                                        Send via WhatsApp
+                                        <svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor">
+                                            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        )}
+
+                        {enquirySubmitted && (
+                            <div className="fpp-enquiry-success">
+                                <div className="fpp-enquiry-success-icon">✅</div>
+                                <h4>Enquiry Sent!</h4>
+                                <p>A WhatsApp message has been prepared for <strong>{product.name}</strong>. Our team will get back to you shortly.</p>
+                                <button className="fpp-enquiry-done" onClick={onClose}>Done</button>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

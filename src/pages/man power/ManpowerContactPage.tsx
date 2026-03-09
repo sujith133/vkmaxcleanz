@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { sendContactMessage } from '../../utils/whatsapp';
 import './ManpowerContactPage.css';
 
 export default function ManpowerContactPage() {
@@ -13,7 +14,14 @@ export default function ManpowerContactPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Manpower contact form:', formData);
+        sendContactMessage({
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || undefined,
+            service: formData.service || undefined,
+            message: formData.message,
+            brand: 'Manpower',
+        });
         setSubmitted(true);
     };
 

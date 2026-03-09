@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import type { Service } from '../../data/servicesData';
+import { sendCleaningBooking } from '../../utils/whatsapp';
 import './BookingModal.css';
 
 interface BookingModalProps {
@@ -24,8 +25,17 @@ export default function BookingModal({ service, onClose }: BookingModalProps) {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        // TODO: Send to WhatsApp API later
-        console.log('Booking submitted:', { service: service.service_name, ...formData });
+        sendCleaningBooking({
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || undefined,
+            serviceName: service.service_name,
+            category: service.category,
+            subcategory: service.subcategory,
+            address: formData.address || undefined,
+            preferredDate: formData.preferredDate || undefined,
+            message: formData.message || undefined,
+        });
         setSubmitted(true);
     };
 

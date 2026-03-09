@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { sendContactMessage } from '../../utils/whatsapp';
 import './FurnitureContactPage.css';
 
 export default function FurnitureContactPage() {
@@ -13,7 +14,14 @@ export default function FurnitureContactPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Furniture contact form:', formData);
+        sendContactMessage({
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email || undefined,
+            subject: formData.subject || undefined,
+            message: formData.message,
+            brand: 'Furnitures',
+        });
         setSubmitted(true);
     };
 

@@ -46,7 +46,7 @@ export default function Navbar() {
                 : [
                     { label: 'Home', id: 'hero', route: '/furnitures' },
                     { label: 'About Us', id: 'about', route: '/furnitures/about' },
-                    { label: 'Products', id: 'products' },
+                    { label: 'Products', id: 'products', route: '/furnitures/products' },
                     { label: 'Contact', id: 'contact', route: '/furnitures/contact' },
                 ];
 

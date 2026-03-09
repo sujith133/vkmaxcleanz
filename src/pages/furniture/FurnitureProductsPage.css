@@ -573,6 +573,192 @@
     box-shadow: 0 8px 24px rgba(201, 169, 110, 0.3);
 }
 
+.fpp-call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 24px;
+    background: transparent;
+    border: 1.5px solid #333;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.fpp-call-btn:hover {
+    border-color: #c9a96e;
+    color: #c9a96e;
+}
+
+.fpp-modal-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ── Inline Enquiry Form ── */
+.fpp-enquiry-form {
+    margin-top: 16px;
+    animation: fppFormSlide 0.3s ease;
+}
+
+@keyframes fppFormSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fpp-enquiry-form h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.fpp-enquiry-field {
+    margin-bottom: 12px;
+}
+
+.fpp-enquiry-field input,
+.fpp-enquiry-field textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.fpp-enquiry-field input::placeholder,
+.fpp-enquiry-field textarea::placeholder {
+    color: #666;
+}
+
+.fpp-enquiry-field input:focus,
+.fpp-enquiry-field textarea:focus {
+    border-color: #c9a96e;
+}
+
+.fpp-enquiry-field textarea {
+    resize: vertical;
+    min-height: 52px;
+}
+
+.fpp-enquiry-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.fpp-enquiry-back {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: #888;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.fpp-enquiry-back:hover {
+    border-color: #666;
+    color: #fff;
+}
+
+.fpp-enquiry-send {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #25d366;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.fpp-enquiry-send svg {
+    width: 16px;
+    height: 16px;
+}
+
+.fpp-enquiry-send:hover {
+    background: #1fba59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* ── Enquiry Success ── */
+.fpp-enquiry-success {
+    text-align: center;
+    padding: 20px 0;
+    animation: fppFormSlide 0.3s ease;
+}
+
+.fpp-enquiry-success-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.fpp-enquiry-success h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.fpp-enquiry-success p {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.fpp-enquiry-done {
+    padding: 10px 28px;
+    background: #c9a96e;
+    border: none;
+    border-radius: 50px;
+    color: #0a0a0a;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.fpp-enquiry-done:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 110, 0.3);
+}
+
 /* ═══════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════ */
