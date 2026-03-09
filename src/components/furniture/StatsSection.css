@@ -1,0 +1,111 @@
+/* ═══════════════════════════════════════
+   STATS SECTION – Dark Luxury Theme
+   ═══════════════════════════════════════ */
+
+.furn-stats {
+    background: #0a0a0a;
+    padding: 80px 24px;
+}
+
+.furn-stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.furn-stats-text {
+    flex-shrink: 0;
+}
+
+.furn-stats-label {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.furn-stats-text h2 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    font-style: italic;
+}
+
+.furn-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    flex: 1;
+}
+
+.furn-stat-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.furn-stat-card:hover {
+    border-color: #c9a96e;
+    transform: translateY(-4px);
+}
+
+.furn-stat-value {
+    display: block;
+    font-size: 44px;
+    font-weight: 800;
+    color: #c9a96e;
+    margin-bottom: 8px;
+    font-family: inherit;
+}
+
+.furn-stat-card p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .furn-stats-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .furn-stats {
+        padding: 60px 20px;
+    }
+
+    .furn-stats-text h2 {
+        font-size: 40px;
+    }
+
+    .furn-stat-value {
+        font-size: 36px;
+    }
+
+    .furn-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .furn-stat-card {
+        padding: 24px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .furn-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

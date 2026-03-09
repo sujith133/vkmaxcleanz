@@ -9,6 +9,7 @@ import ContactPage from './pages/cleaning/ContactPage';
 import FurnitureHome from './pages/furniture/FurnitureHome';
 import FurnitureAboutPage from './pages/furniture/FurnitureAboutPage';
 import FurnitureContactPage from './pages/furniture/FurnitureContactPage';
+import FurnitureProductsPage from './pages/furniture/FurnitureProductsPage';
 import CleanHomePage from './pages/clean/CleanHomePage';
 import FloatingWhatsApp from './components/shared/FloatingWhatsApp';
 import ManPowerHome from './pages/man power/ManPowerHome';
@@ -29,6 +30,7 @@ function AppContent() {
         <Route path="/furnitures" element={<FurnitureHome />} />
         <Route path="/furnitures/about" element={<FurnitureAboutPage />} />
         <Route path="/furnitures/contact" element={<FurnitureContactPage />} />
+        <Route path="/furnitures/products" element={<FurnitureProductsPage />} />
         <Route path="/manpower" element={<ManPowerHome />} />
         <Route path="/manpower/services" element={<ManpowerServicesPage />} />
         <Route path="/manpower/about" element={<ManpowerAboutPage />} />

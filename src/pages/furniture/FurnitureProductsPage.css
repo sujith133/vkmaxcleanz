@@ -1,0 +1,635 @@
+/* ═══════════════════════════════════════
+   FURNITURE PRODUCTS PAGE – Dark Luxury
+   ═══════════════════════════════════════ */
+
+/* ── Hero ── */
+.fpp-hero {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    background: #0a0a0a;
+}
+
+.fpp-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.fpp-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 48px 24px;
+}
+
+.fpp-hero-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #c9a96e;
+    background: rgba(201, 169, 110, 0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.fpp-hero-content h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.fpp-hero-content h1 span {
+    color: #c9a96e;
+    font-style: italic;
+}
+
+.fpp-hero-content p {
+    font-size: 16px;
+    color: #888;
+}
+
+/* ── Breadcrumb ── */
+.fpp-breadcrumb {
+    background: #0f0f0f;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 12px 24px;
+}
+
+.fpp-breadcrumb-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fpp-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.2s;
+}
+
+.fpp-back-btn:hover {
+    color: #c9a96e;
+}
+
+/* ── Toolbar ── */
+.fpp-toolbar {
+    background: #0a0a0a;
+    padding: 24px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.fpp-toolbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.fpp-search {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fpp-search-icon {
+    position: absolute;
+    left: 16px;
+    color: #666;
+    pointer-events: none;
+}
+
+.fpp-search input {
+    width: 100%;
+    padding: 12px 44px 12px 44px;
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #fff;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.fpp-search input::placeholder {
+    color: #555;
+}
+
+.fpp-search input:focus {
+    border-color: #c9a96e;
+}
+
+.fpp-search-clear {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.fpp-sort {
+    padding: 12px 16px;
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23888' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    min-width: 200px;
+}
+
+.fpp-sort option {
+    background: #141414;
+    color: #fff;
+}
+
+/* ── Category Pills ── */
+.fpp-categories {
+    background: #0a0a0a;
+    padding: 0 24px 24px;
+}
+
+.fpp-categories-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.fpp-cat-pill {
+    padding: 8px 20px;
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 50px;
+    color: #888;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.fpp-cat-pill:hover {
+    border-color: #c9a96e;
+    color: #c9a96e;
+}
+
+.fpp-cat-pill.active {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #0a0a0a;
+}
+
+/* ── Results Bar ── */
+.fpp-results-bar {
+    background: #0f0f0f;
+    padding: 12px 24px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.fpp-results-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #888;
+}
+
+.fpp-results-inner strong {
+    color: #c9a96e;
+}
+
+/* ── Product Grid ── */
+.fpp-grid-section {
+    background: #0a0a0a;
+    padding: 32px 24px 80px;
+    min-height: 60vh;
+}
+
+.fpp-grid-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fpp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.fpp-card {
+    position: relative;
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fpp-card:hover {
+    border-color: #c9a96e;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+.fpp-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.fpp-tag-new {
+    background: #c9a96e;
+    color: #0a0a0a;
+}
+
+.fpp-tag-best {
+    background: #1a1a1a;
+    color: #c9a96e;
+    border: 1px solid #c9a96e;
+}
+
+.fpp-card-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.fpp-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.fpp-card:hover .fpp-card-img img {
+    transform: scale(1.06);
+}
+
+.fpp-card-body {
+    padding: 16px;
+}
+
+.fpp-card-cat {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.fpp-card-body h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin: 6px 0 4px;
+}
+
+.fpp-card-body p {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.fpp-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fpp-card-price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #c9a96e;
+}
+
+.fpp-card-btn {
+    padding: 6px 16px;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.fpp-card-btn:hover {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #0a0a0a;
+}
+
+/* ── Empty State ── */
+.fpp-empty {
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.fpp-empty-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.fpp-empty h3 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.fpp-empty p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+.fpp-reset-btn {
+    padding: 10px 24px;
+    background: #c9a96e;
+    border: none;
+    border-radius: 50px;
+    color: #0a0a0a;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ═══════════════════════════════════════
+   PRODUCT DETAIL MODAL
+   ═══════════════════════════════════════ */
+
+.fpp-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: fppOverlayIn 0.3s ease;
+}
+
+@keyframes fppOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fpp-modal {
+    position: relative;
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 780px;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: fppModalIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fppModalIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.fpp-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.2s;
+}
+
+.fpp-modal-close:hover {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #0a0a0a;
+    transform: rotate(90deg);
+}
+
+.fpp-modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.fpp-modal-img {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 20px 0 0 20px;
+}
+
+.fpp-modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fpp-modal-info {
+    padding: 32px;
+}
+
+.fpp-modal-cat {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.fpp-modal-info h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    margin: 8px 0 12px;
+}
+
+.fpp-modal-price {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #c9a96e;
+    margin-bottom: 16px;
+}
+
+.fpp-modal-desc {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.fpp-modal-features h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fpp-modal-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.fpp-modal-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #aaa;
+    padding: 6px 0;
+}
+
+.fpp-check {
+    color: #c9a96e;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.fpp-enquiry-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: #c9a96e;
+    border: none;
+    border-radius: 50px;
+    color: #0a0a0a;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.fpp-enquiry-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(201, 169, 110, 0.3);
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+    .fpp-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fpp-modal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .fpp-modal-img {
+        border-radius: 20px 20px 0 0;
+        aspect-ratio: 16/9;
+    }
+
+    .fpp-modal {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fpp-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .fpp-hero-content h1 {
+        font-size: 28px;
+    }
+
+    .fpp-toolbar-inner {
+        flex-direction: column;
+    }
+
+    .fpp-sort {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .fpp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fpp-modal-info {
+        padding: 20px;
+    }
+
+    .fpp-modal-info h2 {
+        font-size: 20px;
+    }
+
+    .fpp-modal-price {
+        font-size: 22px;
+    }
+}

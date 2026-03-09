@@ -1,0 +1,163 @@
+/* ═══════════════════════════════════════
+   TESTIMONIALS – Dark Luxury
+   ═══════════════════════════════════════ */
+
+.furn-testimonials {
+    background: #0a0a0a;
+    padding: 100px 24px;
+}
+
+.furn-testimonials-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.furn-testimonials-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #c9a96e;
+    margin-bottom: 12px;
+}
+
+.furn-testimonials-header h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 48px;
+}
+
+.furn-testimonials-header h2 span {
+    font-style: italic;
+    color: #c9a96e;
+}
+
+/* ── Card ── */
+.furn-testimonial-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 20px;
+    padding: 48px 40px;
+    animation: furnTestFade 0.4s ease;
+}
+
+@keyframes furnTestFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.furn-testimonial-stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.furn-testimonial-stars span {
+    font-size: 20px;
+    color: #c9a96e;
+}
+
+.furn-testimonial-card blockquote {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 32px;
+}
+
+.furn-testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.furn-testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c9a96e, #a0834a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.furn-testimonial-author strong {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+}
+
+.furn-testimonial-author span {
+    font-size: 13px;
+    color: #888;
+}
+
+/* ── Controls ── */
+.furn-testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.furn-testimonial-nav {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.furn-testimonial-nav:hover {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #0a0a0a;
+}
+
+.furn-testimonial-counter {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .furn-testimonials {
+        padding: 60px 20px;
+    }
+
+    .furn-testimonials-header h2 {
+        font-size: 28px;
+    }
+
+    .furn-testimonial-card {
+        padding: 32px 24px;
+    }
+
+    .furn-testimonial-card blockquote {
+        font-size: 16px;
+    }
+}

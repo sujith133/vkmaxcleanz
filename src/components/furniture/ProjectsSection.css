@@ -1,0 +1,221 @@
+/* ═══════════════════════════════════════
+   PROJECTS SECTION – Accordion Showcase
+   ═══════════════════════════════════════ */
+
+.furn-projects {
+    background: #f8f5f0;
+    padding: 100px 24px;
+}
+
+.furn-projects-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.furn-projects-header {
+    text-align: right;
+    margin-bottom: 48px;
+}
+
+.furn-projects-label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.furn-projects-header h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+
+.furn-projects-header h2 span {
+    font-style: italic;
+}
+
+/* ── Content Layout ── */
+.furn-projects-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.furn-projects-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.furn-projects-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: furnFadeIn 0.5s ease;
+}
+
+@keyframes furnFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.furn-projects-image-badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-width: 60%;
+    justify-content: flex-end;
+}
+
+.furn-projects-image-badge span {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* ── Accordion ── */
+.furn-projects-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.furn-accordion-item {
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.furn-accordion-item:first-child {
+    border-top: 1px solid #ddd;
+}
+
+.furn-accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.furn-accordion-num {
+    font-size: 14px;
+    font-weight: 700;
+    color: #bbb;
+    min-width: 28px;
+}
+
+.furn-accordion-item.active .furn-accordion-num {
+    color: #c9a96e;
+}
+
+.furn-accordion-header h3 {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: color 0.3s;
+}
+
+.furn-accordion-item.active .furn-accordion-header h3 {
+    color: #c9a96e;
+}
+
+.furn-accordion-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.furn-accordion-item.active .furn-accordion-arrow {
+    background: #1a1a1a;
+    color: #c9a96e;
+    transform: rotate(0deg);
+}
+
+.furn-accordion-item:not(.active) .furn-accordion-arrow {
+    transform: rotate(45deg);
+}
+
+.furn-accordion-body {
+    padding: 0 0 20px 44px;
+    animation: accordionSlide 0.3s ease;
+}
+
+@keyframes accordionSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.furn-accordion-body p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .furn-projects-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .furn-projects-header {
+        text-align: center;
+    }
+
+    .furn-projects-header h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .furn-projects {
+        padding: 60px 20px;
+    }
+
+    .furn-projects-header h2 {
+        font-size: 32px;
+    }
+
+    .furn-accordion-header h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .furn-projects-image-badge {
+        display: none;
+    }
+}
