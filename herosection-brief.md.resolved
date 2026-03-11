@@ -1,0 +1,426 @@
+# Furniture Hero Section - Design Analysis & Development Guide
+
+## 📐 Original Figma Design Specifications
+
+### Canvas Size
+- **Desktop Design**: 1280px × 831px (MacBook Air viewport)
+- **Background**: #FFFCF9 (warm off-white)
+
+---
+
+## 🎨 Design Elements Breakdown
+
+### 1. Background Title - "FURNITURE"
+**Purpose**: Creates depth and visual hierarchy as a decorative background element
+
+**Specifications**:
+- Font: Russo One (Regular)
+- Size: 180px
+- Color: #333333
+- Position: Horizontally centered (left: calc(50% - 537px)), top: 214px
+- Transform: Uppercase
+- Line Height: 69px
+- Style: Non-italic, single line
+
+**Design Notes**:
+- This is an oversized decorative element that sits behind all content
+- Should be barely readable, creating texture rather than being a primary text element
+- Z-index should be lowest (background layer)
+
+---
+
+### 2. Left Content Column
+
+#### A. Origin Tag - "Made in China"
+**Specifications**:
+- Font: DM Sans (Regular)
+- Size: 16px
+- Color: #333333
+- Position: left: 114px, top: 328px
+- Line Height: 23px
+- Width: 317px
+- Font Variation Settings: 'opsz' 14
+- Format: Two lines ("Made in" on first line, "China" on second)
+
+#### B. Description Text
+**Specifications**:
+- Font: DM Sans (Regular)
+- Size: 16px
+- Color: #333333
+- Position: left: 114px, top: 450px
+- Line Height: 23px
+- Width: 317px
+- Font Variation Settings: 'opsz' 14
+- Content: "Enjoy a spotless home or office without lifting a Finger. Our Professional cleaning team delivers reliable eco-friendly."
+
+#### C. CTA Button - "Book Your Cleaning Today"
+**Specifications**:
+- Position: left: 114px, top: 545px
+- Size: 250px × 47px
+- Background: #222222
+- Border Radius: 90px (fully rounded pill)
+- Shadow: 0px 4px 4px 0px rgba(0,0,0,0.25)
+
+**Button Components**:
+1. White circular icon container:
+   - Size: 33px × 34px
+   - Position: left: 9px, top: 7px
+   - Background: white
+   - Border Radius: 68px
+   
+2. Arrow icon:
+   - Rotated 47.26deg
+   - Color: #222222
+   - Size: ~16.159px
+   
+3. Button text:
+   - Font: DM Sans (SemiBold)
+   - Size: 16px
+   - Color: white
+   - Position: left: 49px, top: 13px
+   - Letter Spacing: -0.64px
+   - Font Variation Settings: 'opsz' 14
+
+---
+
+### 3. Central Product Images
+
+#### A. Main Chair Image
+**Specifications**:
+- Asset: Gemini_Generated_Image_1bzmpu1bzmpu1bzm-Photoroom 1
+- Position: left: 369px, top: 44px
+- Container Size: 591px × 787px
+- Image Transform: 
+  - Width: 204.8% of container
+  - Height: 100% of container
+  - Position: left: -55.84%, top: 0
+- Z-index: Middle layer (above background, below thumbnails)
+
+**Design Notes**:
+- The image is intentionally oversized and cropped to show only a portion
+- Creates a hero/focal point for the entire layout
+
+#### B. Floor Lamp (Right Side)
+**Specifications**:
+- Asset: Gemini_Generated_Image_vw7ntrvw7ntrvw7n-Photoroom 1
+- Position: left: 850px, top: 95px
+- Container Size: 251px × 606px
+- Image Transform:
+  - Width: 448.21% of container
+  - Height: 120.67% of container
+  - Position: left: -184.46%, top: -0.02%
+
+**Design Notes**:
+- Provides visual balance to the left content column
+- Adds complementary product context
+
+#### C. Ground Shadow/Floor
+**Specifications**:
+- Asset: Gemini_Generated_Image_hloa2ehloa2ehloa-Photoroom 1
+- Position: left: -187px, top: 671px
+- Container Size: 1397px × 161px
+- Image Transform:
+  - Width: 100%
+  - Height: 564.01% of container
+  - Position: top: -463.99%
+- Additional Shadow Element:
+  - SVG ellipse blur filter
+  - Position: left: 467px, top: 782px
+  - Size: 403px × 79px
+  - Blur: gaussian blur stdDeviation 42
+
+**Design Notes**:
+- Creates grounding effect for the floating furniture
+- Extends beyond viewport boundaries for seamless edge blending
+
+---
+
+### 4. Product Thumbnail Cards (Right Side)
+
+**Grid Specifications**:
+- Count: 3 cards
+- Position: left: 1136px (all aligned)
+- Vertical positions: top: 351px, 496px, 641px
+- Spacing between cards: ~145px (351→496), ~145px (496→641)
+
+**Individual Card Specifications**:
+- Size: 108px × 106px
+- Background: #D9D9D9 (placeholder)
+- Border Radius: 23px
+- Content: Same chair image (cropped differently per card)
+
+**Image Crop Inside Cards**:
+- Container size: 100px × 120px
+- Top-right radius: 41px
+- Image transform:
+  - Width: 233.47% of container
+  - Height: 125.77% of container
+  - Position: left: -63.66%, top: -21.65%
+
+**Arrow Badge (Above Thumbnails)**:
+**Position**: left: 1123.49px, top: 339.51px
+**Size**: ~48.686px × 49.017px
+**Components**:
+- Background circle: 34px, #222222, rotated 34.3deg
+- White arrow icon: ~16.159px, rotated 81.57deg total
+
+---
+
+### 5. Bottom Navigation Bar
+
+#### A. Dark Bar
+**Specifications**:
+- Background: #131112
+- Height: 51px
+- Width: 1280px (full width)
+- Position: bottom: 0, left: 0
+- Z-index: High (navigation layer)
+
+#### B. Centered Navigation Button
+
+**Circular Button Specifications**:
+- Position: Centered horizontally on the bar, elevated above it
+- Size: 100px × 100px outer circle
+- Background: #131112
+- Border: 16px solid white (on inner circle at top: 693px)
+- Additional outer ring: 24px stroke width (on outer circle at top: 702px)
+
+**Button Components**:
+1. Large dark circle background (170px diameter):
+   - Position: left: 898px, top: 667px
+   - Background: #131112
+   
+2. Outer ring circle:
+   - Size: 100px diameter
+   - Position: left: 933px, top: 702px
+   - Fill: #131112
+   - Stroke: white, 24px width
+   - Inner radius: 38px
+   
+3. Inner circle:
+   - Size: 100px diameter
+   - Position: left: 933px, top: 693px
+   - Fill: #131112
+   - Stroke: white, 16px width
+   - Inner radius: 42px
+
+4. Arrow icon:
+   - Size: ~31.284px
+   - Color: white
+   - Rotated: 81.57deg
+
+**Decorative Cutouts (Pills)**:
+- Left cutout: left: 865px, top: 748px, size: 45px × 33px
+- Right cutout: left: 1056px, top: 748px, size: 45px × 33px
+- Color: #131112
+- Shape: Rounded rectangles (create pill-shaped negative space effect)
+
+---
+
+## ❌ Current Implementation Issues
+
+### 1. **Positioning System Mismatch**
+**Problem**: Using responsive clamp() functions and percentages instead of fixed positions
+- Original design uses absolute pixel positions for a 1280px desktop layout
+- Current implementation uses fluid responsive values that break the precise spatial relationships
+- **Impact**: Elements don't align as intended at any viewport size
+
+### 2. **Background Title Positioning**
+**Problem**: Title is centered with `alignItems: flex-start` and variable padding
+- Original: Precisely positioned at `left: calc(50% - 537px), top: 214px`
+- Current: Centered with `paddingTop: clamp(14px, 4vw, 60px)`
+- **Impact**: Title moves unpredictably across breakpoints; never matches design
+
+### 3. **Left Content Column Spacing**
+**Problem**: Using a spacer div with clamp() instead of fixed positions
+- Original: Each element has its own absolute position (top: 328px, 450px, 545px)
+- Current: Relative spacing with `height: clamp(80px, 14vw, 180px)` spacer
+- **Impact**: Vertical rhythm breaks; CTA button doesn't align with design
+
+### 4. **Chair Image Placement**
+**Problem**: Complex transform and responsive sizing
+- Original: `left: 369px, top: 44px, 591px × 787px` with specific crop
+- Current: `left: 50%, transform: translateX(-44%)` with clamp() sizing
+- **Impact**: Chair is never in the correct position; proportions shift
+
+### 5. **Floor Lamp Position**
+**Problem**: Using right positioning with clamp()
+- Original: `left: 850px, top: 95px` (fixed from left edge)
+- Current: `right: clamp(90px, 17vw, 260px)` (responsive from right edge)
+- **Impact**: Lamp doesn't maintain spatial relationship with chair
+
+### 6. **Product Thumbnails Alignment**
+**Problem**: Hidden on tablet/mobile; wrong positioning system
+- Original: Vertically stacked at `left: 1136px, top: 351/496/641px`
+- Current: Using Tailwind breakpoint classes with separate mobile/tablet/desktop layouts
+- **Impact**: Design completely changes across devices instead of scaling proportionally
+
+### 7. **Ground Shadow Timing**
+**Problem**: Z-index and positioning don't create proper layering
+- Original: Precise overlap with chair base using negative left offset
+- Current: Using `insetInline: 0` which constrains it to viewport
+- **Impact**: Shadow doesn't extend beyond edges; visual grounding effect lost
+
+### 8. **Bottom Bar Button Complexity**
+**Problem**: Simplified button structure
+- Original: Multi-layered circles with precise stroke widths and decorative cutouts
+- Current: Single button with border and pill-shaped cutouts
+- **Impact**: Lacks the sophisticated depth and craftsmanship of original
+
+### 9. **Responsive Strategy Mismatch**
+**Problem**: Trying to make a fixed desktop design responsive using breakpoints
+- Original: Single fixed layout designed for 1280px desktop
+- Current: Three separate layouts (mobile, tablet, desktop) with different structures
+- **Impact**: None of the layouts match the original design
+
+### 10. **Font Loading & Rendering**
+**Problem**: Using optical sizing and font variation settings incorrectly
+- Original: Uses `font-variation-settings: 'opsz' 14` on DM Sans
+- Current: Not implementing optical sizing
+- **Impact**: Typography doesn't match the intended rendering
+
+---
+
+## ✅ Recommended Development Approach
+
+### Phase 1: Desktop-First Fixed Layout
+1. Create a 1280px fixed-width container
+2. Use absolute positioning with exact pixel values from Figma
+3. Match all z-index layers precisely
+4. Implement exact typography with variation settings
+
+### Phase 2: Proportional Scaling
+1. Wrap the entire layout in a container that scales proportionally
+2. Use CSS `transform: scale()` for viewport adaptation
+3. Set min/max constraints to prevent over-scaling
+
+### Phase 3: True Responsive Breakpoints
+1. Create distinct layouts only at major breakpoints (e.g., 768px, 1024px)
+2. Reorganize content structure (not just resize) for mobile
+3. Maintain design integrity at each breakpoint
+
+### Phase 4: Interactive Enhancements
+1. Add hover states to buttons and thumbnails
+2. Implement smooth transitions
+3. Consider carousel functionality for mobile thumbnails
+
+---
+
+## 🎯 Key Metrics for Accuracy
+
+| Element | Figma Position | Current Implementation | Status |
+|---------|---------------|------------------------|--------|
+| FURNITURE title | left: calc(50%-537px), top: 214px | Centered with variable padding | ❌ Wrong |
+| Origin text | left: 114px, top: 328px | left: clamp(18px,6vw,114px), top: clamp(80px,12vw,148px) | ❌ Wrong |
+| Description | left: 114px, top: 450px | Relative to origin with spacer | ❌ Wrong |
+| CTA button | left: 114px, top: 545px | Relative to description | ❌ Wrong |
+| Main chair | left: 369px, top: 44px, 591×787px | left: 50%, complex transform | ❌ Wrong |
+| Floor lamp | left: 850px, top: 95px, 251×606px | right: clamp(), responsive | ❌ Wrong |
+| Thumbnails | left: 1136px, top: 351/496/641px | Hidden on mobile/tablet | ❌ Wrong |
+| Bottom bar | height: 51px | height: clamp(40px,3.8vw,52px) | ❌ Wrong |
+
+---
+
+## 📋 Asset Requirements
+
+### Images Used:
+1. `imgGeminiGeneratedImage1Bzmpu1Bzmpu1BzmPhotoroom2` - Chair (main + thumbnails)
+2. `imgGeminiGeneratedImageHloa2Ehloa2EhloaPhotoroom1` - Ground shadow
+3. `imgGeminiGeneratedImageVw7Ntrvw7Ntrvw7NPhotoroom1` - Floor lamp
+
+### SVG Paths:
+1. `svgPaths.p1cc52b80` - Arrow icon (small)
+2. `svgPaths.p3660f280` - Arrow icon (large)
+3. `svgPaths.pb8fd00` - Decorative pill cutouts
+
+### Fonts:
+1. Russo One (Regular) - Background title
+2. DM Sans (Regular, SemiBold) - Body text and buttons
+   - Must support optical sizing: `font-variation-settings: 'opsz' 14`
+
+---
+
+## 🔧 Technical Implementation Notes
+
+### CSS Requirements:
+```css
+/* Fixed container approach */
+.hero-container {
+  width: 1280px;
+  height: 831px;
+  position: relative;
+  margin: 0 auto;
+  background: #fffcf9;
+}
+
+/* Scale for smaller viewports */
+@media (max-width: 1280px) {
+  .hero-container {
+    transform: scale(calc(100vw / 1280));
+    transform-origin: top center;
+  }
+}
+
+/* DM Sans optical sizing */
+.dm-sans-text {
+  font-family: 'DM Sans', sans-serif;
+  font-variation-settings: 'opsz' 14;
+}
+```
+
+### Component Structure:
+```
+HeroSection
+├── BackgroundTitle (z-index: 0)
+├── LeftContentColumn (z-index: 10)
+│   ├── OriginTag
+│   ├── Description
+│   └── CTAButton
+├── GroundShadow (z-index: 3)
+├── ChairImage (z-index: 5)
+├── FloorLamp (z-index: 4)
+├── ThumbnailStrip (z-index: 20)
+│   ├── ArrowBadge
+│   └── ThumbnailCards × 3
+└── BottomBar (z-index: 30)
+    ├── DarkBar
+    ├── CircleButton
+    └── DecorativeCutouts
+```
+
+---
+
+## 🎯 Success Criteria
+
+- [ ] All elements positioned within 2px of Figma specifications at 1280px
+- [ ] Typography matches exactly (font, size, weight, optical settings)
+- [ ] Colors match hex values precisely
+- [ ] Z-index layering creates proper depth
+- [ ] Image crops and transforms match original
+- [ ] Button states and interactions work smoothly
+- [ ] Responsive scaling maintains proportions
+- [ ] Mobile layout provides usable alternative while preserving brand
+
+---
+
+## 📱 Responsive Considerations
+
+### Desktop (1280px+):
+- Use exact Figma specifications
+- All elements visible
+- Fixed layout
+
+### Tablet (768px - 1279px):
+- Proportionally scale entire layout
+- Consider stacking thumbnails horizontally below hero
+- Maintain spatial relationships
+
+### Mobile (< 768px):
+- Redesign with vertical flow
+- Stack content: Title → Chair → Text → CTA → Thumbnails
+- Simplify bottom navigation
+- Ensure touch targets are 44px minimum
+
+---
+
+*Last Updated: 2026-03-09*

@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
+import { useLocationStore, LEADERS, getRoleAtLocation } from '../../store/useLocationStore';
 import './FurnitureAboutPage.css';
 
 export default function FurnitureAboutPage() {
+    const { location } = useLocationStore();
+
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
+
+    const filteredLeaders = LEADERS.filter((l) => l.locations.includes(location));
 
     return (
         <main className="fu-ap-page">
@@ -60,10 +65,18 @@ export default function FurnitureAboutPage() {
                         </div>
                         <div className="fu-ap-story-visual">
                             <div className="fu-ap-visual-grid">
-                                <div className="fu-ap-visual-item">🛋️</div>
-                                <div className="fu-ap-visual-item">🪑</div>
-                                <div className="fu-ap-visual-item">🛏️</div>
-                                <div className="fu-ap-visual-item">📚</div>
+                                <div className="fu-ap-visual-item">
+                                    <img src="/images/furniture/cat_living_room.webp" alt="Living Room" />
+                                </div>
+                                <div className="fu-ap-visual-item">
+                                    <img src="/images/furniture/cat_office.webp" alt="Office" />
+                                </div>
+                                <div className="fu-ap-visual-item">
+                                    <img src="/images/furniture/cat_bedroom.webp" alt="Bedroom" />
+                                </div>
+                                <div className="fu-ap-visual-item">
+                                    <img src="/images/furniture/cat_dining.webp" alt="Dining" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -75,26 +88,15 @@ export default function FurnitureAboutPage() {
                 <div className="fu-ap-wrap">
                     <span className="fu-ap-label fu-light">Our Leadership</span>
                     <h2>The Team Behind the Craft</h2>
-                    <div className="fu-ap-leaders-grid">
-                        <div className="fu-ap-leader-card">
-                            <div className="fu-ap-avatar founder"><span>ER</span></div>
-                            <h3>E. Rachel</h3>
-                            <span className="fu-ap-leader-role">Founder & CEO</span>
-                            <p>
-                                Visionary entrepreneur who established VK Max Furnitures with a
-                                mission to make premium, sustainable furniture accessible to all.
-                            </p>
-                        </div>
-                        <div className="fu-ap-leader-card">
-                            <div className="fu-ap-avatar design"><span>EH</span></div>
-                            <h3>E. Honock</h3>
-                            <span className="fu-ap-leader-role">Head of Design</span>
-                            <p>
-                                Creative mind behind our signature collections. Honock blends
-                                modern aesthetics with functional design to create furniture
-                                people love.
-                            </p>
-                        </div>
+                    <div className={`fu-ap-leaders-grid leaders-${filteredLeaders.length}`}>
+                        {filteredLeaders.map((leader) => (
+                            <div className="fu-ap-leader-card" key={leader.name}>
+                                <img src={leader.image} alt={leader.name} className="fu-ap-avatar-img" />
+                                <h3>{leader.name}</h3>
+                                <span className="fu-ap-leader-role">{getRoleAtLocation(leader, location)}</span>
+                                <p>{leader.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

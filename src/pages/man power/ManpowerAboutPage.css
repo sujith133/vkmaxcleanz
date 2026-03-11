@@ -250,6 +250,14 @@
     margin-bottom: 24px;
 }
 
+.mp-ap-avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
 .mp-ap-avatar {
     width: 100px;
     height: 100px;

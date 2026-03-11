@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
+import { useLocationStore, LEADERS, getRoleAtLocation } from '../../store/useLocationStore';
 import './ManpowerAboutPage.css';
 
 export default function ManpowerAboutPage() {
+    const { location } = useLocationStore();
+
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
+
+    const filteredLeaders = LEADERS.filter((l) => l.locations.includes(location));
 
     return (
         <main className="mp-ap-page">
@@ -79,31 +84,17 @@ export default function ManpowerAboutPage() {
                     <p className="mp-ap-section-desc">
                         Passionate leaders driving workforce innovation
                     </p>
-                    <div className="mp-ap-leaders-grid">
-                        <div className="mp-ap-leader-card">
-                            <div className="mp-ap-leader-avatar">
-                                <div className="mp-ap-avatar ceo"><span>ER</span></div>
+                    <div className={`mp-ap-leaders-grid leaders-${filteredLeaders.length}`}>
+                        {filteredLeaders.map((leader) => (
+                            <div className="mp-ap-leader-card" key={leader.name}>
+                                <div className="mp-ap-leader-avatar">
+                                    <img src={leader.image} alt={leader.name} className="mp-ap-avatar-img" />
+                                </div>
+                                <h3>{leader.name}</h3>
+                                <span className="mp-ap-leader-role">{getRoleAtLocation(leader, location)}</span>
+                                <p>{leader.description}</p>
                             </div>
-                            <h3>E. Rachel</h3>
-                            <span className="mp-ap-leader-role">Chief Executive Officer</span>
-                            <p>
-                                Visionary leader with 14+ years of experience. Rachel has built
-                                VK Max into a trusted multi-city workforce solutions brand through
-                                her relentless focus on quality and customer satisfaction.
-                            </p>
-                        </div>
-                        <div className="mp-ap-leader-card">
-                            <div className="mp-ap-leader-avatar">
-                                <div className="mp-ap-avatar ops"><span>EH</span></div>
-                            </div>
-                            <h3>E. Honock</h3>
-                            <span className="mp-ap-leader-role">Head of Operations</span>
-                            <p>
-                                Operations expert who oversees workforce deployment, training programs,
-                                and quality assurance across all service categories. His systematic
-                                approach ensures reliable staffing delivery.
-                            </p>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
