@@ -1,7 +1,7 @@
 import './CleanProjects.css';
 
 export default function CleanProjects() {
-    const bgImage = '/images/cleaning/project-1.png';
+    const bgImage = '/images/cleaning/project-1.webp';
 
     return (
         <section className="clean-projects" id="clean-projects">
@@ -30,7 +30,7 @@ export default function CleanProjects() {
                 <div className="clean-projects-cards">
                     {/* Small card 1 */}
                     <div className="clean-project-card clean-project-card-small">
-                        <img src="/images/cleaning/project-2.png" alt="Cleaning project" />
+                        <img src="/images/cleaning/project-2.webp" alt="Cleaning project" />
                         <div className="clean-project-card-overlay-simple" />
                     </div>
 
@@ -62,13 +62,13 @@ export default function CleanProjects() {
 
                     {/* Small card 2 */}
                     <div className="clean-project-card clean-project-card-small">
-                        <img src="/images/cleaning/project-3.png" alt="Cleaning project" />
+                        <img src="/images/cleaning/project-3.webp" alt="Cleaning project" />
                         <div className="clean-project-card-overlay-simple" />
                     </div>
 
                     {/* Small card 3 */}
                     <div className="clean-project-card clean-project-card-small">
-                        <img src="/images/cleaning/project-4.png" alt="Cleaning project" />
+                        <img src="/images/cleaning/project-4.webp" alt="Cleaning project" />
                         <div className="clean-project-card-overlay-simple" />
                     </div>
                 </div>

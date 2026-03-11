@@ -7,12 +7,12 @@ export default function AboutSection() {
                 <div className="about-content">
                     <div className="about-images">
                         <img
-                            src="/images/cleaning/about-1.png"
+                            src="/images/cleaning/about-1.webp"
                             alt="Quality home services"
                             className="about-img-main"
                         />
                         <img
-                            src="/images/cleaning/about-2.png"
+                            src="/images/cleaning/about-2.webp"
                             alt="Professional team"
                             className="about-img-secondary"
                         />

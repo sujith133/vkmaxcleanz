@@ -7,12 +7,12 @@ export default function AboutSection() {
                 <div className="mp-about-content">
                     <div className="mp-about-images">
                         <img
-                            src="/images/manpower/Cleaning_Staff.png"
+                            src="/images/manpower/Cleaning_Staff.webp"
                             alt="Professional manpower team"
                             className="mp-about-img-main"
                         />
                         <img
-                            src="/images/manpower/Security.png"
+                            src="/images/manpower/Security.webp"
                             alt="Security personnel"
                             className="mp-about-img-secondary"
                         />

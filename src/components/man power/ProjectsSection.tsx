@@ -3,25 +3,25 @@ import './ProjectsSection.css';
 
 const projects = [
     {
-        image: '/images/cleaning/project-1.png',
+        image: '/images/cleaning/project-1.webp',
         title: 'Skilled workforce for commercial construction site',
         subtitle: 'Construction Staffing',
         tags: ['Construction', 'Labor', 'Skilled Workers'],
     },
     {
-        image: '/images/cleaning/project-2.png',
+        image: '/images/cleaning/project-2.webp',
         title: 'Dedicated personnel for large-scale warehouse operations',
         subtitle: 'Logistics & Warehousing',
         tags: ['Warehouse', 'Logistics', 'Inventory'],
     },
     {
-        image: '/images/cleaning/project-3.png',
+        image: '/images/cleaning/project-3.webp',
         title: 'Event staff for national corporate conference',
         subtitle: 'Event Management',
         tags: ['Events', 'Hospitality', 'Support'],
     },
     {
-        image: '/images/cleaning/project-4.png',
+        image: '/images/cleaning/project-4.webp',
         title: 'Commercial facility maintenance and cleaning team',
         subtitle: 'Facility Management',
         tags: ['Maintenance', 'Cleaning', 'Facilities'],

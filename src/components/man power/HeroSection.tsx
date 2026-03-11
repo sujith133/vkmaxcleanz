@@ -40,7 +40,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="mp-hero-image-wrapper">
-                    <img src="/images/manpower/herosection.png" alt="Professional workforce" className="mp-person-img" />
+                    <img src="/images/manpower/herosection.webp" alt="Professional workforce" className="mp-person-img" />
                 </div>
             </div>
 

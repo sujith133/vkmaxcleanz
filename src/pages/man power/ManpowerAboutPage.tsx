@@ -32,7 +32,7 @@ export default function ManpowerAboutPage() {
                     <div className="mp-ap-story-grid">
                         <div className="mp-ap-story-images">
                             <div className="mp-ap-story-img-main">
-                                <img src="/images/manpower/herosection.png" alt="VK Max Manpower team" />
+                                <img src="/images/manpower/herosection.webp" alt="VK Max Manpower team" />
                             </div>
                             <div className="mp-ap-story-badge">
                                 <strong>500+</strong>

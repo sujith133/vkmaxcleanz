@@ -32,10 +32,10 @@ export default function AboutPage() {
                     <div className="ap-story-grid">
                         <div className="ap-story-images">
                             <div className="ap-story-img-main">
-                                <img src="/images/cleaning/about-1.png" alt="VK Max Cleanz team at work" />
+                                <img src="/images/cleaning/about-1.webp" alt="VK Max Cleanz team at work" />
                             </div>
                             <div className="ap-story-img-secondary">
-                                <img src="/images/cleaning/about-2.png" alt="Professional cleaning service" />
+                                <img src="/images/cleaning/about-2.webp" alt="Professional cleaning service" />
                             </div>
                             <div className="ap-story-badge">
                                 <strong>14+</strong>

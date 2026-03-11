@@ -3,25 +3,25 @@ import './ProjectsSection.css';
 
 const projects = [
     {
-        image: '/images/cleaning/project-1.png',
+        image: '/images/cleaning/project-1.webp',
         title: 'Deep cleaning for a family residence',
         subtitle: 'Speaking Home Makeover',
         tags: ['Cleaning Services', 'Cleaning Services', 'Cleaning Services', 'Cleaning Services', 'Cleaning Services'],
     },
     {
-        image: '/images/cleaning/project-2.png',
+        image: '/images/cleaning/project-2.webp',
         title: 'Office space deep sanitization',
         subtitle: 'Corporate Clean Solution',
         tags: ['Office Cleaning', 'Sanitization', 'Deep Clean'],
     },
     {
-        image: '/images/cleaning/project-3.png',
+        image: '/images/cleaning/project-3.webp',
         title: 'Kitchen & bathroom restoration',
         subtitle: 'Residential Revamp',
         tags: ['Kitchen Clean', 'Bathroom Clean', 'Restoration'],
     },
     {
-        image: '/images/cleaning/project-4.png',
+        image: '/images/cleaning/project-4.webp',
         title: 'Post-construction site cleanup',
         subtitle: 'Builder Cleanup Project',
         tags: ['Post Construction', 'Site Cleanup', 'Heavy Duty'],

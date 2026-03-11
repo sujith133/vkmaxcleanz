@@ -5,31 +5,31 @@ import './ManpowerServicesPage.css';
 
 const services = [
     {
-        image: '/images/manpower/Security.png',
+        image: '/images/manpower/Security.webp',
         title: 'Security Services',
         description: 'We deploy trained, licensed security guards for residential complexes, corporate offices, retail outlets, events, and construction sites. Our security personnel are background-verified, disciplined, and equipped to handle emergency situations effectively.',
         features: ['24/7 guarding', 'Access control', 'CCTV monitoring support', 'Event security', 'Emergency response'],
     },
     {
-        image: '/images/manpower/Cleaning_Staff.png',
+        image: '/images/manpower/Cleaning_Staff.webp',
         title: 'Cleaning Staff',
         description: 'Our professional cleaning teams maintain hygiene standards across offices, hospitals, malls, residential societies, and industrial facilities. Trained in modern cleaning techniques and eco-friendly products.',
         features: ['Office & corporate cleaning', 'Hospital-grade sanitation', 'Deep cleaning services', 'Post-construction cleanup', 'Daily maintenance'],
     },
     {
-        image: '/images/manpower/Fire_Safety.png',
+        image: '/images/manpower/Fire_Safety.webp',
         title: 'Fire Safety',
         description: 'We supply certified fire safety officers and fire watch personnel who ensure compliance with safety regulations. Our staff is trained in fire prevention, emergency evacuation, and firefighting equipment handling.',
         features: ['Fire watch personnel', 'Safety compliance audits', 'Emergency drill coordination', 'Fire equipment inspection', 'Evacuation management'],
     },
     {
-        image: '/images/manpower/Household_Works.png',
+        image: '/images/manpower/Household_Works.webp',
         title: 'Household Works',
         description: 'From cooking and cleaning to laundry and general upkeep — our verified household helpers make daily life easier. Each worker is personally vetted, trained, and assigned based on your specific requirements.',
         features: ['Cooking & meal prep', 'House cleaning', 'Laundry & ironing', 'Grocery & errands', 'Elderly care assistance'],
     },
     {
-        image: '/images/manpower/Baby_Sitting.png',
+        image: '/images/manpower/Baby_Sitting.webp',
         title: 'Baby Sitting',
         description: 'Our experienced babysitters and nannies provide attentive, loving childcare right at your home. All caregivers undergo strict background checks and are trained in child safety and early development.',
         features: ['Full-time & part-time nannies', 'After-school care', 'Infant care specialists', 'Weekend babysitters', 'First-aid trained'],

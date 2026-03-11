@@ -8,7 +8,7 @@ export default function HeroSection() {
         <section className="hero" id="hero">
 
             <div className="hero-bg">
-                <img src="/images/cleaning/herosection background.png" alt="Background" className="hero-bg-img" />
+                <img src="/images/cleaning/herosection background.webp" alt="Background" className="hero-bg-img" />
                 <div className="hero-overlay"></div>
             </div>
 
@@ -34,12 +34,12 @@ export default function HeroSection() {
                 </div>
 
                 <div className="hero-image-wrapper">
-                    <img src="/images/cleaning/herosection person.png" alt="Professional cleaner" className="person-img" />
+                    <img src="/images/cleaning/herosection person.webp" alt="Professional cleaner" className="person-img" />
                 </div>
             </div>
 
             <div className="hero-clouds">
-                <img src="/images/cleaning/clouds.png" alt="Clouds separator" />
+                <img src="/images/cleaning/clouds.webp" alt="Clouds separator" />
             </div>
         </section>
     );

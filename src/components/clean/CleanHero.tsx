@@ -4,7 +4,7 @@ export default function CleanHero() {
     return (
         <section className="clean-hero" id="clean-hero">
             <div className="clean-hero-bg">
-                <img src="/images/cleaning/hero-cleaner.png" alt="" aria-hidden="true" style={{ objectPosition: 'center', filter: 'brightness(0.5)' }} />
+                <img src="/images/cleaning/hero-cleaner.webp" alt="" aria-hidden="true" style={{ objectPosition: 'center', filter: 'brightness(0.5)' }} />
             </div>
             <div className="clean-hero-overlay" />
 
@@ -32,7 +32,7 @@ export default function CleanHero() {
                 </div>
 
                 <div className="clean-hero-image">
-                    <img src="/images/cleaning/hero-cleaner.png" alt="Professional cleaning expert" />
+                    <img src="/images/cleaning/hero-cleaner.webp" alt="Professional cleaning expert" />
                 </div>
             </div>
 
