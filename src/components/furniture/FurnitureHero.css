@@ -1,0 +1,732 @@
+/* ========================================
+   FURNITURE HERO – Figma-Accurate Layout
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&display=swap');
+
+/* ---------- Outer wrapper (handles scaling) ---------- */
+.fh-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #FFFCF9;
+}
+
+/* ---------- Full-screen canvas ---------- */
+.fh-canvas {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #FFFCF9;
+    overflow: hidden;
+}
+
+/* ---------- Background title ---------- */
+.fh-bg-title {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    font-family: 'Russo One', sans-serif;
+    font-size: 180px;
+    font-weight: 480;
+    color: #333333;
+    text-transform: uppercase;
+    line-height: 180px;
+    white-space: nowrap;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* ---------- Left content column ---------- */
+.fh-left {
+    position: absolute;
+    left: 120px;
+    top: -20;
+    width: 317px;
+    z-index: 10;
+}
+
+.fh-origin {
+    position: absolute;
+    top: 328px;
+    left: 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-variation-settings: 'opsz' 14;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 23px;
+}
+
+.fh-origin strong {
+    display: block;
+    font-family: 'Russo One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #222222;
+    margin-top: 2px;
+}
+
+.fh-desc {
+    position: absolute;
+    top: 450px;
+    left: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-variation-settings: 'opsz' 14;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 23px;
+    width: 317px;
+}
+
+/* ---------- Wave Button (cursor-following wave) ---------- */
+.fh-wave-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.fh-wave-svg {
+    position: absolute;
+    inset: 0;
+    width: 150%;
+    height: 100%;
+    left: -25%;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 0;
+    opacity: 0;
+}
+
+.fh-wave-btn:hover .fh-wave-svg {
+    opacity: 1;
+}
+
+.fh-wave-btn-content {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* CTA button (now inside WaveButton) */
+.fh-cta {
+    position: absolute;
+    top: 545px;
+    left: 0;
+    width: 250px;
+    height: 47px;
+    background: #222222;
+    border-radius: 90px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fh-cta .fh-wave-btn-content {
+    gap: 8px;
+    padding: 0 18px 0 9px;
+}
+
+.fh-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+}
+
+.fh-cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 34px;
+    background: #fff;
+    border-radius: 68px;
+    flex-shrink: 0;
+}
+
+.fh-cta-icon svg {
+    width: 16px;
+    height: 16px;
+    transform: rotate(47deg);
+    color: #222222;
+}
+
+.fh-cta-text {
+    font-family: 'DM Sans', sans-serif;
+    font-variation-settings: 'opsz' 14;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.64px;
+    white-space: nowrap;
+}
+
+/* ---------- Mat (floor surface) ---------- */
+.fh-mat {
+    position: absolute;
+    bottom: 0;
+    left: -200px;
+    width: 1500px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.fh-mat img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- Furniture group (desktop: pass-through) ---------- */
+.fh-furniture-group {
+    position: static;
+    display: contents;
+    /* invisible wrapper on desktop */
+}
+
+/* ---------- Chair (main hero image) ---------- */
+.fh-chair {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-55%);
+    bottom: -70px;
+    width: auto;
+    height: 480px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.fh-chair img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ---------- Floor lamp ---------- */
+.fh-lamp {
+    position: absolute;
+    left: 60%;
+    transform: translateX(30%);
+    bottom: -20px;
+    width: auto;
+    height: 580px;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.fh-lamp img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ---------- Thumbnail strip ---------- */
+.fh-thumbnails {
+    position: absolute;
+    right: 40px;
+    top: 300px;
+    z-index: 20;
+}
+
+.fh-thumb-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #222222;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-left: -8px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    border: none;
+}
+
+.fh-thumb-arrow:hover {
+    transform: scale(1.1);
+}
+
+.fh-thumb-arrow svg {
+    width: 13px;
+    height: 13px;
+    color: #fff;
+    transform: rotate(47deg);
+}
+
+.fh-thumb-card {
+    width: 72px;
+    height: 70px;
+    background: #D9D9D9;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fh-thumb-card:last-child {
+    margin-bottom: 0;
+}
+
+.fh-thumb-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.fh-thumb-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Bottom orbiter (cursor-following) ---------- */
+.fh-bottom-orbiter {
+    position: absolute;
+    bottom: -60px;
+    transform: translateX(-50%);
+    z-index: 40;
+    cursor: pointer;
+    transition: left 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: auto;
+}
+
+.fh-bottom-orbiter:hover {
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.25));
+}
+
+.fh-bottom-orbiter svg {
+    display: block;
+}
+
+
+/* ========================================
+   RESPONSIVE – Tablet (769px – 1024px)
+   ======================================== */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .fh-canvas {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10vh 32px 0;
+        overflow: hidden;
+    }
+
+    /* Title */
+    .fh-bg-title {
+        position: static;
+        transform: none;
+        font-size: 10vw;
+        line-height: 1;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1vh;
+        order: 0;
+        flex-shrink: 0;
+    }
+
+    /* Hide "Made in China" on tablet */
+    .fh-origin {
+        display: none;
+    }
+
+    /* Content – below title */
+    .fh-left {
+        position: static;
+        width: 100%;
+        text-align: center;
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .fh-desc {
+        position: static;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto 1.5vh;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .fh-cta {
+        position: static;
+        margin: 0 auto 2vh;
+    }
+
+    /* Thumbnails */
+    .fh-thumbnails {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        order: 2;
+        justify-content: center;
+        margin-bottom: 1vh;
+        flex-shrink: 0;
+    }
+
+    .fh-thumb-arrow {
+        display: none;
+    }
+
+    .fh-thumb-card {
+        width: 8vh;
+        max-width: 75px;
+        height: 8vh;
+        max-height: 73px;
+        margin-bottom: 0;
+    }
+
+    /* Furniture group – fills remaining space, sits on mat */
+    .fh-furniture-group {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        order: 3;
+        flex: 1;
+        min-height: 0;
+        z-index: 5;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 15vh;
+        transform: translateY(50px);
+    }
+
+    .fh-chair {
+        position: static;
+        transform: none;
+        height: 75%;
+        width: auto;
+    }
+
+    .fh-chair img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .fh-lamp {
+        position: static;
+        transform: none;
+        height: 100%;
+        width: auto;
+        margin-left: -30px;
+    }
+
+    .fh-lamp img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* Mat – pinned to bottom */
+    .fh-mat {
+        position: absolute;
+        bottom: 0;
+        left: -20%;
+        width: 140%;
+        height: 22vh;
+        order: unset;
+        z-index: 3;
+        overflow: hidden;
+    }
+
+    .fh-mat img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fh-bottom-orbiter {
+        display: none;
+    }
+}
+
+/* ========================================
+   RESPONSIVE – Mobile Layout (≤768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .fh-wrapper {
+        background: #FFFCF9;
+    }
+
+    .fh-canvas {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10vh 20px 0;
+        overflow: hidden;
+    }
+
+    /* Title */
+    .fh-bg-title {
+        position: static;
+        transform: none;
+        font-size: 14vw;
+        line-height: 1;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1vh;
+        order: 0;
+        flex-shrink: 0;
+    }
+
+    /* Hide "Made in China" on mobile */
+    .fh-origin {
+        display: none;
+    }
+
+    /* Content – right below title */
+    .fh-left {
+        position: static;
+        width: 100%;
+        text-align: center;
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .fh-desc {
+        position: static;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 1.5vh;
+        font-size: 2.8vw;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .fh-cta {
+        position: static;
+        margin: 0 auto 2vh;
+        width: 52vw;
+        max-width: 220px;
+        height: 5vh;
+        max-height: 42px;
+    }
+
+    .fh-cta .fh-wave-btn-content {
+        padding: 0 12px 0 6px;
+    }
+
+    .fh-cta-text {
+        font-size: 2.8vw;
+    }
+
+    .fh-cta-icon {
+        width: 3.5vh;
+        max-width: 28px;
+        height: 3.5vh;
+        max-height: 28px;
+    }
+
+    .fh-cta-icon svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    /* Thumbnails – below CTA */
+    .fh-thumbnails {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        gap: 2.5vw;
+        order: 2;
+        justify-content: center;
+        margin-bottom: 1vh;
+        flex-shrink: 0;
+    }
+
+    .fh-thumb-arrow {
+        display: none;
+    }
+
+    .fh-thumb-card {
+        width: 8vh;
+        max-width: 65px;
+        height: 8vh;
+        max-height: 63px;
+        margin-bottom: 0;
+        border-radius: 14px;
+    }
+
+    /* Furniture group – fills remaining space, sits ON the mat */
+    .fh-furniture-group {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        order: 3;
+        flex: 1;
+        min-height: 0;
+        z-index: 5;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 15vh;
+        transform: translateY(50px);
+    }
+
+    .fh-chair {
+        position: static;
+        transform: none;
+        height: 75%;
+        width: auto;
+    }
+
+    .fh-chair img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .fh-lamp {
+        position: static;
+        transform: none;
+        height: 100%;
+        width: auto;
+        margin-left: -20px;
+    }
+
+    .fh-lamp img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* Mat – pinned to bottom, full width, behind furniture */
+    .fh-mat {
+        position: absolute;
+        bottom: 0;
+        left: -20%;
+        width: 140%;
+        height: 22vh;
+        order: unset;
+        z-index: 3;
+        overflow: hidden;
+    }
+
+    .fh-mat img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fh-bottom-orbiter {
+        display: none;
+    }
+}
+
+/* ========================================
+   RESPONSIVE – Small Mobile (≤400px)
+   ======================================== */
+
+@media (max-width: 400px) {
+    .fh-canvas {
+        padding: 9vh 16px 0;
+    }
+
+    .fh-thumb-card {
+        border-radius: 12px;
+    }
+}
+
+/* ========================================
+   ENTRANCE ANIMATIONS
+   ======================================== */
+
+@keyframes fhFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fhFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fhFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fhScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fh-bg-title {
+    animation: fhFadeInUp 0.8s ease 0.1s both;
+}
+
+.fh-origin {
+    animation: fhFadeInLeft 0.7s ease 0.3s both;
+}
+
+.fh-desc {
+    animation: fhFadeInLeft 0.7s ease 0.5s both;
+}
+
+.fh-cta {
+    animation: fhFadeInLeft 0.7s ease 0.7s both;
+}
+
+.fh-chair {
+    animation: fhScaleIn 0.9s ease 0.2s both;
+}
+
+.fh-lamp {
+    animation: fhFadeInRight 0.8s ease 0.4s both;
+}
+
+.fh-thumbnails {
+    animation: fhFadeInRight 0.7s ease 0.6s both;
+}
+
+.fh-mat {
+    animation: fhFadeInUp 0.6s ease 0.3s both;
+}

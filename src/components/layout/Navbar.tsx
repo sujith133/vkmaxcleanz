@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
+import { useLocationStore } from '../../store/useLocationStore';
+import type { LocationId } from '../../store/useLocationStore';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -8,6 +10,7 @@ export default function Navbar() {
     const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const { location, setLocation } = useLocationStore();
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -87,10 +90,14 @@ export default function Navbar() {
                             <svg width="14" height="18" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="location-icon">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="currentColor" />
                             </svg>
-                            <select aria-label="Select City" className="navbar-location-select">
+                            <select
+                                aria-label="Select City"
+                                className="navbar-location-select"
+                                value={location}
+                                onChange={(e) => setLocation(e.target.value as LocationId)}
+                            >
                                 <option value="Hyderabad">Hyderabad</option>
                                 <option value="Vishakapatnam">Vishakapatnam</option>
-                                <option value="Vijaywada">Vijaywada</option>
                             </select>
                         </div>
 
@@ -129,10 +136,14 @@ export default function Navbar() {
                     <svg width="14" height="18" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg" >
                         <path fillRule="evenodd" clipRule="evenodd" d="M7 0C3.13 0 0 3.13 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 3.13 10.87 0 7 0ZM7 9.5C5.62 9.5 4.5 8.38 4.5 7C4.5 5.62 5.62 4.5 7 4.5C8.38 4.5 9.5 5.62 9.5 7C9.5 8.38 8.38 9.5 7 9.5Z" fill="currentColor" />
                     </svg>
-                    <select aria-label="Select City" className="mobile-location-select">
+                    <select
+                        aria-label="Select City"
+                        className="mobile-location-select"
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value as LocationId)}
+                    >
                         <option value="Hyderabad">Hyderabad</option>
                         <option value="Vishakapatnam">Vishakapatnam</option>
-                        <option value="Vijaywada">Vijaywada</option>
                     </select>
                 </div>
                 {visibleButtons.map(btn => (

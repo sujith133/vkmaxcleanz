@@ -2,7 +2,7 @@
    PROJECTS SECTION – CAROUSEL
    ======================================== */
 
-.projects {
+.cz-projects {
     background: var(--dark-bg);
     position: relative;
     overflow: hidden;
@@ -10,20 +10,20 @@
 }
 
 /* Header */
-.projects-inner {
+.cz-projects-inner {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--space-6);
 }
 
-.projects-header {
+.cz-projects-header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: var(--space-12);
 }
 
-.projects-label {
+.cz-projects-label {
     display: block;
     font-size: var(--text-sm);
     font-weight: 600;
@@ -33,20 +33,20 @@
     margin-bottom: var(--space-3);
 }
 
-.projects-header-text h2 {
+.cz-projects-header-text h2 {
     color: var(--white);
     font-size: var(--text-4xl);
     line-height: 1.2;
 }
 
 /* Navigation arrows */
-.projects-nav {
+.cz-projects-nav {
     display: flex;
     gap: var(--space-3);
     flex-shrink: 0;
 }
 
-.projects-nav-btn {
+.cz-projects-nav-btn {
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -59,19 +59,19 @@
     transition: all var(--transition-base);
 }
 
-.projects-nav-btn:hover {
+.cz-projects-nav-btn:hover {
     border-color: var(--accent);
     color: var(--white);
     background: rgba(108, 99, 255, 0.15);
 }
 
-.projects-nav-btn.active {
+.cz-projects-nav-btn.cz-active {
     background: var(--accent);
     border-color: var(--accent);
     color: var(--white);
 }
 
-.projects-nav-btn.active:hover {
+.cz-projects-nav-btn.cz-active:hover {
     background: var(--accent-dark);
     border-color: var(--accent-dark);
 }
@@ -80,7 +80,7 @@
    CAROUSEL
    ======================================== */
 
-.projects-carousel {
+.cz-projects-carousel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,7 @@
 }
 
 /* Individual card */
-.proj-card {
+.cz-proj-card {
     position: relative;
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -102,7 +102,7 @@
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.proj-card-img {
+.cz-proj-card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -110,43 +110,43 @@
 }
 
 /* Card sizes by offset position */
-.proj-offset--2 {
+.cz-proj-offset--2 {
     width: 140px;
     opacity: 0.4;
     transform: scale(0.9);
 }
 
-.proj-offset--1 {
+.cz-proj-offset--1 {
     width: 200px;
     opacity: 0.6;
     transform: scale(0.95);
 }
 
-.proj-active {
+.cz-proj-active {
     width: 480px;
     opacity: 1;
     transform: scale(1);
 }
 
-.proj-offset-1 {
+.cz-proj-offset-1 {
     width: 200px;
     opacity: 0.6;
     transform: scale(0.95);
 }
 
-.proj-offset-2 {
+.cz-proj-offset-2 {
     width: 140px;
     opacity: 0.4;
     transform: scale(0.9);
 }
 
 /* Hover effects on side cards */
-.proj-card:not(.proj-active):hover {
+.cz-proj-card:not(.cz-proj-active):hover {
     opacity: 0.85;
     transform: scale(1);
 }
 
-.proj-card:not(.proj-active):hover .proj-card-img {
+.cz-proj-card:not(.cz-proj-active):hover .cz-proj-card-img {
     transform: scale(1.05);
 }
 
@@ -154,7 +154,7 @@
    ACTIVE CARD OVERLAY
    ======================================== */
 
-.proj-card-overlay {
+.cz-proj-card-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg,
@@ -179,13 +179,13 @@
 }
 
 /* Tag pills */
-.proj-tags {
+.cz-proj-tags {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-2);
 }
 
-.proj-tag {
+.cz-proj-tag {
     padding: 6px 14px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: var(--radius-full);
@@ -198,25 +198,25 @@
 }
 
 /* Bottom info row */
-.proj-card-info {
+.cz-proj-card-info {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: var(--space-4);
 }
 
-.proj-card-text {
+.cz-proj-card-text {
     flex: 1;
 }
 
-.proj-card-subtitle {
+.cz-proj-card-subtitle {
     display: block;
     font-size: var(--text-sm);
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: var(--space-1);
 }
 
-.proj-card-info h3 {
+.cz-proj-card-info h3 {
     color: var(--white);
     font-size: var(--text-xl);
     font-weight: 600;
@@ -224,7 +224,7 @@
 }
 
 /* Arrow button */
-.proj-arrow-btn {
+.cz-proj-arrow-btn {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -238,7 +238,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.proj-arrow-btn:hover {
+.cz-proj-arrow-btn:hover {
     background: var(--accent);
     color: var(--white);
     transform: scale(1.1);
@@ -248,14 +248,14 @@
    DOTS INDICATOR
    ======================================== */
 
-.projects-dots {
+.cz-projects-dots {
     display: flex;
     justify-content: center;
     gap: var(--space-2);
     margin-top: var(--space-8);
 }
 
-.proj-dot {
+.cz-proj-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -265,13 +265,13 @@
     padding: 0;
 }
 
-.proj-dot.active {
+.cz-proj-dot.cz-active {
     background: var(--accent);
     width: 28px;
     border-radius: 4px;
 }
 
-.proj-dot:hover:not(.active) {
+.cz-proj-dot:hover:not(.cz-active) {
     background: var(--grey-400);
 }
 
@@ -280,26 +280,26 @@
    ======================================== */
 
 @media (max-width: 1024px) {
-    .projects-carousel {
+    .cz-projects-carousel {
         height: 360px;
         gap: var(--space-4);
     }
 
-    .proj-active {
+    .cz-proj-active {
         width: 400px;
     }
 
-    .proj-offset--1,
-    .proj-offset-1 {
+    .cz-proj-offset--1,
+    .cz-proj-offset-1 {
         width: 160px;
     }
 
-    .proj-offset--2,
-    .proj-offset-2 {
+    .cz-proj-offset--2,
+    .cz-proj-offset-2 {
         width: 100px;
     }
 
-    .projects-header-text h2 {
+    .cz-projects-header-text h2 {
         font-size: var(--text-3xl);
     }
 }
@@ -309,58 +309,58 @@
    ======================================== */
 
 @media (max-width: 768px) {
-    .projects {
+    .cz-projects {
         padding: var(--space-12) 0;
     }
 
-    .projects-inner {
+    .cz-projects-inner {
         padding: 0 var(--space-4);
     }
 
-    .projects-header {
+    .cz-projects-header {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--space-4);
         margin-bottom: var(--space-8);
     }
 
-    .projects-header-text h2 {
+    .cz-projects-header-text h2 {
         font-size: var(--text-2xl);
     }
 
-    .projects-carousel {
+    .cz-projects-carousel {
         height: 320px;
         gap: var(--space-3);
     }
 
-    .proj-active {
+    .cz-proj-active {
         width: 320px;
     }
 
-    .proj-offset--1,
-    .proj-offset-1 {
+    .cz-proj-offset--1,
+    .cz-proj-offset-1 {
         width: 80px;
     }
 
-    .proj-offset--2,
-    .proj-offset-2 {
+    .cz-proj-offset--2,
+    .cz-proj-offset-2 {
         display: none;
     }
 
-    .proj-card-info h3 {
+    .cz-proj-card-info h3 {
         font-size: var(--text-base);
     }
 
-    .proj-card-subtitle {
+    .cz-proj-card-subtitle {
         font-size: var(--text-xs);
     }
 
-    .proj-tag {
+    .cz-proj-tag {
         font-size: 10px;
         padding: 4px 10px;
     }
 
-    .proj-card-overlay {
+    .cz-proj-card-overlay {
         padding: var(--space-4);
     }
 }
@@ -370,31 +370,31 @@
    ======================================== */
 
 @media (max-width: 480px) {
-    .projects-carousel {
+    .cz-projects-carousel {
         height: 300px;
         gap: var(--space-2);
     }
 
-    .proj-active {
+    .cz-proj-active {
         width: 260px;
     }
 
-    .proj-offset--1,
-    .proj-offset-1 {
+    .cz-proj-offset--1,
+    .cz-proj-offset-1 {
         width: 60px;
     }
 
-    .projects-nav-btn {
+    .cz-projects-nav-btn {
         width: 40px;
         height: 40px;
     }
 
-    .proj-arrow-btn {
+    .cz-proj-arrow-btn {
         width: 36px;
         height: 36px;
     }
 
-    .proj-arrow-btn svg {
+    .cz-proj-arrow-btn svg {
         width: 14px;
         height: 14px;
     }

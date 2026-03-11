@@ -8,7 +8,7 @@ const faqs = [
     },
     {
         question: 'How do I book a cleaning service?',
-        answer: 'You can easily book through our website by filling out the contact form, calling us directly, or clicking the "Book Service" button. Our team will confirm your appointment within 2 hours.',
+        answer: 'You can easily book through our website by filling out the cz-contact form, calling us directly, or clicking the "Book Service" button. Our team will confirm your appointment within 2 hours.',
     },
     {
         question: 'Are your cleaning products eco-friendly?',
@@ -32,32 +32,32 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="faq" id="faq">
+        <section className="cz-faq" id="cz-faq">
             <div className="section-wrapper">
-                <div className="section-header">
-                    <span className="section-label">FAQ</span>
+                <div className="cz-section-header">
+                    <span className="cz-section-label">FAQ</span>
                     <h2>Trusted Answers from Our<br />Cleaning Professionals</h2>
                 </div>
-                <div className="faq-content">
-                    <div className="faq-list">
+                <div className="cz-faq-content">
+                    <div className="cz-faq-list">
                         {faqs.map((faq, i) => (
-                            <div className={`faq-item ${activeIndex === i ? 'active' : ''}`} key={i}>
-                                <button className="faq-question" onClick={() => toggleFAQ(i)}>
+                            <div className={`cz-faq-item ${activeIndex === i ? 'cz-active' : ''}`} key={i}>
+                                <button className="cz-faq-question" onClick={() => toggleFAQ(i)}>
                                     {faq.question}
-                                    <span className="faq-icon">+</span>
+                                    <span className="cz-faq-icon">+</span>
                                 </button>
-                                <div className={`faq-answer ${activeIndex === i ? 'open' : ''}`}>
+                                <div className={`cz-faq-answer ${activeIndex === i ? 'cz-open' : ''}`}>
                                     <p>{faq.answer}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className="faq-illustration">
-                        <div className="faq-img-card">
-                            <div className="faq-emoji">🤔</div>
+                    <div className="cz-faq-illustration">
+                        <div className="cz-faq-img-card">
+                            <div className="cz-faq-emoji">🤔</div>
                             <h3>Still Have Questions?</h3>
                             <p>Can't find the answer you're looking for? Reach out to our support team.</p>
-                            <a href="#contact" className="faq-cta">Contact Us →</a>
+                            <a href="#contact" className="cz-faq-cta">Contact Us →</a>
                         </div>
                     </div>
                 </div>

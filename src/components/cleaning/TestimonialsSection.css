@@ -1,14 +1,14 @@
-.testimonials {
+.cz-testimonials {
     background: var(--white);
 }
 
-.testimonials-slider {
+.cz-testimonials-slider {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
 }
 
-.testimonial-card {
+.cz-testimonial-card {
     background: var(--off-white);
     border-radius: var(--radius-lg);
     padding: var(--space-8);
@@ -17,13 +17,13 @@
     position: relative;
 }
 
-.testimonial-card:hover {
+.cz-testimonial-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-card-hover);
     border-color: var(--card-hover-border);
 }
 
-.testimonial-quote {
+.cz-testimonial-quote {
     font-size: 48px;
     color: var(--primary);
     opacity: 0.2;
@@ -31,27 +31,27 @@
     margin-bottom: var(--space-2);
 }
 
-.testimonial-stars {
+.cz-testimonial-stars {
     color: #FFC107;
     font-size: var(--text-lg);
     margin-bottom: var(--space-4);
     letter-spacing: 2px;
 }
 
-.testimonial-card>p {
+.cz-testimonial-card>p {
     font-size: var(--text-base);
     line-height: 1.8;
     margin-bottom: var(--space-6);
     color: var(--text-secondary);
 }
 
-.testimonial-author {
+.cz-testimonial-author {
     display: flex;
     align-items: center;
     gap: var(--space-3);
 }
 
-.testimonial-avatar {
+.cz-testimonial-avatar {
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -62,7 +62,7 @@
     font-size: 20px;
 }
 
-.testimonial-info h4 {
+.cz-testimonial-info h4 {
     font-size: var(--text-base);
     font-weight: 600;
     margin-bottom: 2px;
@@ -71,7 +71,7 @@
     gap: var(--space-2);
 }
 
-.verified-badge {
+.cz-verified-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -83,19 +83,19 @@
     font-size: 10px;
 }
 
-.testimonial-info span {
+.cz-testimonial-info span {
     font-size: var(--text-sm);
     color: var(--text-light);
 }
 
 @media (max-width: 1024px) {
-    .testimonials-slider {
+    .cz-testimonials-slider {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .testimonials-slider {
+    .cz-testimonials-slider {
         grid-template-columns: 1fr;
         max-width: 500px;
         margin: 0 auto;

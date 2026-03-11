@@ -1,10 +1,15 @@
 import { useEffect } from 'react';
+import { useLocationStore, LEADERS, getRoleAtLocation } from '../../store/useLocationStore';
 import './AboutPage.css';
 
 export default function AboutPage() {
+    const { location } = useLocationStore();
+
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
+
+    const filteredLeaders = LEADERS.filter((l) => l.locations.includes(location));
 
     return (
         <main className="ap-page">
@@ -93,47 +98,23 @@ export default function AboutPage() {
                     <p className="ap-section-desc">
                         Passionate leaders driving innovation in home services
                     </p>
-                    <div className="ap-leaders-grid">
-                        <div className="ap-leader-card">
-                            <div className="ap-leader-avatar">
-                                <div className="ap-avatar-placeholder ceo">
-                                    <span>ER</span>
+                    <div className={`ap-leaders-grid leaders-${filteredLeaders.length}`}>
+                        {filteredLeaders.map((leader) => (
+                            <div className="ap-leader-card" key={leader.name}>
+                                <div className="ap-leader-avatar">
+                                    <img src={leader.image} alt={leader.name} className="ap-avatar-img" />
+                                    <div className="ap-leader-ring" />
                                 </div>
-                                <div className="ap-leader-ring" />
-                            </div>
-                            <h3>E. Rachel</h3>
-                            <span className="ap-leader-role">Chief Executive Officer</span>
-                            <p>
-                                Visionary leader with 14+ years of experience, Rachel has transformed
-                                VK Max Cleanz from a local start-up to a trusted multi-city home services brand.
-                                Her relentless focus on quality and customer-first approach drives the company forward.
-                            </p>
-                            <div className="ap-leader-socials">
-                                <a href="#" aria-label="LinkedIn">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="ap-leader-card">
-                            <div className="ap-leader-avatar">
-                                <div className="ap-avatar-placeholder mktg">
-                                    <span>EH</span>
+                                <h3>{leader.name}</h3>
+                                <span className="ap-leader-role">{getRoleAtLocation(leader, location)}</span>
+                                <p>{leader.description}</p>
+                                <div className="ap-leader-socials">
+                                    <a href="#" aria-label="LinkedIn">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                                    </a>
                                 </div>
-                                <div className="ap-leader-ring" />
                             </div>
-                            <h3>E. Honock</h3>
-                            <span className="ap-leader-role">Head of Marketing</span>
-                            <p>
-                                Creative strategist and brand architect, Honock leads all marketing initiatives at VK Max.
-                                His deep understanding of customer needs and digital-first approach has scaled brand
-                                visibility and customer acquisition across multiple channels.
-                            </p>
-                            <div className="ap-leader-socials">
-                                <a href="#" aria-label="LinkedIn">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-                                </a>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>

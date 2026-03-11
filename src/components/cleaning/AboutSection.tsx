@@ -22,7 +22,7 @@ export default function AboutSection() {
                         </div>
                     </div>
                     <div className="about-text">
-                        <span className="section-label">About Us</span>
+                        <span className="cz-section-label">About Us</span>
                         <h2>VK Max Cleanz</h2>
                         <p>
                             At VK Max Cleanz we believe a well-maintained space creates a happier and healthier life.

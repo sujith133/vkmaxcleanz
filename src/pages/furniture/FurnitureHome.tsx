@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import FurnitureHero from '../../components/furniture/FurnitureHero';
 import StatsSection from '../../components/furniture/StatsSection';
 import ProjectsSection from '../../components/furniture/ProjectsSection';
 import CategoriesSection from '../../components/furniture/CategoriesSection';
@@ -15,25 +16,7 @@ export default function FurnitureHome() {
 
     return (
         <main className="furniture-page">
-            <section className="furniture-hero" id="hero">
-                <div className="hero-bg" />
-                <div className="furniture-hero-content">
-                    <div className="furniture-badge">
-                        <span>✨</span> New Collection 2026
-                    </div>
-                    <h1>
-                        Elevate Your Space with<br />
-                        <span className="highlight">Premium</span> VK Max Furnitures
-                    </h1>
-                    <p>
-                        Discover beautifully crafted pieces that transform your house into a home.
-                        Sustainable materials, timeless design, and unmatched comfort.
-                    </p>
-                    <div className="furniture-hero-actions">
-                        <a href="#products" className="furniture-btn">Shop Collection →</a>
-                    </div>
-                </div>
-            </section>
+            <FurnitureHero />
 
             <StatsSection />
             <ProjectsSection />

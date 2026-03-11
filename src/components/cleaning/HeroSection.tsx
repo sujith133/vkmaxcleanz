@@ -17,7 +17,7 @@ export default function HeroSection() {
                     <p className="hero-subtitle">Spotless Spaces, Stress-Free Living</p>
                     <h1>Trusted Cleaning<br />Expert For Home<br />And Businesses</h1>
                     <p className="hero-desc">
-                        Enjoy a spotless home or office without lifting a Finger. Our<br className="desktop-break" />
+                        Enjoy a spotless home or office without lifting a Finger. Our<br className="cz-desktop-break" />
                         Professional cleaning team delivers reliable eco-friendly.
                     </p>
 

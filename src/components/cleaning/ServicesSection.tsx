@@ -11,8 +11,8 @@ export default function ServicesSection() {
     return (
         <section className="services" id="service">
             <div className="section-wrapper">
-                <div className="section-header">
-                    <span className="section-label">Our Service Categories</span>
+                <div className="cz-section-header">
+                    <span className="cz-section-label">Our Service Categories</span>
                     <h2>Comprehensive Home Services<br />Tailored For You</h2>
                     <p>We offer a wide range of professional services to meet all your household needs.</p>
                 </div>

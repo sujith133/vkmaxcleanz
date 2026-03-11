@@ -9,19 +9,19 @@ const steps = [
 
 export default function ProcessSection() {
     return (
-        <section className="process" id="process">
+        <section className="cz-process" id="cz-process">
             <div className="section-wrapper">
-                <div className="section-header">
-                    <span className="section-label">How It Works</span>
+                <div className="cz-section-header">
+                    <span className="cz-section-label">How It Works</span>
                     <h2>Trusted Cleaning Process<br />Designed Around You</h2>
                 </div>
-                <div className="process-steps">
+                <div className="cz-process-steps">
                     {steps.map((step, i) => (
-                        <div className="process-step" key={i}>
-                            <div className="step-number">
+                        <div className="cz-process-step" key={i}>
+                            <div className="cz-step-number">
                                 <span>{step.number}</span>
                             </div>
-                            <div className="step-icon">{step.icon}</div>
+                            <div className="cz-step-icon">{step.icon}</div>
                             <h3>{step.title}</h3>
                             <p>{step.description}</p>
                         </div>

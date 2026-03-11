@@ -1,15 +1,15 @@
-.process {
+.cz-process {
     background: var(--white);
 }
 
-.process-steps {
+.cz-process-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-8);
     position: relative;
 }
 
-.process-steps::before {
+.cz-process-steps::before {
     content: '';
     position: absolute;
     top: 40px;
@@ -23,12 +23,12 @@
             transparent 16px);
 }
 
-.process-step {
+.cz-process-step {
     text-align: center;
     position: relative;
 }
 
-.step-number {
+.cz-step-number {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -42,51 +42,51 @@
     transition: all var(--transition-base);
 }
 
-.step-number span {
+.cz-step-number span {
     font-family: var(--font-heading);
     font-size: var(--text-2xl);
     font-weight: 800;
     color: var(--primary);
 }
 
-.process-step:hover .step-number {
+.cz-process-step:hover .cz-step-number {
     background: var(--primary);
     transform: scale(1.1);
 }
 
-.process-step:hover .step-number span {
+.cz-process-step:hover .cz-step-number span {
     color: var(--white);
 }
 
-.step-icon {
+.cz-step-icon {
     font-size: 28px;
     margin-bottom: var(--space-3);
 }
 
-.process-step h3 {
+.cz-process-step h3 {
     font-size: var(--text-lg);
     margin-bottom: var(--space-2);
 }
 
-.process-step p {
+.cz-process-step p {
     font-size: var(--text-sm);
     max-width: 240px;
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-    .process-steps {
+    .cz-process-steps {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-10);
     }
 
-    .process-steps::before {
+    .cz-process-steps::before {
         display: none;
     }
 }
 
 @media (max-width: 480px) {
-    .process-steps {
+    .cz-process-steps {
         grid-template-columns: 1fr;
     }
 }

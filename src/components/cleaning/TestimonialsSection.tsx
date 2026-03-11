@@ -26,25 +26,25 @@ const testimonials = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="testimonials" id="testimonials">
+        <section className="cz-testimonials" id="cz-testimonials">
             <div className="section-wrapper">
-                <div className="section-header">
-                    <span className="section-label">Testimonials</span>
+                <div className="cz-section-header">
+                    <span className="cz-section-label">Testimonials</span>
                     <h2>See Why Customers Trust<br />Us with Their Clean</h2>
                     <p>Real reviews from real clients who experienced our exceptional service.</p>
                 </div>
-                <div className="testimonials-slider">
+                <div className="cz-testimonials-slider">
                     {testimonials.map((t, i) => (
-                        <div className="testimonial-card" key={i}>
-                            <div className="testimonial-quote">"</div>
-                            <div className="testimonial-stars">
+                        <div className="cz-testimonial-card" key={i}>
+                            <div className="cz-testimonial-quote">"</div>
+                            <div className="cz-testimonial-stars">
                                 {'★'.repeat(t.stars)}{'☆'.repeat(5 - t.stars)}
                             </div>
                             <p>{t.text}</p>
-                            <div className="testimonial-author">
-                                <div className="testimonial-avatar">{t.emoji}</div>
-                                <div className="testimonial-info">
-                                    <h4>{t.name} <span className="verified-badge">✓</span></h4>
+                            <div className="cz-testimonial-author">
+                                <div className="cz-testimonial-avatar">{t.emoji}</div>
+                                <div className="cz-testimonial-info">
+                                    <h4>{t.name} <span className="cz-verified-badge">✓</span></h4>
                                     <span>{t.location}</span>
                                 </div>
                             </div>
