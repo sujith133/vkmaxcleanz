@@ -10,21 +10,21 @@ export interface Service {
     detailed_description: string;
 }
 
-// GitHub images base URL
-// Images are at: https://github.com/sujith133/vkmaxcleanz/blob/main/generated_images/<IMAGE_NAME>.webp?raw=true
-export const IMAGE_BASE_URL = 'https://github.com/sujith133/vkmaxcleanz/blob/main/generated_images/';
+// GitHub images base URL (using raw.githubusercontent.com for direct access, no redirects)
+// Images are at: https://raw.githubusercontent.com/sujith133/vkmaxcleanz/main/generated_images/<IMAGE_NAME>.webp
+export const IMAGE_BASE_URL = 'https://raw.githubusercontent.com/sujith133/vkmaxcleanz/main/generated_images/';
 
 /**
  * Converts a service name to its image URL.
  * Handles mismatches: "&" → "and", commas removed, spaces → underscores
- * e.g. "AC Full Service (Indoor & Outdoor)" → ".../AC_Full_Service_(Indoor_and_Outdoor).webp?raw=true"
+ * e.g. "AC Full Service (Indoor & Outdoor)" → ".../AC_Full_Service_(Indoor_and_Outdoor).webp"
  */
 export function getServiceImageUrl(serviceName: string): string {
     const fileName = serviceName
         .replace(/&/g, 'and')
         .replace(/,/g, '')
         .replace(/ /g, '_');
-    return `${IMAGE_BASE_URL}${fileName}.webp?raw=true`;
+    return `${IMAGE_BASE_URL}${fileName}.webp`;
 }
 
 // Category icon mapping
