@@ -4,27 +4,27 @@ import './CleanFaq.css';
 const faqs = [
     {
         q: 'Are your cleaning products safe?',
-        a: 'Choose a convenient time service package that fits your needs book takes just a few minutes. Choose a convenient time service package that fits your needs book takes just a few minutes.',
+        a: 'We exclusively use eco-friendly, non-toxic cleaning products that are safe for children, pets, and the environment while still delivering exceptional cleaning results.',
     },
     {
         q: 'How long does a cleaning session take?',
-        a: 'Choose a convenient time service package that fits your needs book takes just a few minutes. The duration depends on the size of the space and the type of cleaning.',
+        a: 'The duration depends on the size of the space and the type of cleaning. A standard residential cleaning usually takes between 3 to 5 hours.',
     },
     {
         q: 'Do I need to be home during the cleaning?',
-        a: 'Choose a convenient time service package that fits your needs book takes just a few minutes.',
+        a: 'No, you do not need to be home. Many of our clients provide us with a key or entry code for convenience.',
     },
     {
         q: 'Can I reschedule my booking?',
-        a: 'Choose a convenient time service package that fits your needs book takes just a few minutes.',
+        a: 'Yes, you can reschedule or cancel your booking. We request at least 24 hours notice for any changes to your scheduled appointment.',
     },
     {
         q: 'What areas do you cover?',
-        a: 'Choose a convenient time service package that fits your needs book takes just a few minutes.',
+        a: 'We provide professional cleaning services across major urban areas, including Hyderabad, Vishakapatnam, and Vijaywada.',
     },
     {
         q: 'Do you offer recurring cleaning plans?',
-        a: 'Choose a convenient time service package that fits your needs book takes just a few minutes.',
+        a: 'Absolutely! We offer weekly, bi-weekly, and monthly cleaning plans at discounted rates to keep your space consistently spotless.',
     },
 ];
 

@@ -1,6 +1,41 @@
+import { useState } from 'react';
 import './CleanContact.css';
 
 export default function CleanContact() {
+    const [submitted, setSubmitted] = useState(false);
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        serviceType: '',
+        message: ''
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        // Mock submission
+        console.log('Form Submitted:', formData);
+        setSubmitted(true);
+        // Reset form after a delay or keep success state
+        setTimeout(() => {
+            setSubmitted(false);
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                phone: '',
+                serviceType: '',
+                message: ''
+            });
+        }, 5000);
+    };
+
     return (
         <section className="clean-contact" id="clean-contact">
             <div className="clean-contact-container">
@@ -12,55 +47,66 @@ export default function CleanContact() {
                 <div className="clean-contact-layout">
                     {/* Form Card */}
                     <div className="clean-contact-form-card">
-                        <div className="clean-contact-form-title">Get In Touch</div>
-                        <p className="clean-contact-form-desc">
-                            Choose a convenient time service package that fits your needs book takes just a few minutes.
-                        </p>
-                        <form className="clean-contact-form" onSubmit={(e) => e.preventDefault()}>
-                            <div className="clean-contact-form-row">
-                                <div className="clean-contact-form-group">
-                                    <label>Full Name</label>
-                                    <input type="text" placeholder="Your first name" />
-                                </div>
-                                <div className="clean-contact-form-group">
-                                    <label>Last Name</label>
-                                    <input type="text" placeholder="Your last name" />
-                                </div>
+                        {submitted ? (
+                            <div className="clean-contact-success">
+                                <div className="clean-contact-success-icon">✓</div>
+                                <h3>Thank You!</h3>
+                                <p>Your message has been received. Our team will contact you shortly.</p>
+                                <button className="clean-contact-form-submit" onClick={() => setSubmitted(false)}>Send Another Message</button>
                             </div>
-                            <div className="clean-contact-form-row">
-                                <div className="clean-contact-form-group">
-                                    <label>Email Address</label>
-                                    <input type="email" placeholder="your@email.com" />
-                                </div>
-                                <div className="clean-contact-form-group">
-                                    <label>Phone Number</label>
-                                    <input type="tel" placeholder="+91 XXXXX XXXXX" />
-                                </div>
-                            </div>
-                            <div className="clean-contact-form-group">
-                                <label>Service Type</label>
-                                <select defaultValue="">
-                                    <option value="" disabled>Select a service</option>
-                                    <option value="residential">Residential Cleaning</option>
-                                    <option value="commercial">Commercial Cleaning</option>
-                                    <option value="deep">Deep Cleaning</option>
-                                    <option value="window">Window Cleaning</option>
-                                </select>
-                            </div>
-                            <div className="clean-contact-form-group">
-                                <label>Your Message</label>
-                                <textarea rows={4} placeholder="Tell us about your cleaning needs..." />
-                            </div>
-                            <button type="submit" className="clean-contact-form-submit">
-                                <span className="clean-contact-form-submit-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <line x1="7" y1="17" x2="17" y2="7" />
-                                        <polyline points="7 7 17 7 17 17" />
-                                    </svg>
-                                </span>
-                                Send Now
-                            </button>
-                        </form>
+                        ) : (
+                            <>
+                                <div className="clean-contact-form-title">Get In Touch</div>
+                                <p className="clean-contact-form-desc">
+                                    Choose a convenient time service package that fits your needs book takes just a few minutes.
+                                </p>
+                                <form className="clean-contact-form" onSubmit={handleSubmit}>
+                                    <div className="clean-contact-form-row">
+                                        <div className="clean-contact-form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Your first name" required />
+                                        </div>
+                                        <div className="clean-contact-form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Your last name" required />
+                                        </div>
+                                    </div>
+                                    <div className="clean-contact-form-row">
+                                        <div className="clean-contact-form-group">
+                                            <label>Email Address</label>
+                                            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
+                                        </div>
+                                        <div className="clean-contact-form-group">
+                                            <label>Phone Number</label>
+                                            <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 XXXXX XXXXX" required />
+                                        </div>
+                                    </div>
+                                    <div className="clean-contact-form-group">
+                                        <label>Service Type</label>
+                                        <select name="serviceType" value={formData.serviceType} onChange={handleChange} required>
+                                            <option value="" disabled>Select a service</option>
+                                            <option value="residential">Residential Cleaning</option>
+                                            <option value="commercial">Commercial Cleaning</option>
+                                            <option value="deep">Deep Cleaning</option>
+                                            <option value="window">Window Cleaning</option>
+                                        </select>
+                                    </div>
+                                    <div className="clean-contact-form-group">
+                                        <label>Your Message</label>
+                                        <textarea name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="Tell us about your cleaning needs..." required />
+                                    </div>
+                                    <button type="submit" className="clean-contact-form-submit">
+                                        <span className="clean-contact-form-submit-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </span>
+                                        Send Now
+                                    </button>
+                                </form>
+                            </>
+                        )}
                     </div>
 
                     {/* Info Card */}

@@ -4,22 +4,22 @@ const steps = [
     {
         num: '01',
         title: 'Book Your Service',
-        desc: 'Choose a convenient time service package that fits your needs book takes just a few minutes',
+        desc: 'Choose a convenient time and service package that fits your needs. Booking takes just a few minutes.',
     },
     {
         num: '02',
         title: 'We Plan & Prepare',
-        desc: 'Choose a convenient time service package that fits your needs book takes just a few minutes',
+        desc: 'Our team evaluates your requirements and prepares the necessary equipment and eco-friendly products.',
     },
     {
         num: '03',
         title: 'Cleaning Begins',
-        desc: 'Choose a convenient time service package that fits your needs book takes just a few minutes',
+        desc: 'Our professionals arrive on time and begin the thorough cleaning process according to the checklist.',
     },
     {
         num: '04',
         title: 'Final Inspection',
-        desc: 'Choose a convenient time service package that fits your needs book takes just a few minutes',
+        desc: 'We perform a final walkthrough to ensure every corner is spotless and meets our high-quality standards.',
     },
 ];
 

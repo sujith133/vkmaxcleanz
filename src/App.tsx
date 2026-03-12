@@ -12,10 +12,14 @@ function AppContent() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Navigate to="/cleanz" replace />} />
+        <Route path="/" element={<Navigate to="/clean" replace />} />
+        <Route path="/clean" element={<CleanHomePage />} />
+        <Route path="/about" element={<CleanHomePage />} />
+        <Route path="/services" element={<CleanHomePage />} />
+        <Route path="/contact" element={<CleanHomePage />} />
         <Route path="/cleanz" element={<CleaningHome />} />
         <Route path="/furnitures" element={<FurnitureHome />} />
-        <Route path="*" element={<Navigate to="/cleanz" replace />} />
+        <Route path="*" element={<Navigate to="/clean" replace />} />
       </Routes>
       <Footer />
       <FloatingWhatsApp />
@@ -28,7 +32,6 @@ function App() {
     <BrowserRouter>
       <ThemeProvider>
         <Routes>
-          <Route path="/clean" element={<CleanHomePage />} />
           <Route path="*" element={<AppContent />} />
         </Routes>
       </ThemeProvider>
