@@ -1,28 +1,26 @@
+import { Sparkles, Paintbrush, ShieldCheck, ArrowRight } from 'lucide-react';
 import './CleanServices.css';
 
 const services = [
     {
-        title: 'Commercial Cleaning',
-        desc: 'Create a professional and welcoming environment for your office or business.',
-        image: 'https://images.unsplash.com/photo-1644890550788-3ca4ee5c3bc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+        title: 'Marble Polishing',
+        desc: 'Restore the natural shine and elegance of your marble surfaces with our professional polishing.',
+        icon: Sparkles,
+        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop',
         highlighted: false,
     },
     {
-        title: 'Residential Cleaning',
-        desc: 'Create a professional and welcoming environment for your home.',
-        image: 'https://images.unsplash.com/photo-1581578949510-fa7315c4c350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
-        highlighted: false,
-    },
-    {
-        title: 'Deep Cleaning',
-        desc: 'Create a professional and welcoming environment for your office or business.',
-        image: 'https://images.unsplash.com/photo-1758273238415-01ec03d9ef27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+        title: 'Painting',
+        desc: 'High-quality interior and exterior painting services to refresh and protect your property.',
+        icon: Paintbrush,
+        image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800&auto=format&fit=crop',
         highlighted: true,
     },
     {
-        title: 'Window Cleaning',
-        desc: 'Create a professional and welcoming environment for your office or business.',
-        image: 'https://images.unsplash.com/photo-1733271751327-140114dbdb4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+        title: 'ANC Services',
+        desc: 'Reliable Annual Maintenance Contracts (ANC) to keep your home or office in top condition year-round.',
+        icon: ShieldCheck,
+        image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop',
         highlighted: false,
     },
 ];
@@ -37,35 +35,40 @@ export default function CleanServices() {
                     <div className="clean-services-header-left">
                         <p className="clean-services-label">Our Services</p>
                         <h2 className="clean-services-heading">
-                            Complete Cleaning Solutions<br />for Homes & Business
+                            Complete Solutions<br />for Homes & Business
                         </h2>
                     </div>
                     <a href="#clean-services" className="clean-services-cta" onClick={(e) => e.preventDefault()}>
                         <span className="clean-services-cta-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="7" y1="17" x2="17" y2="7" />
-                                <polyline points="7 7 17 7 17 17" />
-                            </svg>
+                            <ArrowRight size={16} color="#664bfa" />
                         </span>
                         Click to View More
                     </a>
                 </div>
 
                 <div className="clean-services-cards">
-                    {services.map((service, i) => (
-                        <div className={`clean-service-card ${service.highlighted ? 'highlighted' : ''}`} key={i}>
-                            <div className="clean-service-card-image">
-                                <img src={service.image} alt={service.title} loading="lazy" />
-                                {service.highlighted && (
-                                    <div className="clean-service-card-badge">View</div>
+                    {services.map((service, i) => {
+                        const Icon = service.icon;
+                        return (
+                            <div className={`clean-service-card ${service.highlighted ? 'highlighted' : ''}`} key={i}>
+                                {service.image && (
+                                    <div style={{ width: '100%', height: '200px', marginBottom: '24px', borderRadius: '12px', overflow: 'hidden', flexShrink: 0 }}>
+                                        <img src={service.image} alt={service.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                                    </div>
                                 )}
+                                <div className="clean-service-card-icon-wrap">
+                                    <Icon size={40} className="clean-service-icon" />
+                                    {service.highlighted && (
+                                        <div className="clean-service-card-badge">Top</div>
+                                    )}
+                                </div>
+                                <div className="clean-service-card-body">
+                                    <h3 className="clean-service-card-title">{service.title}</h3>
+                                    <p className="clean-service-card-desc">{service.desc}</p>
+                                </div>
                             </div>
-                            <div className="clean-service-card-body">
-                                <div className="clean-service-card-title">{service.title}</div>
-                                <div className="clean-service-card-desc">{service.desc}</div>
-                            </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 <div className="clean-services-dots">

@@ -1,6 +1,7 @@
 /* ── Services Section (Manpower) ── */
 .mp-services {
     background: var(--off-white);
+    padding: 80px 0;
 }
 
 .mp-services-grid {
@@ -12,11 +13,14 @@
 .mp-service-card {
     background: var(--white);
     border-radius: var(--radius-lg);
-    overflow: hidden;
+    padding: 32px 24px;
     box-shadow: var(--shadow-card);
     border: 1px solid transparent;
     transition: all var(--transition-slow);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .mp-service-card::before {
@@ -31,6 +35,7 @@
     transform-origin: left;
     transition: transform var(--transition-slow);
     z-index: 2;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .mp-service-card:hover {
@@ -43,33 +48,30 @@
     transform: scaleX(1);
 }
 
-.mp-service-img-wrap {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    background: var(--grey-100);
+.mp-service-icon-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    background: rgba(36, 74, 65, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: #244A41;
+    transition: all var(--transition-slow);
 }
 
-.mp-service-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform var(--transition-slow);
-}
-
-.mp-service-card:hover .mp-service-img {
-    transform: scale(1.06);
-}
-
-.mp-service-card-body {
-    padding: var(--space-5) var(--space-6);
+.mp-service-card:hover .mp-service-icon-wrap {
+    background: #244A41;
+    color: #F6C324;
+    transform: scale(1.1) rotate(-5deg);
 }
 
 .mp-service-card-body h3 {
     font-size: var(--text-xl);
     margin-bottom: var(--space-3);
     color: #244A41;
+    font-weight: 700;
 }
 
 .mp-service-card-body p {
@@ -92,6 +94,7 @@
     padding: 0;
     font-family: var(--font-body);
     transition: all var(--transition-base);
+    margin-top: auto;
 }
 
 .mp-service-link:hover {
@@ -103,6 +106,12 @@
 @media (max-width: 1024px) {
     .mp-services-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mp-services {
+        padding: 60px 0;
     }
 }
 

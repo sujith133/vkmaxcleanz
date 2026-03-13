@@ -3,6 +3,7 @@ import CleanNavbar from '../../components/clean/CleanNavbar';
 import CleanHero from '../../components/clean/CleanHero';
 import CleanAbout from '../../components/clean/CleanAbout';
 import CleanServices from '../../components/clean/CleanServices';
+import CleanClients from '../../components/clean/CleanClients';
 import CleanHowWeWork from '../../components/clean/CleanHowWeWork';
 import CleanProjects from '../../components/clean/CleanProjects';
 import CleanTestimonials from '../../components/clean/CleanTestimonials';
@@ -39,6 +40,7 @@ export default function CleanHomePage() {
                 <CleanHero />
                 <CleanAbout />
                 <CleanServices />
+                <CleanClients />
                 <CleanHowWeWork />
                 <CleanProjects />
                 <CleanTestimonials />

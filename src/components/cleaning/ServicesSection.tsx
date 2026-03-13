@@ -1,69 +1,59 @@
-import { useNavigate } from 'react-router-dom';
-import { getCategories, getCategoryImageUrl } from '../../data/servicesData';
-import { useState } from 'react';
+import { Sparkles, Paintbrush, ShieldCheck } from 'lucide-react';
 import './ServicesSection.css';
 
-export default function ServicesSection() {
-    const navigate = useNavigate();
-    // Show only the first 4 main categories
-    const categories = getCategories().slice(0, 4);
+const services = [
+    {
+        title: 'Marble Polishing',
+        desc: 'Restore the natural shine and elegance of your marble surfaces with our professional polishing.',
+        icon: Sparkles,
+        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop',
+        highlighted: false,
+    },
+    {
+        title: 'Painting',
+        desc: 'High-quality interior and exterior painting services to refresh and protect your property.',
+        icon: Paintbrush,
+        image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800&auto=format&fit=crop',
+        highlighted: true,
+    },
+    {
+        title: 'ANC Services',
+        desc: 'Reliable Annual Maintenance Contracts (ANC) to keep your home or office in top condition year-round.',
+        icon: ShieldCheck,
+        image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop',
+        highlighted: false,
+    },
+];
 
+export default function ServicesSection() {
     return (
         <section className="services" id="service">
             <div className="section-wrapper">
                 <div className="cz-section-header">
-                    <span className="cz-section-label">Our Service Categories</span>
-                    <h2>Comprehensive Home Services<br />Tailored For You</h2>
-                    <p>We offer a wide range of professional services to meet all your household needs.</p>
+                    <span className="cz-section-label">Our Services</span>
+                    <h2>Complete Solutions<br />for Homes & Business</h2>
                 </div>
-                <div className="services-grid">
-                    {categories.map((cat) => (
-                        <ServiceCategoryCard
-                            key={cat.name}
-                            name={cat.name}
-                            icon={cat.icon}
-                            description={cat.description}
-                            count={cat.count}
-                            onClick={() => navigate('/cleanz/services')}
-                        />
-                    ))}
+
+                <div className="services-grid-new">
+                    {services.map((service, i) => {
+                        const Icon = service.icon;
+                        return (
+                            <div className={`service-card-new ${service.highlighted ? 'highlighted' : ''}`} key={i}>
+                                {service.image && (
+                                    <div style={{ width: '100%', height: '200px', marginBottom: '24px', borderRadius: '12px', overflow: 'hidden', flexShrink: 0 }}>
+                                        <img src={service.image} alt={service.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
+                                    </div>
+                                )}
+                                <div className="service-card-icon-wrap">
+                                    <Icon size={40} className="service-card-icon" />
+                                </div>
+                                <h3>{service.title}</h3>
+                                <p>{service.desc}</p>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
-    );
-}
-
-function ServiceCategoryCard({ name, icon, description, count, onClick }: {
-    name: string;
-    icon: string;
-    description: string;
-    count: number;
-    onClick: () => void;
-}) {
-    const [imgError, setImgError] = useState(false);
-    const imgUrl = getCategoryImageUrl(name);
-
-    return (
-        <div className="service-card" onClick={onClick} style={{ cursor: 'pointer' }}>
-            {!imgError && imgUrl ? (
-                <div className="service-card-img">
-                    <img
-                        src={imgUrl}
-                        alt={name}
-                        onError={() => setImgError(true)}
-                        loading="lazy"
-                    />
-                </div>
-            ) : (
-                <div className="service-icon">
-                    <span>{icon}</span>
-                </div>
-            )}
-            <h3>{name}</h3>
-            <p>{description}</p>
-            <a className="service-link" onClick={onClick}>
-                {count} Services →
-            </a>
-        </div>
     );
 }

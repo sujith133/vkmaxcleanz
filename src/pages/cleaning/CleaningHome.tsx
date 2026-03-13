@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import HeroSection from '../../components/cleaning/HeroSection';
 import AboutSection from '../../components/cleaning/AboutSection';
 import ServicesSection from '../../components/cleaning/ServicesSection';
+import ClientsSection from '../../components/cleaning/ClientsSection';
 import ProcessSection from '../../components/cleaning/ProcessSection';
 import ProjectsSection from '../../components/cleaning/ProjectsSection';
 import TestimonialsSection from '../../components/cleaning/TestimonialsSection';
@@ -37,6 +38,7 @@ export default function CleaningHome() {
             <HeroSection />
             <AboutSection />
             <ServicesSection />
+            <ClientsSection />
             <ProcessSection />
             <ProjectsSection />
             <TestimonialsSection />
