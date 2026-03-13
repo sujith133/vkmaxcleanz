@@ -460,5 +460,96 @@
         "category": "Smart Home",
         "subcategory": "Home Theatre",
         "detailed_description": "This service provides professional mounting and alignment of projectors and projection screens. Suitable for home theatres, offices, or conference rooms. It ensures sharp visuals and a superior viewing experience."
+    },
+    {
+        "id": 67,
+        "service_name": "Marble Floor Polishing",
+        "category": "Marble & Stone Care",
+        "subcategory": "Marble Polishing",
+        "detailed_description": "Our Marble Floor Polishing service restores the natural shine and luster of marble floors using diamond abrasives and professional-grade polishing compounds. Ideal for homes, offices, and commercial spaces with dull or scratched marble surfaces. The service removes stains, scratches, and etch marks, delivering a mirror-like finish that enhances the elegance of your space."
+    },
+    {
+        "id": 68,
+        "service_name": "Granite & Stone Polishing",
+        "category": "Marble & Stone Care",
+        "subcategory": "Marble Polishing",
+        "detailed_description": "This service covers professional polishing of granite countertops, floors, and stone surfaces to restore their original sheen. Suitable for kitchens, bathrooms, and lobbies with worn or stained granite. It removes water marks, dullness, and surface imperfections, leaving a smooth, glossy finish."
+    },
+    {
+        "id": 69,
+        "service_name": "Marble Crystallization Treatment",
+        "category": "Marble & Stone Care",
+        "subcategory": "Marble Polishing",
+        "detailed_description": "Our Marble Crystallization Treatment chemically hardens the marble surface to create a long-lasting, high-gloss protective layer. Perfect for high-traffic areas in homes, hotels, and offices. It increases stain resistance, reduces porosity, and maintains the marble's brilliant appearance for extended periods."
+    },
+    {
+        "id": 70,
+        "service_name": "Interior Wall Painting",
+        "category": "Painting Services",
+        "subcategory": "Interior Painting",
+        "detailed_description": "Our Interior Wall Painting service covers complete wall preparation, priming, and application of premium-quality paint in your chosen colors. Ideal for homes and offices seeking a fresh, updated look. We ensure clean edges, smooth finishes, and minimal disruption to your daily routine."
+    },
+    {
+        "id": 71,
+        "service_name": "Exterior Wall Painting",
+        "category": "Painting Services",
+        "subcategory": "Exterior Painting",
+        "detailed_description": "This service provides durable exterior painting with weather-resistant paints that protect your building from sun, rain, and humidity. Suitable for residential and commercial properties needing a facelift. It includes surface preparation, crack filling, and multi-coat application for lasting protection and curb appeal."
+    },
+    {
+        "id": 72,
+        "service_name": "Texture & Decorative Painting",
+        "category": "Painting Services",
+        "subcategory": "Interior Painting",
+        "detailed_description": "We offer premium texture and decorative wall finishes including stucco, metallic effects, ombre, and designer patterns. Perfect for accent walls, living rooms, and commercial spaces wanting a unique aesthetic. Each finish is hand-applied by skilled painters to create stunning visual depth and character."
+    },
+    {
+        "id": 73,
+        "service_name": "Wood & Metal Surface Painting",
+        "category": "Painting Services",
+        "subcategory": "Specialty Painting",
+        "detailed_description": "This service covers sanding, priming, and painting of wooden doors, window frames, metal grilles, and railings. Ideal for restoring weathered or peeling surfaces around your property. It uses specialized paints for each material to ensure adhesion, durability, and a smooth professional finish."
+    },
+    {
+        "id": 74,
+        "service_name": "Waterproofing & Damp-Proof Painting",
+        "category": "Painting Services",
+        "subcategory": "Specialty Painting",
+        "detailed_description": "Our Waterproofing & Damp-Proof Painting service applies specialized coatings to walls, terraces, and bathrooms to prevent seepage and dampness. Suitable for buildings experiencing water leakage or moisture issues. It provides long-term protection against mold, efflorescence, and structural damage."
+    },
+    {
+        "id": 75,
+        "service_name": "AMC Inspection Service",
+        "category": "AMC Services",
+        "subcategory": "Inspection",
+        "detailed_description": "Our AMC Inspection Service provides scheduled, thorough inspections of your home systems, appliances, and fixtures to identify potential issues before they become costly repairs. Ideal for homeowners and businesses wanting proactive maintenance. It includes detailed inspection reports with recommendations for corrective actions."
+    },
+    {
+        "id": 76,
+        "service_name": "AMC Cleaning Service",
+        "category": "AMC Services",
+        "subcategory": "Cleaning",
+        "detailed_description": "Under our Annual Maintenance Contract, this cleaning service provides regular, scheduled deep cleaning of your premises including floors, bathrooms, kitchen, and common areas. Perfect for maintaining consistent hygiene standards year-round. It ensures your property stays spotless with predictable costs and professional attention."
+    },
+    {
+        "id": 77,
+        "service_name": "AMC Basic Adjustments",
+        "category": "AMC Services",
+        "subcategory": "Basic Adjustments",
+        "detailed_description": "This AMC service covers routine adjustments to doors, windows, hinges, locks, plumbing fixtures, and electrical fittings to keep everything functioning smoothly. Ideal for preventing wear-and-tear from escalating into major repairs. Our technicians handle tightening, lubrication, alignment, and calibration across your entire property."
+    },
+    {
+        "id": 78,
+        "service_name": "AMC Functional Testing",
+        "category": "AMC Services",
+        "subcategory": "Functional Testing",
+        "detailed_description": "Our AMC Functional Testing service systematically tests all electrical systems, plumbing, appliances, HVAC units, and safety equipment to verify proper operation. Suitable for homes and commercial properties needing compliance and reliability assurance. It identifies performance degradation early, ensuring everything runs at peak efficiency."
+    },
+    {
+        "id": 79,
+        "service_name": "AMC Minor Fixes",
+        "category": "AMC Services",
+        "subcategory": "Minor Fixes",
+        "detailed_description": "This AMC service addresses small but essential repairs such as fixing leaky taps, replacing switches, patching minor wall damages, repairing door handles, and other everyday fixes. Perfect for homeowners who want hassle-free upkeep without calling multiple contractors. It keeps your property in excellent condition with quick, professional repairs."
     }
 ]

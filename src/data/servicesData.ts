@@ -38,6 +38,9 @@ export const categoryIcons: Record<string, string> = {
     'Fire and Safety': '🧯',
     'Security Services': '📹',
     'Smart Home': '🏠',
+    'Marble & Stone Care': '💎',
+    'Painting Services': '🎨',
+    'AMC Services': '📋',
 };
 
 // Category description mapping
@@ -51,6 +54,9 @@ export const categoryDescriptions: Record<string, string> = {
     'Fire and Safety': 'Fire safety equipment maintenance and compliance services.',
     'Security Services': 'Professional CCTV installation and security system setup.',
     'Smart Home': 'Home theatre, projector, and smart entertainment system installations.',
+    'Marble & Stone Care': 'Professional marble polishing, granite restoration, and stone crystallization services.',
+    'Painting Services': 'Interior, exterior, texture, and specialty painting for homes and businesses.',
+    'AMC Services': 'Annual Maintenance Contracts covering inspection, cleaning, adjustments, testing, and minor fixes.',
 };
 
 // ========================================

@@ -1,0 +1,98 @@
+{
+    "description": "All images required for the new Marble Polishing, Painting, and AMC Services. Images should be uploaded to the GitHub repo at: generated_images/<filename>.webp",
+    "upload_path": "https://github.com/sujith133/vkmaxcleanz/tree/main/generated_images/",
+    "naming_convention": "Service name with spaces replaced by underscores, '&' replaced by 'and', commas removed. Extension: .webp",
+    "images": [
+        {
+            "id": 67,
+            "service_name": "Marble Floor Polishing",
+            "filename": "Marble_Floor_Polishing.webp",
+            "category": "Marble & Stone Care",
+            "image_prompt": "Professional worker polishing a white marble floor with an industrial floor polishing machine, sparkling clean marble surface reflecting light, modern luxury home interior, warm lighting, editorial photography style, clean and bright, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 68,
+            "service_name": "Granite & Stone Polishing",
+            "filename": "Granite_and_Stone_Polishing.webp",
+            "category": "Marble & Stone Care",
+            "image_prompt": "Close-up of a technician polishing dark granite countertop surface with a handheld polishing tool, shiny restored granite reflecting ambient light, modern kitchen background, professional service photography, warm tones, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 69,
+            "service_name": "Marble Crystallization Treatment",
+            "filename": "Marble_Crystallization_Treatment.webp",
+            "category": "Marble & Stone Care",
+            "image_prompt": "Professional applying crystallization chemical treatment to a beige marble floor in a luxury hotel lobby, glossy mirror-like marble surface, chemical spray and buffing machine visible, elegant interior, professional photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 70,
+            "service_name": "Interior Wall Painting",
+            "filename": "Interior_Wall_Painting.webp",
+            "category": "Painting Services",
+            "image_prompt": "Professional painter in clean overalls applying fresh pastel paint to interior living room wall with a roller, paint tray and supplies nearby, partially painted wall showing before-after, modern apartment interior, bright natural lighting, editorial style, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 71,
+            "service_name": "Exterior Wall Painting",
+            "filename": "Exterior_Wall_Painting.webp",
+            "category": "Painting Services",
+            "image_prompt": "Professional painter on scaffolding painting exterior wall of a modern residential building, vibrant fresh paint color, blue sky background, safety equipment visible, wide angle architectural photography, bright daylight, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 72,
+            "service_name": "Texture & Decorative Painting",
+            "filename": "Texture_and_Decorative_Painting.webp",
+            "category": "Painting Services",
+            "image_prompt": "Skilled artisan applying textured decorative wall finish with a trowel, beautiful metallic gold and bronze texture pattern on accent wall, modern luxury living room setting, artistic close-up, warm ambient lighting, editorial photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 73,
+            "service_name": "Wood & Metal Surface Painting",
+            "filename": "Wood_and_Metal_Surface_Painting.webp",
+            "category": "Painting Services",
+            "image_prompt": "Professional painter carefully painting wooden door frame with a fine brush, freshly painted wood with smooth glossy finish, workshop or home renovation setting, paint cans and brushes arranged neatly, warm lighting, editorial photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 74,
+            "service_name": "Waterproofing & Damp-Proof Painting",
+            "filename": "Waterproofing_and_Damp-Proof_Painting.webp",
+            "category": "Painting Services",
+            "image_prompt": "Technician applying waterproof coating to bathroom wall with a brush roller, visible waterproofing membrane layer in blue or green, construction and renovation setting, professional tools nearby, bright even lighting, technical photography style, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 75,
+            "service_name": "AMC Inspection Service",
+            "filename": "AMC_Inspection_Service.webp",
+            "category": "AMC Services",
+            "image_prompt": "Professional technician in branded uniform inspecting home electrical panel with a clipboard and flashlight, organized tools in belt, modern home interior, focused and professional demeanor, clean documentary photography style, warm lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 76,
+            "service_name": "AMC Cleaning Service",
+            "filename": "AMC_Cleaning_Service.webp",
+            "category": "AMC Services",
+            "image_prompt": "Uniformed cleaning team performing scheduled deep cleaning in a modern office space, vacuum cleaner and mop in use, clean organized environment, professional maintenance service atmosphere, bright and fresh look, editorial photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 77,
+            "service_name": "AMC Basic Adjustments",
+            "filename": "AMC_Basic_Adjustments.webp",
+            "category": "AMC Services",
+            "image_prompt": "Maintenance technician adjusting door hinges and tightening fixtures in a modern home, small toolbox with screwdrivers and wrenches, focused hands-on work, clean residential interior, natural lighting, professional service photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 78,
+            "service_name": "AMC Functional Testing",
+            "filename": "AMC_Functional_Testing.webp",
+            "category": "AMC Services",
+            "image_prompt": "Technician testing electrical outlets and switches with a multimeter in a modern apartment, safety equipment visible, systematic testing procedure, organized and professional scene, well-lit interior, technical documentary photography style, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 79,
+            "service_name": "AMC Minor Fixes",
+            "filename": "AMC_Minor_Fixes.webp",
+            "category": "AMC Services",
+            "image_prompt": "Handyman fixing a leaky kitchen faucet with proper tools, small repair toolkit nearby, modern kitchen interior, close-up of skilled hands working, clean and professional maintenance scene, warm natural lighting, editorial photography, 16:9 landscape aspect ratio"
+        }
+    ]
+}
