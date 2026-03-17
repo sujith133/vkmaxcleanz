@@ -41,6 +41,8 @@ export const categoryIcons: Record<string, string> = {
     'Marble & Stone Care': '💎',
     'Painting Services': '🎨',
     'AMC Services': '📋',
+    'Security & Access': '🔐',
+    'Smart Solutions': '🏡',
 };
 
 // Category description mapping
@@ -57,6 +59,8 @@ export const categoryDescriptions: Record<string, string> = {
     'Marble & Stone Care': 'Professional marble polishing, granite restoration, and stone crystallization services.',
     'Painting Services': 'Interior, exterior, texture, and specialty painting for homes and businesses.',
     'AMC Services': 'Annual Maintenance Contracts covering inspection, cleaning, adjustments, testing, and minor fixes.',
+    'Security & Access': 'Access control, biometric systems, video-door phones, and fire alarm solutions.',
+    'Smart Solutions': 'Home automation, network cabling, interactive displays, and home cinema setups.',
 };
 
 // ========================================

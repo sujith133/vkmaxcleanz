@@ -34,6 +34,24 @@ const services = [
         description: 'Our experienced babysitters and nannies provide attentive, loving childcare right at your home. All caregivers undergo strict background checks and are trained in child safety and early development.',
         features: ['Full-time & part-time nannies', 'After-school care', 'Infant care specialists', 'Weekend babysitters', 'First-aid trained'],
     },
+    {
+        image: '/images/manpower/a-to-z-home-services.webp',
+        title: 'A to Z Home Services',
+        description: 'Complete end-to-end home service solutions covering cleaning, repairs, electrical, plumbing, painting, and installations — all managed under one roof with trained and verified professionals.',
+        features: ['Electrical & plumbing', 'Painting & carpentry', 'Appliance repairs', 'Deep cleaning', 'General maintenance'],
+    },
+    {
+        image: '/images/manpower/cctv-installation.webp',
+        title: 'CCTV',
+        description: 'Professional CCTV camera installation, configuration and maintenance for homes, offices, retail stores and commercial spaces. We provide end-to-end solutions with remote monitoring setup and cloud storage integration.',
+        features: ['HD & IP cameras', 'Remote monitoring setup', 'Night vision systems', 'Cloud storage integration', 'Annual maintenance'],
+    },
+    {
+        image: '/images/manpower/led-displays.webp',
+        title: 'LED Displays',
+        description: 'Installation, setup and maintenance of indoor and outdoor LED display screens for advertising, digital signage, corporate communication and event displays with full technical support.',
+        features: ['Indoor & outdoor displays', 'Digital signage', 'Content management', 'Event display setup', 'Maintenance & repair'],
+    },
 ];
 
 export default function ManpowerServicesPage() {

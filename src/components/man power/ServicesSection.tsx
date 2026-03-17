@@ -32,6 +32,21 @@ const services = [
         title: 'Office Support',
         description: 'Administrative assistants, receptionists, and office boys for smooth daily operations.',
     },
+    {
+        image: '/images/manpower/a-to-z-home-services.webp',
+        title: 'A to Z Home Services',
+        description: 'Complete end-to-end home service solutions including cleaning, repairs, maintenance and installations.',
+    },
+    {
+        image: '/images/manpower/cctv-installation.webp',
+        title: 'CCTV',
+        description: 'Professional CCTV camera installation, setup and maintenance with remote monitoring support.',
+    },
+    {
+        image: '/images/manpower/led-displays.webp',
+        title: 'LED Displays',
+        description: 'Installation and maintenance of indoor and outdoor LED display screens for advertising and signage.',
+    },
 ];
 
 export default function ServicesSection() {

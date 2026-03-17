@@ -551,5 +551,61 @@
         "category": "AMC Services",
         "subcategory": "Minor Fixes",
         "detailed_description": "This AMC service addresses small but essential repairs such as fixing leaky taps, replacing switches, patching minor wall damages, repairing door handles, and other everyday fixes. Perfect for homeowners who want hassle-free upkeep without calling multiple contractors. It keeps your property in excellent condition with quick, professional repairs."
+    },
+    {
+        "id": 80,
+        "service_name": "Access Control",
+        "category": "Security & Access",
+        "subcategory": "Access Systems",
+        "detailed_description": "Manage and restrict access to offices, buildings and restricted zones using smart card readers, keypads, turnstiles and automated door systems. Our access control solutions enhance building security, enable visitor management, and integrate seamlessly with CCTV and biometric systems for comprehensive protection."
+    },
+    {
+        "id": 81,
+        "service_name": "Biometric Systems",
+        "category": "Security & Access",
+        "subcategory": "Biometric Solutions",
+        "detailed_description": "Time attendance and workforce tracking solutions using fingerprint scanners, facial recognition and card-based biometric systems. Ideal for offices, factories and commercial establishments seeking accurate attendance records, payroll integration, and multi-location workforce management."
+    },
+    {
+        "id": 82,
+        "service_name": "Video-Door Phones",
+        "category": "Security & Access",
+        "subcategory": "Door Security",
+        "detailed_description": "Smart video doorbells and intercom systems with HD video, motion detection, two-way audio and smartphone integration. Our video-door phone solutions provide enhanced security at your doorstep with night vision capabilities and multi-unit support for apartments and villas."
+    },
+    {
+        "id": 83,
+        "service_name": "Home Cinema",
+        "category": "Smart Solutions",
+        "subcategory": "Entertainment Systems",
+        "detailed_description": "Complete home theatre design and installation including projector setup, surround sound configuration, acoustic treatment, screen installation and comfortable seating layout. We create premium cinematic experiences tailored to your space and preferences."
+    },
+    {
+        "id": 84,
+        "service_name": "Home Automation",
+        "category": "Smart Solutions",
+        "subcategory": "Smart Home",
+        "detailed_description": "Smart control of lighting, curtains, climate, security and entertainment systems through IoT technologies, voice assistants and centralized control panels. Our home automation solutions bring convenience, energy efficiency, and modern living to your home or office."
+    },
+    {
+        "id": 85,
+        "service_name": "Network Cabling",
+        "category": "Smart Solutions",
+        "subcategory": "Networking",
+        "detailed_description": "Structured wired and wireless communication infrastructure including LAN setup, fibre optic cabling, Wi-Fi mesh solutions and server room cabling. We deliver seamless connectivity for homes, offices, and commercial establishments with professional cable management."
+    },
+    {
+        "id": 86,
+        "service_name": "Fire Alarm System",
+        "category": "Security & Access",
+        "subcategory": "Fire Safety",
+        "detailed_description": "Design, installation, testing and commissioning of fire detection and protection systems including smoke detectors, alarm panels, sprinkler systems and emergency notification setups. Our fire alarm solutions ensure compliance with safety regulations and protect lives and property."
+    },
+    {
+        "id": 87,
+        "service_name": "Interactive Displays",
+        "category": "Smart Solutions",
+        "subcategory": "Display Solutions",
+        "detailed_description": "Touch-enabled smart displays supporting gesture and voice interaction for corporate presentations, classrooms, retail kiosks and collaboration spaces. We provide full installation, configuration and ongoing support for interactive display solutions."
     }
 ]
