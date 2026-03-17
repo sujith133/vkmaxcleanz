@@ -4,25 +4,25 @@ const services = [
     {
         title: 'Commercial Cleaning',
         desc: 'Create a professional and welcoming environment for your office or business.',
-        image: 'https://images.unsplash.com/photo-1644890550788-3ca4ee5c3bc3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+        image: '/images/cleanz/house-cleaning.webp',
         highlighted: false,
     },
     {
         title: 'Residential Cleaning',
         desc: 'Create a professional and welcoming environment for your home.',
-        image: 'https://images.unsplash.com/photo-1581578949510-fa7315c4c350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+        image: '/images/cleanz/house-cleaning.webp',
         highlighted: false,
     },
     {
         title: 'Deep Cleaning',
         desc: 'Create a professional and welcoming environment for your office or business.',
-        image: 'https://images.unsplash.com/photo-1758273238415-01ec03d9ef27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+        image: '/images/cleanz/house-cleaning.webp',
         highlighted: true,
     },
     {
         title: 'Window Cleaning',
         desc: 'Create a professional and welcoming environment for your office or business.',
-        image: 'https://images.unsplash.com/photo-1733271751327-140114dbdb4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+        image: '/images/cleanz/house-cleaning.webp',
         highlighted: false,
     },
 ];
