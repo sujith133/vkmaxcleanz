@@ -57,28 +57,28 @@ export default function ContactSection() {
                                     <div className="contact-info-icon">📍</div>
                                     <div className="contact-info-text">
                                         <h4>Our Office</h4>
-                                        <p>123 Clean Street, Suite 100, New York, NY 10001</p>
+                                        <p>Vishakapatnam, Andhra Pradesh, India</p>
                                     </div>
                                 </div>
                                 <div className="contact-info-item">
                                     <div className="contact-info-icon">📞</div>
                                     <div className="contact-info-text">
                                         <h4>Phone</h4>
-                                        <p>(123) 456-7890</p>
+                                        <p>+91 7569057281</p>
                                     </div>
                                 </div>
                                 <div className="contact-info-item">
                                     <div className="contact-info-icon">✉️</div>
                                     <div className="contact-info-text">
                                         <h4>Email</h4>
-                                        <p>staffing@vkmaxcleanz.com</p>
+                                        <p>enochmoses@vkmaxcleanzsolutions.com</p>
                                     </div>
                                 </div>
                                 <div className="contact-info-item">
                                     <div className="contact-info-icon">🕐</div>
                                     <div className="contact-info-text">
                                         <h4>Working Hours</h4>
-                                        <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
+                                        <p>Mon - Sat: 8:00 AM - 8:00 PM</p>
                                     </div>
                                 </div>
                             </div>

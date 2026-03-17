@@ -78,7 +78,7 @@ export default function CleanContact() {
                                 </div>
                                 <div className="clean-contact-info-text">
                                     <span className="clean-contact-info-label">Our Location</span>
-                                    <span className="clean-contact-info-value">Local Address, Street Lmvdkn,<br />125-G, the woodloneinis, 772</span>
+                                    <span className="clean-contact-info-value">Vishakapatnam, Andhra Pradesh,<br />India</span>
                                 </div>
                             </div>
 
@@ -90,7 +90,7 @@ export default function CleanContact() {
                                 </div>
                                 <div className="clean-contact-info-text">
                                     <span className="clean-contact-info-label">Phone Number</span>
-                                    <span className="clean-contact-info-value">+91 49370 34828<br />+91 49370 34826</span>
+                                    <span className="clean-contact-info-value">+91 7569057281</span>
                                 </div>
                             </div>
 
@@ -103,7 +103,7 @@ export default function CleanContact() {
                                 </div>
                                 <div className="clean-contact-info-text">
                                     <span className="clean-contact-info-label">Email Address</span>
-                                    <span className="clean-contact-info-value">vkmaxcleanz@gmail.com<br />Info@vkmaxcleanz.com</span>
+                                    <span className="clean-contact-info-value">enochmoses@vkmaxcleanzsolutions.com</span>
                                 </div>
                             </div>
                         </div>

@@ -33,17 +33,17 @@ export default function ContactPage() {
         {
             icon: '📍',
             title: 'Visit Us',
-            lines: ['Visakhapatnam, Andhra Pradesh', 'India – 530001'],
+            lines: ['Visakhapatnam, Andhra Pradesh', 'India'],
         },
         {
             icon: '📞',
             title: 'Call Us',
-            lines: ['+91 98765 43210', 'Mon – Sat, 8 AM – 8 PM'],
+            lines: ['+91 7569057281', 'Mon – Sat, 8 AM – 8 PM'],
         },
         {
             icon: '✉️',
             title: 'Email Us',
-            lines: ['info@vkmaxcleanz.com', 'support@vkmaxcleanz.com'],
+            lines: ['enochmoses@vkmaxcleanzsolutions.com'],
         },
         {
             icon: '⏰',
