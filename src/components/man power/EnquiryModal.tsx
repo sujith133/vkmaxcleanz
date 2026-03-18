@@ -14,6 +14,12 @@ const serviceOptions = [
     'Fire Safety',
     'Household Works',
     'Baby Sitting',
+    'Office Support',
+    'A to Z Home Services',
+    'CCTV',
+    'LED Displays',
+    'Event Organization',
+    'Printing Services'
 ];
 
 export default function EnquiryModal({ onClose, preselectedService, formType = 'enquiry' }: EnquiryModalProps) {
@@ -68,6 +74,12 @@ export default function EnquiryModal({ onClose, preselectedService, formType = '
         'request-staff': 'Fill in the details and we\'ll deploy the right team for you.',
         'hire': 'Let us know your staffing needs and we\'ll match the right workers.',
     };
+
+    // Ensure preselectedService is clearly available in options if not already listed
+    const displayOptions = [...serviceOptions];
+    if (preselectedService && !displayOptions.includes(preselectedService)) {
+        displayOptions.unshift(preselectedService);
+    }
 
     return (
         <div className="em-overlay" onClick={onClose}>
@@ -154,7 +166,7 @@ export default function EnquiryModal({ onClose, preselectedService, formType = '
                                     required
                                 >
                                     <option value="">Select a service</option>
-                                    {serviceOptions.map((s) => (
+                                    {displayOptions.map((s) => (
                                         <option key={s} value={s}>{s}</option>
                                     ))}
                                 </select>

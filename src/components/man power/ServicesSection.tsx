@@ -47,6 +47,16 @@ const services = [
         title: 'LED Displays',
         description: 'Installation and maintenance of indoor and outdoor LED display screens for advertising and signage.',
     },
+    {
+        image: '/images/manpower/events/Corporate_Event_-_Fashion_Show.webp',
+        title: 'Event Organization',
+        description: 'Complete event management including corporate events, artist management, product launches, and weddings.',
+    },
+    {
+        image: '/images/manpower/printing/Banner_and_Flex_Printing.webp',
+        title: 'Printing Services',
+        description: 'Comprehensive printing solutions from banners and hoardings to packaging and corporate gifts.',
+    },
 ];
 
 export default function ServicesSection() {

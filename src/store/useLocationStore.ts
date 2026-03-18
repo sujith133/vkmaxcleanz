@@ -17,11 +17,11 @@ interface LocationState {
 
 export const LEADERS: Leader[] = [
     {
-        name: 'E Rachel Moses',
+        name: 'E. Moses Hanock',
         role: 'MD',
         image: '/images/Profile/enoch.webp',
         description:
-            'Visionary leader with 14+ years of experience, E Rachel Moses has transformed VK Max Cleanz from a local start-up to a trusted multi-city home services brand. Her relentless focus on quality and customer-first approach drives the company forward.',
+            'Visionary leader with 14+ years of experience, E. Moses Hanock has transformed VK Max Cleanz from a local start-up to a trusted multi-city home services brand. Her relentless focus on quality and customer-first approach drives the company forward.',
         locations: ['Hyderabad', 'Vishakapatnam'],
     },
     {
@@ -33,11 +33,11 @@ export const LEADERS: Leader[] = [
         locations: ['Hyderabad'],
     },
     {
-        name: 'E Moses Hanock',
+        name: 'E. Rachel Moses',
         role: 'MD',
         image: '/images/Profile/laxmi.webp',
         description:
-            'Operations powerhouse, E Moses Hanock manages all day-to-day operations in Vizag. His dedication to service excellence and client relationships ensures VK Max Cleanz consistently delivers outstanding results across the city.',
+            'Operations powerhouse, E. Rachel Moses manages all day-to-day operations in Vizag. Her dedication to service excellence and client relationships ensures VK Max Cleanz consistently delivers outstanding results across the city.',
         locations: ['Vishakapatnam'],
     },
 ];

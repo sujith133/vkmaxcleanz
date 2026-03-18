@@ -3,7 +3,7 @@ import './FAQSection.css';
 
 const faqs = [
     {
-        question: 'What cleaning services do you offer?',
+        question: 'What Deep Cleaning Services do you offer?',
         answer: 'We offer residential cleaning, commercial cleaning, deep cleaning, move-in/out cleaning, office cleaning, carpet cleaning, and specialized sanitization services.',
     },
     {

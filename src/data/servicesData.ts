@@ -29,7 +29,7 @@ export function getServiceImageUrl(serviceName: string): string {
 
 // Category icon mapping
 export const categoryIcons: Record<string, string> = {
-    'Cleaning Services': '✨',
+    'Deep Cleaning Services': '✨',
     'AC Services': '❄️',
     'Appliance Services': '🔧',
     'Technical Services': '🛠️',
@@ -47,7 +47,7 @@ export const categoryIcons: Record<string, string> = {
 
 // Category description mapping
 export const categoryDescriptions: Record<string, string> = {
-    'Cleaning Services': 'Thorough deep cleaning for your entire home, bathrooms, kitchens, and more.',
+    'Deep Cleaning Services': 'Thorough deep cleaning for your entire home, bathrooms, kitchens, and more.',
     'AC Services': 'Expert AC servicing, installation, repair, and gas refilling for all types.',
     'Appliance Services': 'Professional repair and maintenance for geysers, washing machines, fridges, and more.',
     'Technical Services': 'Reliable electrician, plumber, and carpenter services for your home.',

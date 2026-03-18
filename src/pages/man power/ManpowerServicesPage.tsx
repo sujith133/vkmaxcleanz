@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EnquiryModal from '../../components/man power/EnquiryModal';
+import eventServicesJson from '../../event_services_description.json';
+import printingServicesJson from '../../printing_services_description.json';
 import './ManpowerServicesPage.css';
 
-const services = [
+const baseServices = [
     {
         image: '/images/manpower/Security.webp',
         title: 'Security Services',
@@ -14,7 +16,7 @@ const services = [
         image: '/images/manpower/Cleaning_Staff.webp',
         title: 'Cleaning Staff',
         description: 'Our professional cleaning teams maintain hygiene standards across offices, hospitals, malls, residential societies, and industrial facilities. Trained in modern cleaning techniques and eco-friendly products.',
-        features: ['Office & corporate cleaning', 'Hospital-grade sanitation', 'Deep cleaning services', 'Post-construction cleanup', 'Daily maintenance'],
+        features: ['Office & corporate cleaning', 'Hospital-grade sanitation', 'Deep Deep Cleaning Services', 'Post-construction cleanup', 'Daily maintenance'],
     },
     {
         image: '/images/manpower/Fire_Safety.webp',
@@ -53,6 +55,36 @@ const services = [
         features: ['Indoor & outdoor displays', 'Digital signage', 'Content management', 'Event display setup', 'Maintenance & repair'],
     },
 ];
+
+const formatServiceName = (name: string) => {
+    return name.replace(/&/g, 'and').replace(/\//g, '-').replace(/,/g, '').replace(/ /g, '_');
+};
+
+const eventServices = eventServicesJson.map((s: any) => ({
+    image: `/images/manpower/events/${formatServiceName(s.service_name)}.webp`,
+    title: s.service_name,
+    description: s.detailed_description,
+    features: [
+        "Professional " + s.category,
+        "High-quality execution",
+        "Customized solutions",
+        "Reliable service"
+    ],
+}));
+
+const printingServices = printingServicesJson.map((s: any) => ({
+    image: `/images/manpower/printing/${formatServiceName(s.service_name)}.webp`,
+    title: s.service_name,
+    description: s.detailed_description,
+    features: [
+        "Professional " + (s.subcategory === 'Printing' ? s.category : s.subcategory),
+        "High-quality execution",
+        "Customized solutions",
+        "Reliable service"
+    ],
+}));
+
+const services = [...baseServices, ...eventServices, ...printingServices];
 
 export default function ManpowerServicesPage() {
     const navigate = useNavigate();

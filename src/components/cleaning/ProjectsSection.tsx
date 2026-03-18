@@ -6,7 +6,7 @@ const projects = [
         image: '/images/cleaning/project-1.webp',
         title: 'Deep cleaning for a family residence',
         subtitle: 'Speaking Home Makeover',
-        tags: ['Cleaning Services', 'Cleaning Services', 'Cleaning Services', 'Cleaning Services', 'Cleaning Services'],
+        tags: ['Deep Cleaning Services', 'Deep Cleaning Services', 'Deep Cleaning Services', 'Deep Cleaning Services', 'Deep Cleaning Services'],
     },
     {
         image: '/images/cleaning/project-2.webp',

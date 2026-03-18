@@ -40,7 +40,7 @@ export default function CleanProjects() {
                         <div className="clean-project-card-overlay-gradient" />
                         <div className="clean-project-card-content">
                             <div className="clean-project-card-tags">
-                                <span className="clean-project-card-tag">Cleaning Services</span>
+                                <span className="clean-project-card-tag">Deep Cleaning Services</span>
                                 <span className="clean-project-card-tag">Residential</span>
                                 <span className="clean-project-card-tag">Deep Clean</span>
                                 <span className="clean-project-card-tag">Floor Clean</span>

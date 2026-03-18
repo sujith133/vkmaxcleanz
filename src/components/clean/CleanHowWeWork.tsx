@@ -46,7 +46,7 @@ export default function CleanHowWeWork() {
                     <div className="clean-howwework-center">
                         <div className="clean-howwework-center-emoji">🧹</div>
                         <div className="clean-howwework-center-title">VK Max Cleanz</div>
-                        <div className="clean-howwework-center-sub">Professional Cleaning Services</div>
+                        <div className="clean-howwework-center-sub">Professional Deep Cleaning Services</div>
                     </div>
 
                     <div className="clean-howwework-steps">
