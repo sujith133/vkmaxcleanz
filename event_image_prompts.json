@@ -1,0 +1,56 @@
+{
+    "description": "All images required for Event Organization services. Place images in the local generated_images/ folder and commit via git.",
+    "upload_path": "generated_images/",
+    "naming_convention": "Service name with spaces replaced by underscores, '&' replaced by 'and', '/' replaced by '-', commas removed. Extension: .webp",
+    "images": [
+        {
+            "id": 88,
+            "service_name": "Corporate Event / Fashion Show",
+            "filename": "Corporate_Event_-_Fashion_Show.webp",
+            "category": "Event Organization",
+            "image_prompt": "Grand corporate event stage with dramatic runway lighting, fashion show setup with sleek catwalk, spotlights beaming down, elegant audience seating, professional event production with LED screens and floral arrangements, modern convention hall, luxury event atmosphere, editorial event photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 89,
+            "service_name": "Artist Management",
+            "filename": "Artist_Management.webp",
+            "category": "Event Organization",
+            "image_prompt": "Behind-the-scenes artist coordination at a live concert event, professional event manager with headset and tablet coordinating with musicians backstage, stage lights glowing in background, instruments and sound equipment visible, energetic and organized atmosphere, professional event photography, warm stage lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 90,
+            "service_name": "Product Launch",
+            "filename": "Product_Launch.webp",
+            "category": "Event Organization",
+            "image_prompt": "Spectacular product launch event on a modern stage with large LED display screen, sleek product pedestal with spotlight, audience with smartphones capturing the moment, confetti and dramatic lighting effects, corporate branding elements, premium tech launch atmosphere, professional event photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 91,
+            "service_name": "Wedding Planner",
+            "filename": "Wedding_Planner.webp",
+            "category": "Event Organization",
+            "image_prompt": "Beautifully decorated Indian wedding venue with elaborate floral mandap, fairy lights and chandeliers, elegant draping in gold and red, marigold garlands, traditional yet modern wedding setup, luxury banquet hall, romantic warm lighting, stunning wedding decoration photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 92,
+            "service_name": "Anchors / Hostess",
+            "filename": "Anchors_-_Hostess.webp",
+            "category": "Event Organization",
+            "image_prompt": "Professional female event anchor in elegant attire speaking confidently on stage with microphone, large corporate event backdrop with stage lighting, engaged audience in foreground, LED screens displaying event graphics, polished and charismatic presence, professional event photography, warm spotlight lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 93,
+            "service_name": "Birthday / Bachelor Party",
+            "filename": "Birthday_-_Bachelor_Party.webp",
+            "category": "Event Organization",
+            "image_prompt": "Vibrant birthday party setup with colorful balloon arch, neon lights, DJ booth with music equipment, decorated party table with cake and confetti, glowing LED dance floor, festive and energetic party atmosphere, fun and youthful celebration vibes, professional party photography, colorful ambient lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 94,
+            "service_name": "Manpower / Entertainment",
+            "filename": "Manpower_-_Entertainment.webp",
+            "category": "Event Organization",
+            "image_prompt": "Professional event support team in uniform coordinating a large-scale event, ushers and event staff directing guests, live entertainment performers on stage in background with colorful lights, organized event operations with walkie-talkies and clipboards, bustling venue atmosphere, professional event documentation photography, 16:9 landscape aspect ratio"
+        }
+    ]
+}

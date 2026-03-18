@@ -254,7 +254,7 @@ All descriptions: "Create a professional and welcoming environment for your offi
 **Center decorator** (hidden on mobile): `w-[328px] h-[462px]`, `rounded-[24px]`, gradient `from-[#f2f0fe] to-[#6546fa]`, shadow `0 0 17px rgba(0,0,0,0.25)`. Contains centered content:
 - Broom emoji: 🧹 at 80px
 - "VK Max Cleanz": Montserrat bold 20px white
-- "Professional Cleaning Services": DM Sans white/80 14px
+- "Professional Deep Cleaning Services": DM Sans white/80 14px
 
 ---
 
@@ -273,7 +273,7 @@ All descriptions: "Create a professional and welcoming environment for your offi
 
 1. **Small card** (`225x400px`): `rounded-[24px]`, `hero-bg.png`, overlay `rgba(42,64,123,0.1)`, shadow `0 0 17px rgba(0,0,0,0.25)`
 2. **Large featured card** (`500x400px`): `rounded-[24px]`, `hero-bg.png`, gradient overlay `from-[rgba(41,27,128,0.2)] to-[#624bf2]`
-   - Top tags: `["Cleaning Services", "Residential", "Deep Clean", "Floor Clean"]` — `bg-[#6649fb]`, `rounded-[20px]`, `px-3 py-1.5`, DM Sans 12px white
+   - Top tags: `["Deep Cleaning Services", "Residential", "Deep Clean", "Floor Clean"]` — `bg-[#6649fb]`, `rounded-[20px]`, `px-3 py-1.5`, DM Sans 12px white
    - Bottom text: "Speaking Home Makeover" (DM Sans 14px white) + "Deep cleaning for a family residence" (DM Sans semibold 18px white) + white circle arrow button
 3. **Small card** (same as #1)
 4. **Small card** (same as #1)

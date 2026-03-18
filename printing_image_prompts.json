@@ -1,0 +1,154 @@
+{
+    "description": "All images required for Printing Services. Place images in the local generated_images/ folder and commit via git.",
+    "upload_path": "generated_images/",
+    "naming_convention": "Service name with spaces replaced by underscores, '&' replaced by 'and', '/' replaced by '-', commas removed. Extension: .webp",
+    "images": [
+        {
+            "id": 95,
+            "service_name": "Banner & Flex Printing",
+            "filename": "Banner_and_Flex_Printing.webp",
+            "category": "Printing Services",
+            "image_prompt": "Large format digital printer producing a vibrant colorful flex banner, printing machine in action with vivid graphics rolling out, professional print shop interior, rolls of flex material stacked nearby, bright industrial lighting, commercial photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 96,
+            "service_name": "Visiting Cards",
+            "filename": "Visiting_Cards.webp",
+            "category": "Printing Services",
+            "image_prompt": "Elegant stack of premium business visiting cards with gold foil embossing and matte finish on a dark marble surface, close-up showing texture and detail, scattered cards displaying sophisticated typography and logo design, soft studio lighting, product photography style, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 97,
+            "service_name": "Books & Booklets",
+            "filename": "Books_and_Booklets.webp",
+            "category": "Printing Services",
+            "image_prompt": "Neatly arranged professionally printed booklets and catalogs with colorful covers on a clean workspace, perfect binding and saddle-stitch binding visible, open booklet showing crisp printed pages, print shop setting, clean and organized, professional product photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 98,
+            "service_name": "Calendars",
+            "filename": "Calendars.webp",
+            "category": "Printing Services",
+            "image_prompt": "Beautiful custom printed wall calendar and desk calendar displayed together, vibrant landscape photography on calendar pages, premium paper quality visible, corporate branding elements, modern office desk setting, clean product photography, warm natural lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 99,
+            "service_name": "Flyers / Brochures / Posters",
+            "filename": "Flyers_-_Brochures_-_Posters.webp",
+            "category": "Printing Services",
+            "image_prompt": "Colorful tri-fold brochures, flyers, and posters spread out on a design table, vibrant printed marketing materials with professional layouts, graphic design elements visible, creative agency workspace, bright and organized, editorial product photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 100,
+            "service_name": "Office Stationery",
+            "filename": "Office_Stationery.webp",
+            "category": "Printing Services",
+            "image_prompt": "Complete set of branded corporate stationery including letterheads, envelopes, notepads, and folders arranged neatly on a white desk, consistent branding visible across all items, professional corporate identity mockup, clean minimalist styling, studio photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 101,
+            "service_name": "Stickers & Labels",
+            "filename": "Stickers_and_Labels.webp",
+            "category": "Printing Services",
+            "image_prompt": "Assorted colorful custom printed stickers and die-cut labels in various shapes and sizes, vinyl and paper stickers on a roll and in sheets, brand logos and decorative designs visible, production table in printing workshop, bright even lighting, product photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 102,
+            "service_name": "Hoardings & Billboards",
+            "filename": "Hoardings_and_Billboards.webp",
+            "category": "Printing Services",
+            "image_prompt": "Large outdoor billboard with vibrant advertisement graphic on a busy city roadside, steel structure mounting visible, clear blue sky background, urban commercial area, wide-angle street photography capturing scale of the hoarding, bright daylight, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 103,
+            "service_name": "Sign Boards",
+            "filename": "Sign_Boards.webp",
+            "category": "Printing Services",
+            "image_prompt": "Professional illuminated shop sign board with LED backlit acrylic lettering on a modern storefront, clean brand name and logo visible, nighttime view showing glow effect, commercial building facade, architectural photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 104,
+            "service_name": "Standees & Displays",
+            "filename": "Standees_and_Displays.webp",
+            "category": "Printing Services",
+            "image_prompt": "Professional roll-up banner standees and X-frame displays set up at a trade show exhibition, colorful promotional graphics printed on portable displays, convention hall setting with polished floors, marketing event atmosphere, professional event photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 105,
+            "service_name": "Vehicle Branding",
+            "filename": "Vehicle_Branding.webp",
+            "category": "Printing Services",
+            "image_prompt": "White delivery van fully wrapped with vibrant colorful brand graphics and logo, professional vehicle wrap installation, parked on clean urban road, eye-catching mobile advertisement design, commercial photography with clear branding visible, bright daylight, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 106,
+            "service_name": "Wall / Glass Branding",
+            "filename": "Wall_-_Glass_Branding.webp",
+            "category": "Printing Services",
+            "image_prompt": "Modern corporate office interior with branded wall graphics and frosted glass vinyl decals showing company logo and design elements, sleek glass partition with printed branding, contemporary workspace aesthetic, clean architectural interior photography, natural lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 107,
+            "service_name": "Product Packaging",
+            "filename": "Product_Packaging.webp",
+            "category": "Printing Services",
+            "image_prompt": "Collection of beautifully designed custom product packaging boxes in various sizes with premium printing, luxury cosmetic and food packaging with embossed logos, arranged on a clean surface, packaging design showcase, professional product photography, soft studio lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 108,
+            "service_name": "Box Printing",
+            "filename": "Box_Printing.webp",
+            "category": "Printing Services",
+            "image_prompt": "Stack of custom printed corrugated shipping boxes and branded gift boxes with full-color designs, die-cut windows and premium finishes visible, packaging production facility background, organized display of box varieties, professional commercial photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 109,
+            "service_name": "Custom Labels",
+            "filename": "Custom_Labels.webp",
+            "category": "Printing Services",
+            "image_prompt": "Close-up of premium custom printed product labels being applied to glass bottles and jars, elegant typography and brand design visible, waterproof glossy labels, cosmetic and food product labeling scene, clean professional setting, macro product photography, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 110,
+            "service_name": "Barcode / QR Labels",
+            "filename": "Barcode_-_QR_Labels.webp",
+            "category": "Printing Services",
+            "image_prompt": "Rolls of printed barcode and QR code labels coming off a label printer, crisp black and white scannable codes on white labels, barcode scanner nearby, warehouse or retail inventory management setting, technical commercial photography, clean and sharp, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 111,
+            "service_name": "T-Shirts",
+            "filename": "T-Shirts.webp",
+            "category": "Printing Services",
+            "image_prompt": "Freshly screen-printed custom T-shirts in multiple colors neatly folded and stacked, vibrant graphic designs and logos visible, screen printing press in background, print shop atmosphere, colorful and creative, professional product photography, bright lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 112,
+            "service_name": "Mugs",
+            "filename": "Mugs.webp",
+            "category": "Printing Services",
+            "image_prompt": "Collection of custom printed ceramic mugs with colorful sublimation designs including photos, logos, and artistic patterns, arranged on a wooden shelf display, some with coffee visible, warm cozy product photography, soft natural lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 113,
+            "service_name": "Corporate Gifts",
+            "filename": "Corporate_Gifts.webp",
+            "category": "Printing Services",
+            "image_prompt": "Elegant corporate gift set including branded diary, pen set, keychain, and award trophy with company logo engraving, arranged in a premium gift box with satin lining, executive desk setting, luxury gift presentation, professional product photography, warm studio lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 114,
+            "service_name": "Customized Items",
+            "filename": "Customized_Items.webp",
+            "category": "Printing Services",
+            "image_prompt": "Assortment of personalized printed items including phone cases, photo frames, cushion covers, badges, and lanyards displayed on a creative workshop table, colorful custom designs and names visible, maker space atmosphere, vibrant product photography, bright lighting, 16:9 landscape aspect ratio"
+        },
+        {
+            "id": 115,
+            "service_name": "Pens",
+            "filename": "Pens.webp",
+            "category": "Printing Services",
+            "image_prompt": "Premium branded metal and plastic pens with laser-engraved company logos arranged elegantly on a dark leather desk pad, variety of pen styles including ballpoint and roller, close-up showing engraving detail, executive office setting, professional product photography, soft studio lighting, 16:9 landscape aspect ratio"
+        }
+    ]
+}

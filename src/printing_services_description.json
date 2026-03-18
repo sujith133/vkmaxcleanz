@@ -1,0 +1,149 @@
+[
+    {
+        "id": 95,
+        "service_name": "Banner & Flex Printing",
+        "category": "Printing Services",
+        "subcategory": "Printing",
+        "detailed_description": "High-quality banner and flex printing for events, promotions, and advertisements. We offer vibrant full-color printing on durable flex and vinyl materials in custom sizes. Ideal for shop fronts, event backdrops, trade shows, and outdoor campaigns. Our prints are weather-resistant, UV-protected, and designed for maximum visual impact."
+    },
+    {
+        "id": 96,
+        "service_name": "Visiting Cards",
+        "category": "Printing Services",
+        "subcategory": "Printing",
+        "detailed_description": "Professional visiting card printing with premium finishes including matte, glossy, textured, and metallic options. We offer custom designs, embossing, foil stamping, and spot UV coatings to make your business cards stand out. Ideal for entrepreneurs, corporate professionals, and businesses seeking a polished first impression."
+    },
+    {
+        "id": 97,
+        "service_name": "Books & Booklets",
+        "category": "Printing Services",
+        "subcategory": "Printing",
+        "detailed_description": "Complete book and booklet printing services including design layout, binding, and finishing. We handle catalogs, manuals, annual reports, magazines, and educational materials with options for saddle-stitch, perfect binding, and spiral binding. Ideal for publishers, institutions, and businesses needing professional-grade printed publications."
+    },
+    {
+        "id": 98,
+        "service_name": "Calendars",
+        "category": "Printing Services",
+        "subcategory": "Printing",
+        "detailed_description": "Custom calendar printing in wall, desk, and pocket formats with premium paper quality and vibrant color reproduction. We offer personalized designs with company branding, product images, and custom date highlights. Perfect for corporate gifting, promotional campaigns, and personal use with year-round brand visibility."
+    },
+    {
+        "id": 99,
+        "service_name": "Flyers / Brochures / Posters",
+        "category": "Printing Services",
+        "subcategory": "Printing",
+        "detailed_description": "Eye-catching flyers, brochures, and posters printed on premium paper with vivid colors and sharp graphics. We offer single-page flyers, bi-fold and tri-fold brochures, and large-format posters for marketing campaigns, events, and retail promotions. Includes design assistance, multiple paper weight options, and bulk printing at competitive rates."
+    },
+    {
+        "id": 100,
+        "service_name": "Office Stationery",
+        "category": "Printing Services",
+        "subcategory": "Printing",
+        "detailed_description": "Complete office stationery printing including letterheads, envelopes, notepads, invoice books, receipt pads, and presentation folders. All items are customized with your company logo, branding colors, and contact details. Ideal for businesses seeking a consistent and professional brand identity across all printed materials."
+    },
+    {
+        "id": 101,
+        "service_name": "Stickers & Labels",
+        "category": "Printing Services",
+        "subcategory": "Printing",
+        "detailed_description": "Custom sticker and label printing in various shapes, sizes, and materials including vinyl, paper, transparent, and holographic options. We produce product labels, packaging stickers, bumper stickers, and decorative decals with precision die-cutting and vibrant printing. Suitable for branding, packaging, promotions, and personal use."
+    },
+    {
+        "id": 102,
+        "service_name": "Hoardings & Billboards",
+        "category": "Printing Services",
+        "subcategory": "Large Format & Advertising",
+        "detailed_description": "Large-scale hoarding and billboard printing with weather-resistant, high-resolution graphics for maximum outdoor visibility. We handle design, printing, and installation of roadside hoardings, building wraps, and highway billboards. Ideal for brand advertising, product promotions, political campaigns, and event announcements reaching thousands of viewers daily."
+    },
+    {
+        "id": 103,
+        "service_name": "Sign Boards",
+        "category": "Printing Services",
+        "subcategory": "Large Format & Advertising",
+        "detailed_description": "Professional sign board fabrication and printing including LED-lit boards, acrylic signs, metal boards, and wooden signage. We create shop name boards, directional signs, safety signs, and office nameplates with durable materials and sharp graphics. Perfect for retail stores, offices, hospitals, and commercial establishments."
+    },
+    {
+        "id": 104,
+        "service_name": "Standees & Displays",
+        "category": "Printing Services",
+        "subcategory": "Large Format & Advertising",
+        "detailed_description": "Portable standee and display printing including roll-up banners, X-frame standees, pop-up displays, and tabletop stands. Printed on high-quality materials with vibrant colors and easy-to-assemble frames. Ideal for trade shows, exhibitions, retail promotions, corporate events, and point-of-sale displays."
+    },
+    {
+        "id": 105,
+        "service_name": "Vehicle Branding",
+        "category": "Printing Services",
+        "subcategory": "Large Format & Advertising",
+        "detailed_description": "Full or partial vehicle wrapping and branding with high-quality vinyl graphics that transform cars, vans, buses, and trucks into mobile advertisements. We provide custom designs, durable weather-resistant wraps, and professional installation. Perfect for delivery fleets, corporate vehicles, and businesses seeking city-wide brand exposure on the move."
+    },
+    {
+        "id": 106,
+        "service_name": "Wall / Glass Branding",
+        "category": "Printing Services",
+        "subcategory": "Large Format & Advertising",
+        "detailed_description": "Transform office walls, storefronts, and glass surfaces into branded visual displays with custom-printed wall graphics, vinyl decals, frosted glass films, and window wraps. We offer design, production, and installation for corporate offices, retail spaces, restaurants, and showrooms. It creates an immersive brand environment with professional aesthetics."
+    },
+    {
+        "id": 107,
+        "service_name": "Product Packaging",
+        "category": "Printing Services",
+        "subcategory": "Packaging & Labeling",
+        "detailed_description": "Custom product packaging design and printing for retail, food, cosmetics, electronics, and e-commerce industries. We create branded boxes, pouches, wrappers, and cartons with premium finishes, embossing, and spot UV. Our packaging solutions enhance shelf appeal, protect products, and reinforce brand identity at every touchpoint."
+    },
+    {
+        "id": 108,
+        "service_name": "Box Printing",
+        "category": "Printing Services",
+        "subcategory": "Packaging & Labeling",
+        "detailed_description": "Custom box printing in corrugated, cardboard, and rigid formats with full-color branding, die-cut shapes, and protective coatings. We produce shipping boxes, gift boxes, product display boxes, and mailer packaging. Ideal for e-commerce brands, retail businesses, and manufacturers needing branded packaging that stands out."
+    },
+    {
+        "id": 109,
+        "service_name": "Custom Labels",
+        "category": "Printing Services",
+        "subcategory": "Packaging & Labeling",
+        "detailed_description": "Professional custom label printing for products, bottles, jars, and containers with options for waterproof, oil-resistant, and tamper-evident materials. We produce food labels, cosmetic labels, pharmaceutical labels, and industrial labels with regulatory compliance and barcode integration. Perfect for brands needing polished, durable product identification."
+    },
+    {
+        "id": 110,
+        "service_name": "Barcode / QR Labels",
+        "category": "Printing Services",
+        "subcategory": "Packaging & Labeling",
+        "detailed_description": "Precision barcode and QR code label printing for inventory management, product tracking, and digital marketing integration. We produce scannable labels in bulk with options for thermal, paper, and synthetic materials. Ideal for retail, warehousing, logistics, and businesses needing reliable product identification and traceability."
+    },
+    {
+        "id": 111,
+        "service_name": "T-Shirts",
+        "category": "Printing Services",
+        "subcategory": "Promotional & Gift Printing",
+        "detailed_description": "Custom T-shirt printing using screen printing, DTG (direct-to-garment), and heat transfer techniques for vibrant, long-lasting designs. We handle bulk corporate orders, event merchandise, team uniforms, and personalized fashion prints. Available in multiple fabric options, colors, and sizes with quick turnaround and premium print quality."
+    },
+    {
+        "id": 112,
+        "service_name": "Mugs",
+        "category": "Printing Services",
+        "subcategory": "Promotional & Gift Printing",
+        "detailed_description": "Personalized mug printing with full-color sublimation for photo mugs, logo mugs, and custom message mugs. We offer ceramic, magic color-changing, and travel mug options. Perfect for corporate gifts, promotional giveaways, wedding favors, and personal keepsakes with dishwasher-safe, fade-resistant prints."
+    },
+    {
+        "id": 113,
+        "service_name": "Corporate Gifts",
+        "category": "Printing Services",
+        "subcategory": "Promotional & Gift Printing",
+        "detailed_description": "Curated corporate gift printing and customization including branded diaries, planners, pen sets, awards, trophies, keychains, and executive gift hampers. We offer logo engraving, embossing, and full-color printing on premium items. Ideal for client appreciation, employee recognition, festive gifting, and conference giveaways with elegant presentation packaging."
+    },
+    {
+        "id": 114,
+        "service_name": "Customized Items",
+        "category": "Printing Services",
+        "subcategory": "Promotional & Gift Printing",
+        "detailed_description": "On-demand printing and personalization of unique items including phone cases, photo frames, cushion covers, badges, lanyards, and novelty products. We use UV printing, sublimation, and laser engraving for durable, high-quality customization. Perfect for personal gifts, event merchandise, influencer collaborations, and one-of-a-kind branded creations."
+    },
+    {
+        "id": 115,
+        "service_name": "Pens",
+        "category": "Printing Services",
+        "subcategory": "Promotional & Gift Printing",
+        "detailed_description": "Branded pen printing with company logos, names, and custom messages using engraving, screen printing, and pad printing techniques. We offer ballpoint, gel, roller, and premium metal pen options in bulk quantities. Ideal for trade shows, corporate events, office supplies, and promotional handouts with cost-effective brand visibility."
+    }
+]

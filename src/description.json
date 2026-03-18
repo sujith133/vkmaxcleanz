@@ -2,203 +2,203 @@
     {
         "id": 1,
         "service_name": "Bathroom Deep Cleaning (1 Bathroom)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Our Bathroom Deep Cleaning service for one bathroom includes thorough scrubbing of tiles, descaling of fittings, deep cleaning of toilet, basin, shower area, and removal of tough stains and soap scum. Ideal for homeowners or tenants looking to restore hygiene and freshness in a single bathroom. The service ensures a sparkling, germ-free space with long-lasting cleanliness."
     },
     {
         "id": 2,
         "service_name": "Bathroom Deep Cleaning (2 Bathrooms)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "This service provides comprehensive deep cleaning for two bathrooms, including tiles, sanitary ware, mirrors, fittings, and hard water stain removal. Perfect for families or shared homes that require detailed attention in multiple bathrooms. Enjoy a sanitized, odor-free environment with visibly renewed surfaces."
     },
     {
         "id": 3,
         "service_name": "Bathroom Deep Cleaning (3 Bathrooms)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Designed for larger homes, this package covers deep cleaning of three bathrooms with descaling, scrubbing, and disinfecting of all surfaces and fixtures. Suitable for households seeking professional-grade hygiene across multiple bathrooms. The result is a spotless, hygienic, and refreshed bathroom space."
     },
     {
         "id": 4,
         "service_name": "1 BHK Open Premises Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Our 1 BHK Open Premises Deep Cleaning targets vacant homes, covering floors, kitchen, bathrooms, windows, and all surfaces. Ideal for newly constructed or recently vacated properties before moving in. This service ensures a dust-free, sanitized, and move-in-ready home."
     },
     {
         "id": 5,
         "service_name": "1 BHK Occupied Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Tailored for lived-in 1 BHK homes, this deep cleaning service includes careful cleaning around furniture, appliances, and high-touch areas. Perfect for families wanting a seasonal or festive refresh without disrupting daily life. Experience a healthier, revitalized living space."
     },
     {
         "id": 6,
         "service_name": "2 BHK Open Premises Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "This service thoroughly cleans a vacant 2 BHK property, including bedrooms, living areas, kitchen, bathrooms, and floors. Ideal for property handovers, rentals, or pre-move-in preparation. It delivers a spotless, hygienic environment ready for immediate occupancy."
     },
     {
         "id": 7,
         "service_name": "2 BHK Occupied Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Our 2 BHK Occupied Deep Cleaning focuses on detailed cleaning of all rooms while carefully working around your belongings. Suitable for families seeking a comprehensive home refresh. The service enhances indoor hygiene, comfort, and overall appearance."
     },
     {
         "id": 8,
         "service_name": "3 BHK Open Premises Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Designed for vacant 3 BHK homes, this service includes deep cleaning of bedrooms, living areas, kitchen, bathrooms, and floors. Ideal for new homeowners or landlords preparing a property for tenants. It ensures a pristine, sanitized, and welcoming space."
     },
     {
         "id": 9,
         "service_name": "3 BHK Occupied Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "This package delivers meticulous cleaning for occupied 3 BHK homes, addressing hidden dirt, high-touch areas, and hard-to-reach spots. Best suited for larger families wanting a thorough home makeover. Enjoy improved cleanliness, hygiene, and a refreshed ambiance."
     },
     {
         "id": 10,
         "service_name": "4 BHK Open Premises Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Our 4 BHK Open Premises Deep Cleaning provides an extensive clean-up of large vacant homes, covering every room and surface. Ideal for luxury property owners or real estate turnovers. The service ensures a dust-free, polished, and ready-to-move-in property."
     },
     {
         "id": 11,
         "service_name": "4 BHK Occupied Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "This comprehensive cleaning service is tailored for occupied 4 BHK homes, with careful attention to furniture, fixtures, and high-traffic areas. Suitable for large households seeking professional-level sanitation. The result is a healthier, cleaner, and more comfortable living space."
     },
     {
         "id": 12,
         "service_name": "Duplex House Empty Premises (Above 2000 Sft)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "We provide detailed deep cleaning for empty duplex homes above 2000 sq ft, including staircases, rooms, kitchens, and bathrooms. Ideal for post-construction or pre-move-in preparation. This service ensures a thoroughly cleaned, dust-free, and hygienic environment."
     },
     {
         "id": 13,
         "service_name": "Duplex House Living Rooms",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Focused on living areas in duplex homes, this service covers deep cleaning of floors, furniture surfaces, windows, and décor areas. Perfect for homeowners wanting to enhance their primary gathering spaces. It restores shine and creates a welcoming atmosphere."
     },
     {
         "id": 14,
         "service_name": "Villa Living Rooms (3000-5000 Sft)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Specially designed for spacious villas, this service deeply cleans living rooms ranging from 3000 to 5000 sq ft. Suitable for luxury homeowners seeking premium care for expansive areas. Enjoy immaculate floors, polished surfaces, and refreshed interiors."
     },
     {
         "id": 15,
         "service_name": "Villa Occupied (5000-8000 Sft)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Deep Cleaning",
         "detailed_description": "Our Villa Occupied Deep Cleaning covers large, lived-in villas between 5000 and 8000 sq ft with meticulous attention to every corner. Ideal for high-end residences requiring detailed sanitation and surface care. The service delivers a superior level of cleanliness and comfort."
     },
     {
         "id": 16,
         "service_name": "Commercial Properties Open Premises (Above 5000 Sft)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Commercial Cleaning",
         "detailed_description": "This service provides deep cleaning for vacant commercial spaces above 5000 sq ft, including floors, restrooms, and work areas. Ideal for offices, retail outlets, or showrooms before occupancy. It ensures a professional, hygienic environment ready for operations."
     },
     {
         "id": 17,
         "service_name": "Commercial Properties Occupied (Above 5000 Sft)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Commercial Cleaning",
         "detailed_description": "We offer thorough cleaning for operational commercial spaces over 5000 sq ft with minimal disruption to business activities. Perfect for offices and institutions seeking regular or periodic deep cleaning. The service promotes a clean, safe, and productive workspace."
     },
     {
         "id": 18,
         "service_name": "Small Commercial Properties (2000-3000 Sft)",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Commercial Cleaning",
         "detailed_description": "Designed for smaller offices and retail spaces, this service covers deep cleaning of areas between 2000 and 3000 sq ft. Ideal for maintaining hygiene and professional appearance. It enhances workplace cleanliness and client impressions."
     },
     {
         "id": 19,
         "service_name": "Bathroom Wet Wiping",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Bathroom Cleaning",
         "detailed_description": "Our Bathroom Wet Wiping service focuses on wiping and disinfecting bathroom surfaces, mirrors, and fixtures. Ideal for routine maintenance between deep cleans. It keeps your bathroom fresh, hygienic, and visibly clean."
     },
     {
         "id": 20,
         "service_name": "Geyser, Exhaust, Window Sills & Glass Partition Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Bathroom Cleaning",
         "detailed_description": "This service includes cleaning of geysers, exhaust fans, window sills, and glass partitions to remove dust, grime, and stains. Perfect for homeowners wanting detailed attention to often-overlooked areas. It enhances cleanliness and improves overall bathroom appearance."
     },
     {
         "id": 21,
         "service_name": "Stain Removal Using Scrub Machine",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Bathroom Cleaning",
         "detailed_description": "This service uses professional-grade scrub machines to remove stubborn stains, hard water marks, and deep-seated grime from bathroom floors and tiles. Ideal for bathrooms with heavy buildup that regular cleaning cannot address. It restores surface shine and significantly improves overall hygiene."
     },
     {
         "id": 22,
         "service_name": "Tiles, Basin, Toilets & Water Closet Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Bathroom Cleaning",
         "detailed_description": "We thoroughly clean and disinfect tiles, wash basins, toilets, and water closets to eliminate stains, germs, and odors. Suitable for routine or intensive bathroom sanitation needs. The service ensures a sparkling, hygienic, and fresh-smelling bathroom."
     },
     {
         "id": 23,
         "service_name": "Balcony Deep Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Balcony Cleaning",
         "detailed_description": "Our Balcony Deep Cleaning service removes dust, bird droppings, stains, and debris from floors, railings, and walls. Ideal for apartments and homes with neglected or weather-exposed balconies. It transforms your balcony into a clean and enjoyable outdoor space."
     },
     {
         "id": 24,
         "service_name": "Floor Cleaning Using Single Disc Machine",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Floor Cleaning",
         "detailed_description": "This service utilizes a single disc machine to deep clean and polish various types of flooring, removing embedded dirt and dullness. Perfect for residential and commercial spaces needing floor restoration. It enhances shine, cleanliness, and floor longevity."
     },
     {
         "id": 25,
         "service_name": "Spotless Home Service",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Premium Cleaning",
         "detailed_description": "Spotless Home Service offers an intensive, top-to-bottom cleaning covering all rooms, surfaces, fixtures, and high-touch areas. Ideal for homeowners seeking a premium, all-inclusive cleaning experience. It delivers a pristine, hotel-like finish throughout your home."
     },
     {
         "id": 26,
         "service_name": "Dry Dusting Service",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "General Cleaning",
         "detailed_description": "Our Dry Dusting Service removes dust from furniture, shelves, electronics, and accessible surfaces using specialized tools. Perfect for regular home or office upkeep. It maintains a neat appearance and reduces allergens indoors."
     },
     {
         "id": 27,
         "service_name": "Wet Wiping Service",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "General Cleaning",
         "detailed_description": "This service includes damp wiping of surfaces, tables, counters, and frequently touched areas to remove stains and germs. Suitable for homes and workplaces requiring enhanced hygiene. It leaves surfaces clean, sanitized, and refreshed."
     },
     {
         "id": 28,
         "service_name": "Dry Vacuuming Service",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "General Cleaning",
         "detailed_description": "Our Dry Vacuuming Service effectively removes dust, dirt, and debris from floors, carpets, and upholstery. Ideal for maintaining cleanliness in homes and offices. It improves indoor air quality and ensures a tidy environment."
     },
     {
         "id": 29,
         "service_name": "Kitchen Cleaning Service",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Kitchen Cleaning",
         "detailed_description": "This service provides deep cleaning of kitchen countertops, cabinets, tiles, sink, and appliances to remove grease and stains. Perfect for households seeking a hygienic cooking environment. It ensures a spotless, odor-free, and safe kitchen space."
     },
@@ -296,28 +296,28 @@
     {
         "id": 43,
         "service_name": "Canopy Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Specialized Cleaning",
         "detailed_description": "This service removes grease, dust, and buildup from kitchen canopies and exhaust systems. Ideal for homes and commercial kitchens. It improves air circulation and maintains hygiene standards."
     },
     {
         "id": 44,
         "service_name": "Car Parking Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Specialized Cleaning",
         "detailed_description": "Our Car Parking Cleaning service removes oil stains, debris, and dirt from parking areas using professional equipment. Suitable for residential and commercial complexes. It ensures a clean and well-maintained parking space."
     },
     {
         "id": 45,
         "service_name": "Clubhouse Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Commercial Cleaning",
         "detailed_description": "We provide comprehensive cleaning for clubhouses, including floors, seating areas, restrooms, and common spaces. Ideal for residential communities and recreational facilities. It maintains a welcoming and hygienic environment for members."
     },
     {
         "id": 46,
         "service_name": "Gym Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Commercial Cleaning",
         "detailed_description": "This service focuses on sanitizing gym equipment, floors, mirrors, and high-touch areas. Perfect for fitness centers prioritizing hygiene and member safety. It ensures a clean and health-conscious workout space."
     },
@@ -338,14 +338,14 @@
     {
         "id": 49,
         "service_name": "Sofa Cleaning",
-        "category": "Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "Furniture Cleaning",
         "detailed_description": "Our Sofa Cleaning service uses specialized equipment to remove dust, stains, and allergens from fabric or leather upholstery. Perfect for maintaining furniture hygiene and appearance. It refreshes your sofa and extends its lifespan."
     },
     {
         "id": 50,
-        "service_name": "House Cleaning Services",
-        "category": "Cleaning Services",
+        "service_name": "House Deep Cleaning Services",
+        "category": "Deep Cleaning Services",
         "subcategory": "General Cleaning",
         "detailed_description": "We offer comprehensive house cleaning covering bedrooms, living areas, kitchen, and bathrooms. Suitable for routine or occasional cleaning needs. It keeps your home neat, hygienic, and comfortable."
     },

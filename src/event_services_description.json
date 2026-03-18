@@ -1,0 +1,51 @@
+[
+    {
+        "id": 88,
+        "service_name": "Corporate Event / Fashion Show",
+        "category": "Event Organization",
+        "subcategory": "Corporate Events",
+        "detailed_description": "We plan and execute high-profile corporate events and fashion shows with end-to-end management including venue selection, stage design, lighting, sound, model coordination, and guest management. Ideal for product launches, brand showcases, annual meets, and runway shows. Our team ensures seamless execution with creative themes, professional event flow, and memorable experiences for your audience."
+    },
+    {
+        "id": 89,
+        "service_name": "Artist Management",
+        "category": "Event Organization",
+        "subcategory": "Talent Management",
+        "detailed_description": "Our Artist Management service handles the complete coordination and booking of performers, musicians, DJs, dancers, comedians, and celebrity guests for your events. We manage artist contracts, travel logistics, rehearsal schedules, sound checks, and on-stage requirements. Perfect for concerts, private parties, corporate galas, and cultural festivals seeking top-tier entertainment."
+    },
+    {
+        "id": 90,
+        "service_name": "Product Launch",
+        "category": "Event Organization",
+        "subcategory": "Corporate Events",
+        "detailed_description": "We create impactful product launch events with strategic planning, brand-aligned stage design, media coordination, live demonstrations, and audience engagement activities. Ideal for companies unveiling new products, technologies, or service offerings. Our team delivers immersive launch experiences with professional AV setups, press kits, social media integration, and post-event coverage."
+    },
+    {
+        "id": 91,
+        "service_name": "Wedding Planner",
+        "category": "Event Organization",
+        "subcategory": "Wedding Events",
+        "detailed_description": "Our Wedding Planner service provides comprehensive wedding management from concept to execution — including venue decoration, catering coordination, photography and videography arrangements, bridal styling, entertainment booking, and guest management. Perfect for couples seeking a stress-free, beautifully orchestrated celebration. We handle every detail to create a magical, unforgettable wedding experience."
+    },
+    {
+        "id": 92,
+        "service_name": "Anchors / Hostess",
+        "category": "Event Organization",
+        "subcategory": "Event Staff",
+        "detailed_description": "We provide professional event anchors, emcees, and hostesses who bring energy, charisma, and polish to any occasion. Our talent is experienced in hosting corporate conferences, weddings, award ceremonies, trade shows, and cultural events. They handle audience engagement, script delivery, guest introductions, and smooth event transitions with confidence and professionalism."
+    },
+    {
+        "id": 93,
+        "service_name": "Birthday / Bachelor Party",
+        "category": "Event Organization",
+        "subcategory": "Private Celebrations",
+        "detailed_description": "We design and organize themed birthday parties and bachelor celebrations with custom decorations, entertainment, DJ setups, games, catering, and photography. Ideal for milestone birthdays, surprise parties, kids' events, and unforgettable bachelor or bachelorette nights. Our team transforms any venue into a vibrant party space with personalized touches and seamless coordination."
+    },
+    {
+        "id": 94,
+        "service_name": "Manpower / Entertainment",
+        "category": "Event Organization",
+        "subcategory": "Event Support",
+        "detailed_description": "We supply trained event manpower including bouncers, ushers, valet staff, backstage crew, and technical support teams alongside curated entertainment acts such as live bands, dance troupes, magicians, and stand-up comedians. Perfect for large-scale events, exhibitions, and private functions requiring reliable staffing and engaging entertainment. Our team ensures smooth operations and an elevated guest experience."
+    }
+]
