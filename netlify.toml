@@ -2,6 +2,15 @@
   command = "npm run build"
   publish = "dist"
 
+# ======== MAINTENANCE MODE ========
+# Remove this block and redeploy to restore the site
+[[redirects]]
+  from = "/*"
+  to = "/maintenance.html"
+  status = 503
+  force = true
+# ===================================
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

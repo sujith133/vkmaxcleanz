@@ -9,6 +9,7 @@ import FAQSection from '../../components/cleaning/FAQSection';
 import JoinTeamSection from '../../components/cleaning/JoinTeamSection';
 import ContactSection from '../../components/cleaning/ContactSection';
 import CTABanner from '../../components/shared/CTABanner';
+import OurClients from '../../components/shared/OurClients';
 
 export default function CleaningHome() {
     useEffect(() => {
@@ -41,6 +42,7 @@ export default function CleaningHome() {
             <ProjectsSection />
             <TestimonialsSection />
             <FAQSection />
+            <OurClients />
             <JoinTeamSection />
             <ContactSection />
             <CTABanner

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocationStore, LEADERS, getRoleAtLocation } from '../../store/useLocationStore';
+import OurClients from '../../components/shared/OurClients';
 import './ManpowerAboutPage.css';
 
 export default function ManpowerAboutPage() {
@@ -128,6 +129,9 @@ export default function ManpowerAboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* ── Our Clients ── */}
+            <OurClients />
 
             {/* ── Stats Ticker ── */}
             <section className="mp-ap-ticker">

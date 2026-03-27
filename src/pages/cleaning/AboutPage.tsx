@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocationStore, LEADERS, getRoleAtLocation } from '../../store/useLocationStore';
+import OurClients from '../../components/shared/OurClients';
 import './AboutPage.css';
 
 export default function AboutPage() {
@@ -148,6 +149,9 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* ── Our Clients ── */}
+            <OurClients />
 
             {/* ── 2026 Goals ── */}
             <section className="ap-goals">

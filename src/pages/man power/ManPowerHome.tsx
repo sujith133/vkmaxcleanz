@@ -8,6 +8,7 @@ import FAQSection from '../../components/man power/FAQSection';
 import JoinTeamSection from '../../components/man power/JoinTeamSection';
 import ContactSection from '../../components/man power/ContactSection';
 import CTABanner from '../../components/shared/CTABanner';
+import OurClients from '../../components/shared/OurClients';
 
 export default function ManPowerHome() {
     useEffect(() => {
@@ -39,6 +40,7 @@ export default function ManPowerHome() {
             <ProcessSection />
             <TestimonialsSection />
             <FAQSection />
+            <OurClients />
             <ContactSection />
             <JoinTeamSection />
             <CTABanner
